@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    {% for autotrade_user in autotrade_users %}
+        <div class="d-inline p-2 w-50">
+            <div class="d-flex flex-column">
+                <a href="{% url 'profile details' autotrade_user.pk %}">{{ autotrade_user }}</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

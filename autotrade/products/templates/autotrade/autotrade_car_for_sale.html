@@ -1,0 +1,70 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    {% for object in object_list %}
+        <div class="d-inline p-2 w-50">
+            <img src="{{ object.image.url }}" alt="{{ object.description }}" width="300" height="300">
+        </div>
+        <div class="d-inline p-2 w-50">
+            <div class="d-flex flex-column">
+                <h5><u>Марка:</u> {{ object.mark }}</h5>
+                <h5><u>Модел:</u> {{ object.model }}</h5>
+                {% if object.fuel %}
+                    <h5><u>Гориво:</u> {{ object.fuel }}</h5>
+                {% endif %}
+                {% if object.motor %}
+                    <h5><u>Двигател:</u> {{ object.motor }}</h5>
+                {% endif %}
+                {% if object.cooling %}
+                    <h5><u>Охлаждане:</u> {{ object.cooling }}</h5>
+                {% endif %}
+                {% if object.motor_type %}
+                    <h5><u>Tип:</u> {{ object.motor_type }}</h5>
+                {% endif %}
+                {% if object.total_weight %}
+                    <h5><u>Общо тегло:</u> {{ object.total_weight }}</h5>
+                {% endif %}
+                {% if object.capacity %}
+                    <h5><u>Товароносимост:</u> {{ object.capacity }}</h5>
+                {% endif %}
+                {% if object.capacity %}
+                    <h5><u>Категория:</u> {{ object.category }}</h5>
+                {% endif %}
+                <h5><u>Описание:</u> {{ object.description|truncatechars:30 }}</h5>
+                {% if not object.is_reviewed %}
+                    <h5><u>Цена:</u> <strong>{{ object.price }}</strong></h5>
+                {% else %}
+                    <h5><u>Цена:</u> <strong>{{ object.price|truncatechars:2 }}</strong></h5>
+                {% endif %}
+                {% if object.motor %}
+                    <a href="{% url 'delete car' object.pk %}">
+                {% elif object.capacity %}
+                    <a href="{% url 'delete truck' object.pk %}">
+                {% elif object.motor_type %}
+                    <a href="{% url 'delete motorcycle' object.pk %}">
+                {% endif %}
+                <button>Изтрий</button>
+                </a>
+                {% if object.motor %}
+                    <a href="{% url 'details car' object.pk %}">
+                {% elif object.capacity %}
+                    <a href="{% url 'details truck' object.pk %}">
+                {% elif object.motor_type %}
+                    <a href="{% url 'details motorcycle' object.pk %}">
+                {% endif %}
+                <button>Детайли</button>
+                </a>
+                {% if not object.is_reviewed %}
+                    {% if object.motor %}
+                        <a href="{% url 'edit car' object.pk %}">
+                    {% elif object.capacity %}
+                        <a href="{% url 'edit truck' object.pk %}">
+                    {% elif object.motor_type %}
+                        <a href="{% url 'edit motorcycle' object.pk %}">
+                    {% endif %}
+                <button>Редакция</button>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

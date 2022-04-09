@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <img src="{{ object.image.url }}" alt="{{ object.mark }}" width="300" height="300">
+    <h5><u>Марка:</u> {{ object.mark }}</h5>
+    <h5><u>Модел:</u> {{ object.model }}</h5>
+    <h5><u>Година:</u> {{ object.year }}</h5>
+    <h5><u>Двигател:</u> {{ object.motor }}</h5>
+    <h5><u>Описание:</u> <strong>{{ object.description }}</strong></h5>
+    <h5><u>Общо тегло:</u> <strong>{{ object.total_weight }}</strong></h5>
+    <h5><u>Товароносимост:</u> <strong>{{ object.capacity }}</strong></h5>
+    <h5><u>Категория:</u> <strong>{{ object.category }}</strong></h5>
+    <h5><u>Цена:</u> <strong>{{ object.price }}</strong></h5>
+    <a href="{% url 'user vehicles' %}"><button>Назад към моите обяви</button></a>
+{% endblock %}

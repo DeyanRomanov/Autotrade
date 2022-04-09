@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <h1>Сигурен ли си ?</h1>
+    <form method="post" action="{% url 'delete car' object.pk %}" enctype="multipart/form-data">
+        {{ form }}
+        {% csrf_token %}
+        <button>Да, изтрий обявата</button>
+    </form>
+    <a href="{% url 'user vehicles' %}"><button>Не, върни ме към моите обяви</button></a>
+{% endblock %}

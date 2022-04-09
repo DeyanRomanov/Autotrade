@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <form method="post" action="{% url 'profile create' request.user.pk %}">
+        {{ form }}
+        {% csrf_token %}
+        <button>
+            Създай профил
+        </button>
+    </form>
+{% endblock %}

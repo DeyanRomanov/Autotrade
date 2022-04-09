@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <a href="{% url 'autotrade create cars' %}"><img
+            src=""
+            alt="Лeки автомобили" style="width:600px;height:200px;"></a>        <a href="{% url 'create motorcycle' %}"><img
+        src="https://cdn1.polaris.com/globalassets/indian/2022/model/model-pages/challenger/specs/challenger-specs-xxs.jpg?v=990a2293"
+        alt="Мотоциклети" style="width:300px;height:400px;"></a>
+    <br>
+    <a href="{% url 'autotrade create cars' %}">Леки автомобили</a>    <a href="{% url 'create motorcycle' %}">Мотоциклети</a>
+    <br>
+    <a href="{% url 'create truck' %}"><img
+            src="https://docplayer.bg/docs-images/103/161009949/images/13-0.jpg"
+            alt="Товарни автомобили" style="width:600px;height:330px;"></a>
+    <br>
+    <a href="{% url 'create truck' %}">Товарни автомобили</a>
+    <br>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <form method="post" action="{% url 'autotrade create cars' %}" enctype="multipart/form-data">
+        {{ form }}
+        {% csrf_token %}
+        <button>Запази</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<h1>
+    Logout
+</h1>
+<form method="post" action="{% url 'logout' %}?next{% url 'home' %}">
+
+</form>
+{% endblock %}
