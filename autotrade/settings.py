@@ -14,6 +14,7 @@ SECRET_KEY = 'django-insecure-dbtqstdo(9_)b7lltnk^@x%*2gnmcznr^y%-2w86yn@4kh_7_t
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'autotrade-bg.herokuapp.com',
 ]
 
