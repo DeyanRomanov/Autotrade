@@ -1,0 +1,41 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="img" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyChainedComparisonsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoreConstantInTheMiddle" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="int.isnumeric" />
+          <option value="tuple.get_info" />
+          <option value="project.user.Library" />
+          <option value="project.test.test.Library" />
+          <option value="exam_prepare_second.exam_skeleton.project.baked_food.baked_food.ABC" />
+          <option value="exam_prepare_second.exam_skeleton.project.table.outside_table.*" />
+          <option value="project.table.inside_table.Table" />
+          <option value="Petstagram.main.forms.YEARS_TO_SHOW" />
+          <option value="Petstagram.main.forms.photo" />
+          <option value="django.db.models.PermissionsMixin" />
+          <option value="Petstagram.main_app.validators.MinLengthValidator" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

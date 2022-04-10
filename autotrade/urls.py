@@ -13,4 +13,4 @@ urlpatterns = [
                   path('', include('autotrade.products.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-import autotrade.signals
+# import autotrade.signals
