@@ -13,7 +13,9 @@ SECRET_KEY = 'django-insecure-dbtqstdo(9_)b7lltnk^@x%*2gnmcznr^y%-2w86yn@4kh_7_t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'autotrade-bg.herokuapp.com',
+]
 
 # Application definition
 
