@@ -1,1 +1,1 @@
-web: gunicorn Autotrade autotrade.wsgi
+web: gunicorn Autotrade autotrade.autotrade.wsgi
