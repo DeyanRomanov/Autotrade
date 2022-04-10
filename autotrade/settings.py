@@ -14,7 +14,6 @@ SECRET_KEY = 'django-insecure-dbtqstdo(9_)b7lltnk^@x%*2gnmcznr^y%-2w86yn@4kh_7_t
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'autotrade-bg.herokuapp.com',
 ]
 
 # Application definition
@@ -69,10 +68,10 @@ WSGI_APPLICATION = 'autotrade.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'autotrade_db',
-        'USER': 'postgres',
-        'PASSWORD': 'Snejieli90@',
-        'HOST': '127.0.0.1',
+        'NAME': 'd50a2h64m6jto0',
+        'USER': 'emayohuqohsyyt',
+        'PASSWORD': '1609fd50888ac9a2130e2401c8a29e3dd00d65d03d029c74298a62ded8911eb0',
+        'HOST': 'ec2-99-80-170-190.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
