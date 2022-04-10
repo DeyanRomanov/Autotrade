@@ -1,1 +1,1 @@
-web: gunicorn Autotrade autotrade.autotrade.wsgi
+web: gunicorn --pythonpath autotrade autotrade.wsgi
