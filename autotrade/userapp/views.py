@@ -20,14 +20,14 @@ __WELLCOME_MESSAGE = f', благодарим Ви, че се регистрир
 
 __SUBJECT_FOR_EMAIL = 'Добре дошли в AUTOTRADE'
 
-
-@receiver(signals.pre_save, sender=Profile)
-def send_email_after_register(instance, **kwargs):
-    subject = __SUBJECT_FOR_EMAIL
-    message = f'Добре дошли {instance.get_full_name}{__WELLCOME_MESSAGE}'
-    email_from = settings.EMAIL_HOST_USER
-    recipient_list = [instance.email, ]
-    send_mail(subject, message, email_from, recipient_list)
+#
+# @receiver(signals.pre_save, sender=Profile)
+# def send_email_after_register(instance, **kwargs):
+#     subject = __SUBJECT_FOR_EMAIL
+#     message = f'Добре дошли {instance.get_full_name}{__WELLCOME_MESSAGE}'
+#     email_from = settings.EMAIL_HOST_USER
+#     recipient_list = [instance.email, ]
+#     send_mail(subject, message, email_from, recipient_list)
 
 
 class RegisterUser(generic.CreateView):
