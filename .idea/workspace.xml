@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_vehicles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/user_advertisement.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/user_advertisement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/images/car.png" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/images/car.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +159,7 @@
       <workItem from="1649575394634" duration="5761000" />
       <workItem from="1649581546127" duration="4563000" />
       <workItem from="1649600378257" duration="3126000" />
-      <workItem from="1649622548083" duration="3722000" />
+      <workItem from="1649622548083" duration="4382000" />
     </task>
     <servers />
   </component>
