@@ -1,17 +1,22 @@
 {% extends 'base/base.html' %}
+{% load static %}
 {% block content %}
-    <a href="{% url 'autotrade create cars' %}"><img
-            src=""
-            alt="Лeки автомобили" style="width:600px;height:200px;"></a>        <a href="{% url 'create motorcycle' %}"><img
-        src="https://cdn1.polaris.com/globalassets/indian/2022/model/model-pages/challenger/specs/challenger-specs-xxs.jpg?v=990a2293"
-        alt="Мотоциклети" style="width:300px;height:400px;"></a>
-    <br>
-    <a href="{% url 'autotrade create cars' %}">Леки автомобили</a>    <a href="{% url 'create motorcycle' %}">Мотоциклети</a>
-    <br>
-    <a href="{% url 'create truck' %}"><img
-            src="https://docplayer.bg/docs-images/103/161009949/images/13-0.jpg"
-            alt="Товарни автомобили" style="width:600px;height:330px;"></a>
-    <br>
-    <a href="{% url 'create truck' %}">Товарни автомобили</a>
-    <br>
+    <table>
+        <tr>
+            <th><a href="{% url 'create car' %}"><img src="{% static 'images/car.jpg' %}"
+                                                      alt="Лeки автомобили" style="width:600px;height:200px;"></a>
+            </th>
+            <th><a href="{% url 'create motorcycle' %}"><img src="{% static 'images/motorcycle.jpg' %}"
+                                                             alt="Мотоциклети" style="width:300px;height:400px;"></a>
+            </th>
+            <th><a href="{% url 'create truck' %}"><img src="{% static 'images/truck.jpg' %}"
+                                                        alt="Товарни автомобили" style="width:600px;height:330px;"></a>
+            </th>
+        </tr>
+        <tr>
+            <td><a href="{% url 'create car' %}">Леки автомобили</a></td>
+            <td><a href="{% url 'create motorcycle' %}">Мотоциклети</a></td>
+            <td><a href="{% url 'create truck' %}">Товарни автомобили</a></td>
+        </tr>
+    </table>
 {% endblock %}
