@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_vehicles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +160,7 @@
       <workItem from="1649600378257" duration="3126000" />
       <workItem from="1649622548083" duration="19025000" />
       <workItem from="1649685642692" duration="2905000" />
-      <workItem from="1649701359191" duration="16496000" />
+      <workItem from="1649701359191" duration="16828000" />
     </task>
     <servers />
   </component>

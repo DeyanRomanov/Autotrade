@@ -26,9 +26,9 @@ urlpatterns = [
     path('edit_truck/<int:pk>/', TruckEditView.as_view(), name='edit truck'),
 
     path('create_part/', PartCreateView.as_view(), name='create part'),
-    path('delete_part/', PartDeleteView.as_view(), name='delete part'),
-    path('details_part/', PartDetailsView.as_view(), name='details part'),
-    path('edit_part/', PartEditView.as_view(), name='edit part'),
+    path('delete_part/<int:pk>/', PartDeleteView.as_view(), name='delete part'),
+    path('details_part/<int:pk>/', PartDetailsView.as_view(), name='details part'),
+    path('edit_part/<int:pk>/', PartEditView.as_view(), name='edit part'),
 
     path('user_vehicles/', UserVehiclesView.as_view(), name='user vehicles'),
     path('user_advestisement/', UserAdvertisementView.as_view(), name='user advertisement'),
