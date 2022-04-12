@@ -2,29 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/part/create_part.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/part/delete_part.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/part/details_part.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/part/edit_part.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/views/views_part.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0002_auto_20220403_1934.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0003_autotradecar_autotrademotorcycle_autotradetruck.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/truck/details_truck.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/truck/details_truck.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/user_advertisement.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/user_advertisement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/user_vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/user_vehicles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_truck.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_truck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_vehicles.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_vehicles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/templates/profile_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/templates/profile_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/mixins.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mediafiles/IMG-f67d232a50cd563959a3d4543e769b04-V.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mediafiles/IMG-f67d232a50cd563959a3d4543e769b04-V_0wNFavc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mediafiles/IMG-f67d232a50cd563959a3d4543e769b04-V_9oPTjHC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mediafiles/IMG-f67d232a50cd563959a3d4543e769b04-V_LZHfCel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mediafiles/IMG-f67d232a50cd563959a3d4543e769b04-V_XtBNQtR.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mediafiles/IMG-f67d232a50cd563959a3d4543e769b04-V_c4cb3af.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mediafiles/IMG-f67d232a50cd563959a3d4543e769b04-V_xCRY2GP.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +167,7 @@
       <workItem from="1649600378257" duration="3126000" />
       <workItem from="1649622548083" duration="19025000" />
       <workItem from="1649685642692" duration="2905000" />
-      <workItem from="1649701359191" duration="10659000" />
+      <workItem from="1649701359191" duration="11084000" />
     </task>
     <servers />
   </component>
