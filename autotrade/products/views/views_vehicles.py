@@ -3,7 +3,7 @@ from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views import generic
 
-from autotrade.products.models import Car, Motorcycle, Truck
+from autotrade.products.models import Car, Motorcycle, Truck, Part
 
 
 class UserAdvertisementView(mixins.LoginRequiredMixin, generic.TemplateView):
@@ -19,7 +19,8 @@ class UserVehiclesView(mixins.LoginRequiredMixin, generic.ListView):
         cars = list(Car.objects.filter(user_id=pk))
         motorcycles = list(Motorcycle.objects.filter(user_id=pk))
         trucks = list(Truck.objects.filter(user_id=pk))
-        vehicles_list = cars + motorcycles + trucks
+        parts = list(Part.objects.filter(user_id=pk))
+        vehicles_list = cars + motorcycles + trucks + parts
         return vehicles_list
 
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -28,9 +29,11 @@ class UserVehiclesView(mixins.LoginRequiredMixin, generic.ListView):
         motorcycle_count = Motorcycle.objects.filter(user_id=pk).count()
         car_count = Car.objects.filter(user_id=pk).count()
         truck_count = Truck.objects.filter(user_id=pk).count()
+        part_count = Part.objects.filter(user_id=pk).count()
         context['count'] = sum([
             motorcycle_count,
             car_count,
             truck_count,
+            part_count,
         ])
         return context

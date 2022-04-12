@@ -9,14 +9,22 @@
             <th><a href="{% url 'create motorcycle' %}"><img src="{% static 'images/motorcycle.jpg' %}"
                                                              alt="Мотоциклети" style="width:300px;height:400px;"></a>
             </th>
-            <th><a href="{% url 'create truck' %}"><img src="{% static 'images/truck.jpg' %}"
-                                                        alt="Товарни автомобили" style="width:600px;height:330px;"></a>
-            </th>
         </tr>
         <tr>
             <td><a href="{% url 'create car' %}">Леки автомобили</a></td>
             <td><a href="{% url 'create motorcycle' %}">Мотоциклети</a></td>
+        </tr>
+        <tr>
+            <th><a href="{% url 'create truck' %}"><img src="{% static 'images/truck.jpg' %}"
+                                                        alt="Товарни автомобили" style="width:600px;height:330px;"></a>
+            </th>
+            <th><a href="{% url 'create part' %}"><img src="{% static 'images/part.jpg' %}"
+                                                       alt="Части" style="width:600px;height:330px;"></a>
+            </th>
+        </tr>
+        <tr>
             <td><a href="{% url 'create truck' %}">Товарни автомобили</a></td>
+            <td><a href="{% url 'create truck' %}">Части</a></td>
         </tr>
     </table>
 {% endblock %}

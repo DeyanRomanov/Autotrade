@@ -1,6 +1,6 @@
 from django import forms
 
-from autotrade.products.models import Car, Vehicle, Motorcycle, Truck
+from autotrade.products.models import Car, Vehicle, Motorcycle, Truck, Part
 from common.mixins import FormControlWidgetMixin
 
 
@@ -37,14 +37,16 @@ class CarCreateForm(FormControlWidgetMixin, VehicleWidgets):
         )
 
 
-class CarEditForm(FormControlWidgetMixin):
+class CarEditForm(FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
 
     class Meta:
         model = Car
-        fields = '__all__'
+        exclude = (
+            'user',
+        )
 
 
 class MotorcycleCreatForm(FormControlWidgetMixin, VehicleWidgets):
@@ -59,14 +61,16 @@ class MotorcycleCreatForm(FormControlWidgetMixin, VehicleWidgets):
         )
 
 
-class MotorcycleEditForm(FormControlWidgetMixin):
+class MotorcycleEditForm(FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
 
     class Meta:
         model = Motorcycle
-        fields = '__all__'
+        exclude = (
+            'user',
+        )
 
 
 class TruckCreateForm(FormControlWidgetMixin, VehicleWidgets):
@@ -83,22 +87,60 @@ class TruckCreateForm(FormControlWidgetMixin, VehicleWidgets):
         )
 
 
-class TruckEditForm(FormControlWidgetMixin):
+class TruckEditForm(FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
 
     class Meta:
         model = Truck
-        fields = '__all__'
+        fields = (
+            'image',
+            'mark',
+            'model',
+            'year',
+            'total_weight',
+            'capacity',
+            'category',
+            'description',
+        )
+
+
+class PartCreateForm(FormControlWidgetMixin, forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._init_bootstrap_form_controls()
+
+    class Meta:
+        model = Part
+        exclude = (
+            'user',
+        )
+
+
+class PartEditForm(FormControlWidgetMixin, forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._init_bootstrap_form_controls()
+
+    class Meta:
+        model = Part
+        exclude = (
+            'user',
+        )
 
 
 class AutotradeCarCreateForm(CarCreateForm):
     pass
+
 
 class AutotradeTruckCreateForm(TruckCreateForm):
     pass
 
 
 class AutotradeMotorcycleCreateForm(MotorcycleCreatForm):
+    pass
+
+
+class AutotradePartCreateForm(PartCreateForm):
     pass

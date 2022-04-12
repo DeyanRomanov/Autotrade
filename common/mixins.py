@@ -15,6 +15,4 @@ class FormControlWidgetMixin:
 
 class UserPermissionAccessMixin:
     def get_queryset(self):
-        if self.request.user.has_perm('userapp.view_profile'):
-            return super().get_queryset()
         return super().get_queryset().filter(user=self.request.user)

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from autotrade.userapp.models import UserAppModel
+from autotrade.userapp.models import UserAppModel, Profile
 
 
 @admin.register(UserAppModel)
@@ -23,4 +23,25 @@ class UserAdmin(admin.ModelAdmin):
     list_filter = (
         'is_staff',
         'last_login',
+    )
+
+
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = (
+        'first_name',
+        'last_name',
+        'date_of_birth',
+    )
+
+    list_filter = (
+        'first_name',
+        'last_name',
+        'date_of_birth',
+    )
+
+    ordering = (
+        'first_name',
+        'last_name',
+        'date_of_birth',
     )

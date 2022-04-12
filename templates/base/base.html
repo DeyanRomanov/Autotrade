@@ -37,10 +37,10 @@
                     <a class="nav-link" href="{% url 'login' %}">Вход</a>
                 </li>
             {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'profile details' request.user.pk %}">Профил</a>
-                </li>
                 {% if not request.user.is_staff %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'profile details' request.user.pk %}">Профил</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'user vehicles' %}">Моите запитвания</a>
                     </li>
@@ -48,9 +48,6 @@
                         <a class="nav-link" href="{% url 'user advertisement' %}">Поискай оферта</a>
                     </li>
                 {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'users' %}">Потребители</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'autotrade create vehicles' %}">Създай обява</a>
                     </li>

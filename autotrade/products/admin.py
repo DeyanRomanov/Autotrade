@@ -1,10 +1,10 @@
 from django.contrib import admin
 
-from autotrade.products.models import Car, Motorcycle, Truck
+from autotrade.products.models import Car, Motorcycle, Truck, AutotradeCar, AutotradeTruck, AutotradeMotorcycle, Part
 
 
 @admin.register(Car)
-class ProfileAdmin(admin.ModelAdmin):
+class CarAdmin(admin.ModelAdmin):
     list_display = (
         'mark',
         'model',
@@ -19,7 +19,7 @@ class ProfileAdmin(admin.ModelAdmin):
 
 
 @admin.register(Motorcycle)
-class ProfileAdmin(admin.ModelAdmin):
+class MotorcycleAdmin(admin.ModelAdmin):
     list_display = (
         'mark',
         'model',
@@ -34,7 +34,7 @@ class ProfileAdmin(admin.ModelAdmin):
 
 
 @admin.register(Truck)
-class ProfileAdmin(admin.ModelAdmin):
+class TruckAdmin(admin.ModelAdmin):
     list_display = (
         'mark',
         'model',
@@ -47,3 +47,30 @@ class ProfileAdmin(admin.ModelAdmin):
         'capacity',
         'category',
     )
+
+
+@admin.register(Part)
+class PartAdmin(admin.ModelAdmin):
+    list_display = (
+        'catalog_number',
+        'condition',
+        'image',
+        'price',
+        'parts_category',
+        'user',
+    )
+
+
+@admin.register(AutotradeCar)
+class AutotradeCarAdmin(admin.ModelAdmin):
+    model = AutotradeCar
+
+
+@admin.register(AutotradeTruck)
+class AutotradeCarAdmin(admin.ModelAdmin):
+    model = AutotradeTruck
+
+
+@admin.register(AutotradeMotorcycle)
+class AutotradeCarAdmin(admin.ModelAdmin):
+    model = AutotradeMotorcycle

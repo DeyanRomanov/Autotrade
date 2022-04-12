@@ -1,0 +1,9 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <form method="post" action="{% url 'edit part' object.pk %}" enctype="multipart/form-data">
+        {{ form }}
+        {% csrf_token %}
+        <button>Промени</button>
+    </form>
+        <a href="{% url 'user vehicles' %}"><button>Назад към, моите обяви</button></a>
+{% endblock %}

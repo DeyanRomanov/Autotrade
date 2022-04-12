@@ -192,12 +192,81 @@ class Truck(Vehicle):
     )
 
 
+class Part(models.Model):
+    MOTOR = 'Двигател'
+    TRANSMISSION = 'Скорости'
+    COUPE = 'КУПЕ'
+    OTHERS = 'Други'
+    PARTS_CHOICES = [
+        (MOTOR, MOTOR),
+        (TRANSMISSION, TRANSMISSION),
+        (COUPE, COUPE),
+        (OTHERS, OTHERS),
+    ]
+    MAX_PARTS_LENGTH = _get_max_choices_length(PARTS_CHOICES)
+
+    NEW = 'Ново'
+    USED = 'Използвано'
+    UNPACKED = 'Разопаковано'
+    CONDITION_CHOISES = [
+        (NEW, NEW),
+        (USED, USED),
+        (UNPACKED, UNPACKED),
+    ]
+    MAX_CONDITION_LENGTH = _get_max_choices_length(CONDITION_CHOISES)
+
+    MAX_CATALOG_CODE_LENGTH = 25
+
+    MIN_PRICE = 1
+
+    IMAGE_MAXSIZE_IN_MB = 1
+    parts_category = models.CharField(
+        max_length=MAX_PARTS_LENGTH,
+        choices=PARTS_CHOICES,
+        verbose_name="Категория"
+    )
+
+    condition = models.CharField(
+        max_length=MAX_CONDITION_LENGTH,
+        choices=CONDITION_CHOISES,
+        verbose_name='Състояние',
+    )
+
+    catalog_number = models.CharField(
+        max_length=MAX_CATALOG_CODE_LENGTH,
+        null=True,
+        blank=True,
+        verbose_name='Каталожен номер'
+    )
+
+    price = models.IntegerField(
+        validators=(
+            MinValueValidator(MIN_PRICE),
+                    ),
+        verbose_name='Цена'
+    )
+
+    image = models.ImageField(
+        validators=(
+            MaxFileSizeInMbValidator(IMAGE_MAXSIZE_IN_MB),
+        ),
+        verbose_name='Изберете снимка до 1мб',
+    )
+
+    user = models.ForeignKey(
+        UserModel,
+        on_delete=models.CASCADE,
+    )
+
+
 class AutotradeMotorcycle(Motorcycle):
     pass
 
 
 class AutotradeCar(Car):
-    pass
+    Car.is_reviewed = models.BooleanField(
+        default=True,
+    )
 
 
 class AutotradeTruck(Truck):
