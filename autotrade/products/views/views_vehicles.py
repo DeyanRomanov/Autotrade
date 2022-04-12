@@ -1,6 +1,4 @@
 from django.contrib.auth import mixins
-from django.shortcuts import redirect
-from django.urls import reverse_lazy
 from django.views import generic
 
 from autotrade.products.models import Car, Motorcycle, Truck, Part

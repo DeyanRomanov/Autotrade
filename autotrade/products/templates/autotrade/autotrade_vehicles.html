@@ -38,6 +38,8 @@
                     <a href="{% url 'delete truck' object.pk %}">
                 {% elif object.motor_type %}
                     <a href="{% url 'delete motorcycle' object.pk %}">
+                {% elif object.catalog_num %}
+                    <a href="{% url 'delete part' object.pk %}">
                 {% endif %}
                 <button>Изтрий</button>
                 </a>
@@ -47,6 +49,8 @@
                     <a href="{% url 'details truck' object.pk %}">
                 {% elif object.motor_type %}
                     <a href="{% url 'details motorcycle' object.pk %}">
+                {% elif object.catalog_number %}
+                    <a href="{% url 'details part' object.pk %}">
                 {% endif %}
                 <button>Детайли</button>
                 </a>
@@ -57,6 +61,8 @@
                         <a href="{% url 'edit truck' object.pk %}">
                     {% elif object.motor_type %}
                         <a href="{% url 'edit motorcycle' object.pk %}">
+                    {% elif object.catalog_number %}
+                        <a href="{% url 'edit part' object.pk %}">
                     {% endif %}
                 <button>Редакция</button>
                 </a>
