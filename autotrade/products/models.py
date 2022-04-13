@@ -217,9 +217,15 @@ class Part(models.Model):
 
     MAX_CATALOG_CODE_LENGTH = 25
 
+    MAX_NAME_LENGTH = 33
+
     MIN_PRICE = 1
 
     IMAGE_MAXSIZE_IN_MB = 1
+
+    name = models.CharField(
+        max_length=MAX_NAME_LENGTH,
+    )
     parts_category = models.CharField(
         max_length=MAX_PARTS_LENGTH,
         choices=PARTS_CHOICES,
@@ -251,6 +257,12 @@ class Part(models.Model):
             MaxFileSizeInMbValidator(IMAGE_MAXSIZE_IN_MB),
         ),
         verbose_name='Изберете снимка до 1мб',
+    )
+
+    description = models.TextField(
+        null=True,
+        blank=True,
+        verbose_name='Описание',
     )
 
     user = models.ForeignKey(

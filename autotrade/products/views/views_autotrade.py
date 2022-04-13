@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.views import generic
 
 from autotrade.products.forms import AutotradeCarCreateForm
-from autotrade.products.models import AutotradeCar, Car
+from autotrade.products.models import AutotradeCar, Car, Part, Truck, Motorcycle
 
 UserApp = get_user_model()
 
@@ -30,17 +30,21 @@ class AutotradeVehicleCreateView(generic.TemplateView):
 class AutotradeVehicleView(generic.ListView):
     model = Car
     template_name = 'autotrade/autotrade_vehicles.html'
+    staff = list(UserApp.objects.filter(is_staff=True).all())
+    cars = []
 
     def get_queryset(self):
-        staff = list(UserApp.objects.filter(is_staff=True).all())
-        return super().get_queryset().filter(user__in=staff)
-    # def get_context_data(self, *, object_list=None, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     cars = []
-    #     for staff in list(UserApp.objects.filter(is_staff=True)):
-    #         cars.append(Car.objects.filter(user=staff).all())
-    #     context['cars'] = cars
-    #     context['trucks'] = trucks
-    #     context['trucks'] = trucks
-    #     context['trucks'] = trucks
-    #     return context
+        cars = super().get_queryset().filter(user__in=self.staff)
+        return cars
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        motorcycles = Motorcycle.objects.filter(user__in=self.staff).all()
+        trucks = Truck.objects.filter(user__in=self.staff).all()
+        parts = Part.objects.filter(user__in=self.staff).all()
+
+        context['trucks'] = trucks
+        context['motorcycles'] = motorcycles
+        context['parts'] = parts
+        context['cars'] = self.cars
+        return context
