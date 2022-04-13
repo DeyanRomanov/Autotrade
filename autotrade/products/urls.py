@@ -1,7 +1,7 @@
 from django.urls import path
 
-from autotrade.products.views.views_autotrade import AutotradeCreateCarView, AutotradeAdvertisementView, \
-    AutotradeVehicleCreateView, AutotradeVehicleView
+from autotrade.products.views.views_autotrade import AutotradeCreateCarView, AutotradeVehicleCreateView, \
+    AutotradeVehicleView
 from autotrade.products.views.views_car import CarCreateView, CarDetailsView, CarsEditView, CarsDeleteView
 from autotrade.products.views.views_motorcycle import MotorcycleCreateView, MotorcycleDeleteView, MotorcycleDetailsView, \
     MotorcycleEditView
