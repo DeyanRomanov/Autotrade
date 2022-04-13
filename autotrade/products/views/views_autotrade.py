@@ -5,7 +5,7 @@ from django.views import generic
 from autotrade.products.forms import AutotradeCarCreateForm
 from autotrade.products.models import AutotradeCar, Car, Part, Truck, Motorcycle
 
-UserApp = get_user_model()
+UserModel = get_user_model()
 
 
 class AutotradeCreateCarView(generic.CreateView):
@@ -30,7 +30,7 @@ class AutotradeVehicleCreateView(generic.TemplateView):
 class AutotradeVehicleView(generic.ListView):
     model = Car
     template_name = 'autotrade/autotrade_vehicles.html'
-    staff = list(UserApp.objects.filter(is_staff=True).all())
+    staff = list(UserModel.objects.filter(is_staff=True).all())
     cars = []
 
     def get_queryset(self):
