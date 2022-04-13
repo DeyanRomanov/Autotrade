@@ -32,7 +32,7 @@ class AutotradeVehicleView(generic.ListView):
     template_name = 'autotrade/autotrade_vehicles.html'
 
     def get_queryset(self):
-        return super().get_queryset().filter(user=is_staff)
+        return super().get_queryset().filter(is_staff=True)
     # def get_context_data(self, *, object_list=None, **kwargs):
     #     context = super().get_context_data(**kwargs)
     #     cars = []
