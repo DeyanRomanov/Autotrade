@@ -42,5 +42,5 @@ class AutotradeVehicleView(generic.ListView):
         context['trucks'] = trucks
         context['motorcycles'] = motorcycles
         context['parts'] = parts
-        context['cars'] = self.cars
+        context['cars'] = cars
         return context
