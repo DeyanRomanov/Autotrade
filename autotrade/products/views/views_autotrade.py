@@ -31,14 +31,10 @@ class AutotradeVehicleView(generic.ListView):
     model = Car
     template_name = 'autotrade/autotrade_vehicles.html'
     staff = list(UserModel.objects.filter(is_staff=True).all())
-    cars = []
-
-    def get_queryset(self):
-        cars = super().get_queryset().filter(user__in=self.staff)
-        return cars
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
+        cars = Car.objects.filter(user__in=self.staff).all()
         motorcycles = Motorcycle.objects.filter(user__in=self.staff).all()
         trucks = Truck.objects.filter(user__in=self.staff).all()
         parts = Part.objects.filter(user__in=self.staff).all()
