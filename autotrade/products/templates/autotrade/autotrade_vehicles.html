@@ -3,17 +3,17 @@
 
     {% for car in cars %}
         <div class="d-inline p-2 w-50">
-            <img src="{{ car.image.url }}" alt="{{ car.description }}" width="300" height="300">
+            <img src="{{ object.image.url }}" alt="{{ object.description }}" width="300" height="300">
         </div>
         <div class="d-inline p-2 w-50">
             <div class="d-flex flex-column">
-                <h5><u>Марка:</u> {{ car.mark }}</h5>
+                <h5><u>Марка:</u> {{ object.mark }}</h5>
                 <h5><u>Модел:</u> {{ car.model }}</h5>
                 {% if object.fuel %}
-                    <h5><u>Гориво:</u> {{ car.fuel }}</h5>
+                    <h5><u>Гориво:</u> {{ object.fuel }}</h5>
                 {% endif %}
                 {% if car.motor %}
-                    <h5><u>Двигател:</u> {{ car.motor }}</h5>
+                    <h5><u>Двигател:</u> {{ object.motor }}</h5>
                 {% endif %}
                 {% if object.cooling %}
                     <h5><u>Охлаждане:</u> {{ object.cooling }}</h5>
@@ -30,7 +30,7 @@
                 {% if object.capacity %}
                     <h5><u>Категория:</u> {{ object.category }}</h5>
                 {% endif %}
-                <h5><u>Описание:</u> {{ car.description|truncatechars:30 }}</h5>
+                    <h5><u>Описание:</u> {{ car.description|truncatechars:30 }}</h5>
                     <h5><u>Цена:</u> <strong>{{ object.price|truncatechars:2 }}</strong></h5>
                 {% if car.motor %}
                     <a href="{% url 'delete car' object.pk %}">
