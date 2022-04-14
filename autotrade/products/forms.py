@@ -110,6 +110,10 @@ class PartCreateForm(FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
+        self.fields['name'].widget.attrs.update({'placeholder': 'Въведете има на продукта, пример: Врата'})
+        self.fields['catalog_number'].widget.attrs.update(
+            {'placeholder': 'Ако НЕ разполагате с каталожен номер на продукта оставете празно това поле'})
+        self.fields['description'].widget.attrs.update({'placeholder': 'Въведете допълнителна информация за продукта'})
 
     class Meta:
         model = Part

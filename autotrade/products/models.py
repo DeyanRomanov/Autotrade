@@ -225,6 +225,7 @@ class Part(models.Model):
 
     name = models.CharField(
         max_length=MAX_NAME_LENGTH,
+        verbose_name='Наименование',
     )
     parts_category = models.CharField(
         max_length=MAX_PARTS_LENGTH,
