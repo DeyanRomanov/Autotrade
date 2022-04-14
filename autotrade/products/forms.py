@@ -36,6 +36,9 @@ class CarCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, Veh
             'user',
         )
 
+    def form_valid(self, form):
+        return super().form_valid(form)
+
 
 class CarEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -47,6 +50,9 @@ class CarEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms
         exclude = (
             'user',
         )
+
+    def form_valid(self, form):
+        return super().form_valid(form)
 
 
 class MotorcycleCreatFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, VehicleWidgets):
@@ -60,6 +66,9 @@ class MotorcycleCreatFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixi
             'user',
         )
 
+    def form_valid(self, form):
+        return super().form_valid(form)
+
 
 class MotorcycleEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -71,6 +80,9 @@ class MotorcycleEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin
         exclude = (
             'user',
         )
+
+    def form_valid(self, form):
+        return super().form_valid(form)
 
 
 class TruckCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, VehicleWidgets):
@@ -85,6 +97,9 @@ class TruckCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, V
         exclude = (
             'user',
         )
+
+    def form_valid(self, form):
+        return super().form_valid(form)
 
 
 class TruckEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
@@ -105,6 +120,9 @@ class TruckEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, for
             'description',
         )
 
+    def form_valid(self, form):
+        return super().form_valid(form)
+
 
 class PartCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -114,13 +132,17 @@ class PartCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, fo
         self.fields['catalog_number'].widget.attrs.update(
             {'placeholder': 'Ако НЕ разполагате с каталожен номер на продукта оставете празно това поле'})
         self.fields['description'].widget.attrs.update(
-            {'placeholder': 'Въведете допълнителна информация за продукта.\nПример:Ляв фар от Жигула 1986г. лява дирекция'})
+            {
+                'placeholder': 'Въведете допълнителна информация за продукта.\nПример:Ляв фар от Жигула 1986г. лява дирекция'})
 
     class Meta:
         model = Part
         exclude = (
             'user',
         )
+
+    def form_valid(self, form):
+        return super().form_valid(form)
 
 
 class PartEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
@@ -134,6 +156,9 @@ class PartEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, form
             'user',
         )
 
+    def form_valid(self, form):
+        return super().form_valid(form)
+    
 
 class CarEditForm(CarEditFormBase):
     pass
