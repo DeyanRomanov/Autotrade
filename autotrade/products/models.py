@@ -288,8 +288,7 @@ class PartBase(models.Model):
 
 
 class Car(CarBase):
-    class Meta:
-        proxy = True
+    pass
 
 
 class Motorcycle(MotorcycleBase):
