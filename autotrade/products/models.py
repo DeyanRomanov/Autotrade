@@ -289,38 +289,38 @@ class PartBase(models.Model):
 
 class Car(CarBase):
     class Meta:
-        abstract = False
+        proxy = True
 
 
 class Motorcycle(MotorcycleBase):
     class Meta:
-        abstract = False
+        proxy = True
 
 
 class Truck(TruckBase):
-    class Meta:
-        abstract = False
+    pass
+
 
 class Part(PartBase):
     class Meta:
-        abstract = False
+        proxy = True
 
 
 class AutotradeMotorcycle(MotorcycleBase):
     class Meta:
-        abstract = False
+        proxy = True
 
 
 class AutotradeCar(CarBase):
     class Meta:
-        abstract = False
+        proxy = True
 
 
 class AutotradeTruck(TruckBase):
     class Meta:
-        abstract = False
+        proxy = True
 
 
 class AutotradePart(PartBase):
     class Meta:
-        abstract = False
+        proxy = True
