@@ -80,9 +80,14 @@
                 {% if part.description %}
                     <h5><u>Описание:</u> {{ part.description }}</h5>
                 {% endif %}
-                <h5><u>Цена:</u> <strong>{{ part.price|truncatechars:2 }}</strong></h5>
-                <a href="{% url 'details part' part.pk %}">
-                    <button>Детайли</button>
+                {% if request.user.is_authenticated %}
+                    <h5><u>Цена:</u> <strong>{{ part.price }}</strong></h5>
+                    <a href="{% url 'details part' part.pk %}">
+                {% else %}
+                    <h5><u>Цена:</u> <strong>{{ part.price|truncatechars:2 }}</strong></h5>
+                    <a href="{% url 'register' %}">
+                {% endif %}
+                <button>Детайли</button>
                 </a>
             </div>
         </div>
