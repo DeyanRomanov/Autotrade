@@ -1,6 +1,7 @@
 from django import forms
 
-from autotrade.products.models import Vehicle, TruckBase, CarBase, MotorcycleBase, PartBase
+from autotrade.products.models import Vehicle, TruckBase, CarBase, MotorcycleBase, PartBase, Car, Motorcycle, Truck, \
+    Part, AutotradeCar, AutotradeTruck, AutotradeMotorcycle, AutotradePart
 from autotrade.common.mixins import FormControlWidgetMixin
 
 
@@ -31,7 +32,6 @@ class CarCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
     motor = forms.IntegerField(widget=forms.TextInput(attrs={'placeholder': 'Моля въведете кубатура на автомобила!'}))
 
     class Meta:
-        model = CarBase
         exclude = (
             'user',
         )
@@ -43,7 +43,6 @@ class CarEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
-        model = CarBase
         exclude = (
             'user',
         )
@@ -55,7 +54,6 @@ class MotorcycleCreatFormBase(FormControlWidgetMixin, VehicleWidgets):
         self._init_bootstrap_form_controls()
 
     class Meta:
-        model = MotorcycleBase
         exclude = (
             'user',
         )
@@ -67,7 +65,6 @@ class MotorcycleEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
-        model = MotorcycleBase
         exclude = (
             'user',
         )
@@ -81,7 +78,6 @@ class TruckCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
         self.fields['capacity'].widget.attrs.update({'placeholder': 'Въведете товароносимост в тонаж'})
 
     class Meta:
-        model = TruckBase
         exclude = (
             'user',
         )
@@ -93,7 +89,6 @@ class TruckEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
-        model = TruckBase
         fields = (
             'image',
             'mark',
@@ -118,7 +113,6 @@ class PartCreateFormBase(FormControlWidgetMixin, forms.ModelForm):
                 'placeholder': 'Въведете допълнителна информация за продукта.\nПример:Ляв фар от Жигула 1986г. лява дирекция'})
 
     class Meta:
-        model = PartBase
         exclude = (
             'user',
         )
@@ -130,55 +124,66 @@ class PartEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
-        model = PartBase
         exclude = (
             'user',
         )
 
 
 class CarEditForm(CarEditFormBase):
-    pass
+    class Meta:
+        model = Car
 
 
 class CarCreateForm(CarCreateFormBase):
-    pass
+    class Meta:
+        model = Car
 
 
 class MotorcycleCreatForm(MotorcycleCreatFormBase):
-    pass
+    class Meta:
+        model = Motorcycle
 
 
 class MotorcycleEditForm(MotorcycleEditFormBase):
-    pass
+    class Meta:
+        model = Motorcycle
 
 
 class TruckCreateForm(TruckCreateFormBase):
-    pass
+    class Meta:
+        model = Truck
 
 
 class TruckEditForm(TruckEditFormBase):
-    pass
+    class Meta:
+        model = Truck
 
 
 class PartCreateForm(PartCreateFormBase):
-    pass
+    class Meta:
+        model = Part
 
 
 class PartEditForm(PartEditFormBase):
-    pass
+    class Meta:
+        model = Part
 
 
 class AutotradeCarCreateForm(CarCreateFormBase):
-    pass
+    class Meta:
+        model = AutotradeCar
 
 
 class AutotradeTruckCreateForm(TruckCreateFormBase):
-    pass
+    class Meta:
+        model = AutotradeTruck
 
 
 class AutotradeMotorcycleCreateForm(MotorcycleCreatFormBase):
-    pass
+    class Meta:
+        model = AutotradeMotorcycle
 
 
 class AutotradePartCreateForm(PartCreateFormBase):
-    pass
+    class Meta:
+        model = AutotradePart
