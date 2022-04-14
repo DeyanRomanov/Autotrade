@@ -23,7 +23,7 @@ class VehicleWidgets(forms.ModelForm):
     is_reviewed = forms.CharField(widget=forms.HiddenInput(), initial=False)
 
 
-class CarCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, VehicleWidgets):
+class CarCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -36,11 +36,8 @@ class CarCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, Veh
             'user',
         )
 
-    def form_valid(self, form):
-        return super().form_valid(form)
 
-
-class CarEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
+class CarEditFormBase(FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -51,11 +48,8 @@ class CarEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms
             'user',
         )
 
-    def form_valid(self, form):
-        return super().form_valid(form)
 
-
-class MotorcycleCreatFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, VehicleWidgets):
+class MotorcycleCreatFormBase(FormControlWidgetMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -66,11 +60,8 @@ class MotorcycleCreatFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixi
             'user',
         )
 
-    def form_valid(self, form):
-        return super().form_valid(form)
 
-
-class MotorcycleEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
+class MotorcycleEditFormBase(FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -81,11 +72,8 @@ class MotorcycleEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin
             'user',
         )
 
-    def form_valid(self, form):
-        return super().form_valid(form)
 
-
-class TruckCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, VehicleWidgets):
+class TruckCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -98,11 +86,8 @@ class TruckCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, V
             'user',
         )
 
-    def form_valid(self, form):
-        return super().form_valid(form)
 
-
-class TruckEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
+class TruckEditFormBase(FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -120,11 +105,8 @@ class TruckEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, for
             'description',
         )
 
-    def form_valid(self, form):
-        return super().form_valid(form)
 
-
-class PartCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
+class PartCreateFormBase(FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -141,11 +123,8 @@ class PartCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, fo
             'user',
         )
 
-    def form_valid(self, form):
-        return super().form_valid(form)
 
-
-class PartEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
+class PartEditFormBase(FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -156,9 +135,6 @@ class PartEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, form
             'user',
         )
 
-    def form_valid(self, form):
-        return super().form_valid(form)
-    
 
 class CarEditForm(CarEditFormBase):
     pass
