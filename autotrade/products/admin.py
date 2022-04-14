@@ -69,13 +69,13 @@ class AutotradeCarAdmin(admin.ModelAdmin):
 
 
 @admin.register(AutotradeTruck)
-class AutotradeCarAdmin(admin.ModelAdmin):
+class AutotradeTruckAdmin(admin.ModelAdmin):
     model = AutotradeTruck
     fields = '__all__'
 
 
 @admin.register(AutotradeMotorcycle)
-class AutotradeCarAdmin(admin.ModelAdmin):
+class AutotradeMotorcycleAdmin(admin.ModelAdmin):
     model = AutotradeMotorcycle
     fields = '__all__'
 
