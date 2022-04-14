@@ -1,11 +1,10 @@
-from django.contrib.auth import get_user_model
 from django.urls import reverse_lazy
 from django.views import generic
 
 from autotrade.products.forms import AutotradeCarCreateForm, AutotradeTruckCreateForm, AutotradeMotorcycleCreateForm, \
     AutotradePartCreateForm
 from autotrade.products.models import AutotradeCar, AutotradeMotorcycle, AutotradeTruck, AutotradePart
-from common.mixins import CurrentUserSaveProductMixin
+from autotrade.common.mixins import CurrentUserSaveProductMixin
 
 
 class AutotradeCreateCarView(CurrentUserSaveProductMixin, generic.CreateView):

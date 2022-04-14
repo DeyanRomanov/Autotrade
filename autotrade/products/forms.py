@@ -1,7 +1,7 @@
 from django import forms
 
 from autotrade.products.models import Car, Vehicle, Motorcycle, Truck, Part
-from common.mixins import FormControlWidgetMixin, CurrentUserSaveProductMixin
+from autotrade.common.mixins import FormControlWidgetMixin, CurrentUserSaveProductMixin
 
 
 class VehicleWidgets(forms.ModelForm):

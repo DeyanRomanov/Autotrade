@@ -5,7 +5,6 @@ from django.views import generic
 
 from autotrade.products.forms import TruckCreateForm, TruckEditForm
 from autotrade.products.models import Truck
-from common.mixins import UserPermissionAccessMixin
 
 
 class TruckCreateView(mixins.LoginRequiredMixin, generic.CreateView):

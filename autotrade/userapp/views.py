@@ -1,16 +1,12 @@
-from django.conf import settings
 from django.contrib.auth import views as auth_views, login, get_user_model
 from django.contrib.auth import mixins
-from django.core.mail import send_mail
-from django.db.models import signals
-from django.dispatch import receiver
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views import generic
 
 from autotrade.userapp.forms import UserRegisterForm, ProfileEditForm, ProfileDeleteForm, CreateProfileForm
 from autotrade.userapp.models import Profile, UserAppModel
-from common.mixins import UserPermissionAccessMixin
+from autotrade.common.mixins import UserPermissionAccessMixin
 
 UserModel = get_user_model()
 
