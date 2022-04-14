@@ -1,7 +1,7 @@
 from django import forms
 
 from autotrade.products.models import Car, Vehicle, Motorcycle, Truck, Part
-from common.mixins import FormControlWidgetMixin
+from common.mixins import FormControlWidgetMixin, CurrentUserSaveProductMixin
 
 
 class VehicleWidgets(forms.ModelForm):
@@ -23,7 +23,7 @@ class VehicleWidgets(forms.ModelForm):
     is_reviewed = forms.CharField(widget=forms.HiddenInput(), initial=False)
 
 
-class CarCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
+class CarCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -37,7 +37,7 @@ class CarCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
         )
 
 
-class CarEditFormBase(FormControlWidgetMixin, forms.ModelForm):
+class CarEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -49,7 +49,7 @@ class CarEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         )
 
 
-class MotorcycleCreatFormBase(FormControlWidgetMixin, VehicleWidgets):
+class MotorcycleCreatFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -61,7 +61,7 @@ class MotorcycleCreatFormBase(FormControlWidgetMixin, VehicleWidgets):
         )
 
 
-class MotorcycleEditFormBase(FormControlWidgetMixin, forms.ModelForm):
+class MotorcycleEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -73,7 +73,7 @@ class MotorcycleEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         )
 
 
-class TruckCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
+class TruckCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -87,7 +87,7 @@ class TruckCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
         )
 
 
-class TruckEditFormBase(FormControlWidgetMixin, forms.ModelForm):
+class TruckEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -106,7 +106,7 @@ class TruckEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         )
 
 
-class PartCreateFormBase(FormControlWidgetMixin, forms.ModelForm):
+class PartCreateFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -123,7 +123,7 @@ class PartCreateFormBase(FormControlWidgetMixin, forms.ModelForm):
         )
 
 
-class PartEditFormBase(FormControlWidgetMixin, forms.ModelForm):
+class PartEditFormBase(CurrentUserSaveProductMixin, FormControlWidgetMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
