@@ -12,12 +12,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY', 'sk')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
 APP_ENVIRONMENT = os.getenv('APP_ENVIRONMENT')
 
 # Application definition
@@ -104,6 +104,7 @@ if is_production:
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
+AUTH_PASSWORD_VALIDATORS = []
 
 if is_production():
     AUTH_PASSWORD_VALIDATORS.extend([

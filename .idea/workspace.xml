@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db.xml.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0002_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mediafiles/IMG-f67d232a50cd563959a3d4543e769b04-V.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +183,7 @@
       <workItem from="1649858570212" duration="9807000" />
       <workItem from="1649920365062" duration="17277000" />
       <workItem from="1649945492788" duration="5320000" />
-      <workItem from="1649954818454" duration="6110000" />
+      <workItem from="1649954818454" duration="7372000" />
     </task>
     <servers />
   </component>
