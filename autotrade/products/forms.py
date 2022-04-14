@@ -143,60 +143,60 @@ class PartEditFormBase(FormControlWidgetMixin, forms.ModelForm):
 
 
 class CarEditForm(CarEditFormBase):
-    class Meta:
+    class Meta(CarEditFormBase.Meta):
         model = Car
 
 
 class CarCreateForm(CarCreateFormBase):
-    class Meta:
+    class Meta(CarCreateFormBase.Meta):
         model = Car
 
 
 class MotorcycleCreatForm(MotorcycleCreatFormBase):
-    class Meta:
+    class Meta(MotorcycleCreatFormBase.Meta):
         model = Motorcycle
 
 
 class MotorcycleEditForm(MotorcycleEditFormBase):
-    class Meta:
+    class Meta(MotorcycleCreatFormBase.Meta):
         model = Motorcycle
 
 
 class TruckCreateForm(TruckCreateFormBase):
-    class Meta:
+    class Meta(TruckCreateFormBase.Meta):
         model = Truck
 
 
 class TruckEditForm(TruckEditFormBase):
-    class Meta:
+    class Meta(TruckCreateFormBase.Meta):
         model = Truck
 
 
 class PartCreateForm(PartCreateFormBase):
-    class Meta:
+    class Meta(PartCreateFormBase.Meta):
         model = Part
 
 
 class PartEditForm(PartEditFormBase):
-    class Meta:
+    class Meta(PartCreateFormBase.Meta):
         model = Part
 
 
 class AutotradeCarCreateForm(CarCreateFormBase):
-    class Meta:
+    class Meta(CarCreateFormBase.Meta):
         model = AutotradeCar
 
 
 class AutotradeTruckCreateForm(TruckCreateFormBase):
-    class Meta:
+    class Meta(TruckCreateFormBase.Meta):
         model = AutotradeTruck
 
 
 class AutotradeMotorcycleCreateForm(MotorcycleCreatFormBase):
-    class Meta:
+    class Meta(MotorcycleCreatFormBase.Meta):
         model = AutotradeMotorcycle
 
 
 class AutotradePartCreateForm(PartCreateFormBase):
-    class Meta:
+    class Meta(PartCreateFormBase.Meta):
         model = AutotradePart
