@@ -31,17 +31,17 @@ class AutotradeCreateTruckView(CurrentUserSaveProductMixin, generic.CreateView):
 class AutotradeCreateMotorcycleView(CurrentUserSaveProductMixin, generic.CreateView):
     model = AutotradeMotorcycle
     form_class = AutotradeMotorcycleCreateForm
-    template_name = 'autotrade/autotrade_create_motorcycles.html'
+    template_name = 'autotrade/autotrade_create_motorcycle.html'
     success_url = reverse_lazy('autotrade vehicles')
 
     def form_valid(self, form):
         return super().form_valid(form)
 
 
-class AutotradeCreatePartsView(CurrentUserSaveProductMixin, generic.CreateView):
+class AutotradeCreatePartView(CurrentUserSaveProductMixin, generic.CreateView):
     model = AutotradePart
     form_class = AutotradePartCreateForm
-    template_name = 'autotrade/autotrade_create_parts.html'
+    template_name = 'autotrade/autotrade_create_part.html'
     success_url = reverse_lazy('autotrade vehicles')
 
     def form_valid(self, form):

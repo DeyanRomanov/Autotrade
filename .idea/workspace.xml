@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_motorcycles.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_parts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_truck.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_vehicles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_car.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_motorcycles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_motorcycle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_parts.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_part.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_truck.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_create_truck.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/mixins.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +168,7 @@
       <workItem from="1649685642692" duration="2905000" />
       <workItem from="1649701359191" duration="17193000" />
       <workItem from="1649858570212" duration="9807000" />
-      <workItem from="1649920365062" duration="7358000" />
+      <workItem from="1649920365062" duration="7691000" />
     </task>
     <servers />
   </component>
