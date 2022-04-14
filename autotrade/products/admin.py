@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from autotrade.products.models import Car, Motorcycle, Truck, AutotradeCar, AutotradeTruck, AutotradeMotorcycle, Part
+from autotrade.products.models import Car, Motorcycle, Truck, AutotradeCar, AutotradeTruck, AutotradeMotorcycle, Part, \
+    AutotradePart
 
 
 @admin.register(Car)
@@ -74,3 +75,8 @@ class AutotradeCarAdmin(admin.ModelAdmin):
 @admin.register(AutotradeMotorcycle)
 class AutotradeCarAdmin(admin.ModelAdmin):
     model = AutotradeMotorcycle
+
+
+@admin.register(AutotradePart)
+class AutotradePartAdmin(admin.ModelAdmin):
+    model = AutotradePart
