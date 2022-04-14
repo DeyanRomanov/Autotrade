@@ -3,9 +3,7 @@ from django.urls import reverse_lazy
 from django.views import generic
 
 from autotrade.products.forms import AutotradeCarCreateForm
-from autotrade.products.models import AutotradeCar, AutotradeMotorcycle, AutotradeTruck
-
-UserModel = get_user_model()
+from autotrade.products.models import AutotradeCar, AutotradeMotorcycle, AutotradeTruck, AutotradePart
 
 
 class AutotradeCreateCarView(generic.CreateView):
@@ -32,12 +30,11 @@ class AutotradeVehicleView(generic.ListView):
     template_name = 'autotrade/autotrade_vehicles.html'
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        staff = list(UserModel.objects.filter(is_staff=True).all())
         context = super().get_context_data(**kwargs)
-        cars = AutotradeCar.objects.filter(user__in=staff).all()
-        motorcycles = AutotradeMotorcycle.objects.filter(user__in=staff).all()
-        trucks = AutotradeTruck.objects.filter(user__in=staff).all()
-        parts = Part.objects.filter(user__in=staff).all()
+        cars = AutotradeCar.objects.all()
+        motorcycles = AutotradeMotorcycle.objects.all()
+        trucks = AutotradeTruck.objects.all()
+        parts = AutotradePart.objects.all()
 
         context['trucks'] = trucks
         context['motorcycles'] = motorcycles
