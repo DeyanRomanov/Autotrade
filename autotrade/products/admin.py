@@ -65,18 +65,22 @@ class PartAdmin(admin.ModelAdmin):
 @admin.register(AutotradeCar)
 class AutotradeCarAdmin(admin.ModelAdmin):
     model = AutotradeCar
+    fields = '__all__'
 
 
 @admin.register(AutotradeTruck)
 class AutotradeCarAdmin(admin.ModelAdmin):
     model = AutotradeTruck
+    fields = '__all__'
 
 
 @admin.register(AutotradeMotorcycle)
 class AutotradeCarAdmin(admin.ModelAdmin):
     model = AutotradeMotorcycle
+    fields = '__all__'
 
 
 @admin.register(AutotradePart)
 class AutotradePartAdmin(admin.ModelAdmin):
     model = AutotradePart
+    fields = '__all__'
