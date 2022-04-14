@@ -31,6 +31,7 @@ class CarCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
     motor = forms.IntegerField(widget=forms.TextInput(attrs={'placeholder': 'Моля въведете кубатура на автомобила!'}))
 
     class Meta:
+        abstract = True
         model = CarBase
         exclude = (
             'user',
@@ -43,6 +44,7 @@ class CarEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
+        abstract = True
         model = CarBase
         exclude = (
             'user',
@@ -55,6 +57,7 @@ class MotorcycleCreatFormBase(FormControlWidgetMixin, VehicleWidgets):
         self._init_bootstrap_form_controls()
 
     class Meta:
+        abstract = True
         model = MotorcycleBase
         exclude = (
             'user',
@@ -67,6 +70,7 @@ class MotorcycleEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
+        abstract = True
         model = MotorcycleBase
         exclude = (
             'user',
@@ -81,6 +85,7 @@ class TruckCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
         self.fields['capacity'].widget.attrs.update({'placeholder': 'Въведете товароносимост в тонаж'})
 
     class Meta:
+        abstract = True
         model = TruckBase
         exclude = (
             'user',
@@ -93,6 +98,7 @@ class TruckEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
+        abstract = True
         model = TruckBase
         fields = (
             'image',
@@ -118,6 +124,7 @@ class PartCreateFormBase(FormControlWidgetMixin, forms.ModelForm):
                 'placeholder': 'Въведете допълнителна информация за продукта.\nПример:Ляв фар от Жигула 1986г. лява дирекция'})
 
     class Meta:
+        abstract = True
         model = PartBase
         exclude = (
             'user',
@@ -130,6 +137,7 @@ class PartEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
+        abstract = True
         model = PartBase
         exclude = (
             'user',

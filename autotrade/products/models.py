@@ -293,8 +293,7 @@ class Car(CarBase):
 
 
 class Motorcycle(MotorcycleBase):
-    class Meta:
-        proxy = True
+    pass
 
 
 class Truck(TruckBase):
@@ -302,25 +301,20 @@ class Truck(TruckBase):
 
 
 class Part(PartBase):
-    class Meta:
-        proxy = True
+    pass
 
 
 class AutotradeMotorcycle(MotorcycleBase):
-    class Meta:
-        proxy = True
+    pass
 
 
 class AutotradeCar(CarBase):
-    class Meta:
-        proxy = True
+    pass
 
 
 class AutotradeTruck(TruckBase):
-    class Meta:
-        proxy = True
+    pass
 
 
 class AutotradePart(PartBase):
-    class Meta:
-        proxy = True
+    pass
