@@ -113,7 +113,8 @@ class PartCreateForm(FormControlWidgetMixin, forms.ModelForm):
         self.fields['name'].widget.attrs.update({'placeholder': 'Въведете има на продукта, пример: Врата'})
         self.fields['catalog_number'].widget.attrs.update(
             {'placeholder': 'Ако НЕ разполагате с каталожен номер на продукта оставете празно това поле'})
-        self.fields['description'].widget.attrs.update({'placeholder': 'Въведете допълнителна информация за продукта'})
+        self.fields['description'].widget.attrs.update(
+            {'placeholder': 'Въведете допълнителна информация за продукта.\nПример:Ляв фар от Жигула 1986г. лява дирекция'})
 
     class Meta:
         model = Part
