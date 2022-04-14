@@ -276,10 +276,12 @@ class AutotradeMotorcycle(Motorcycle):
 
 
 class AutotradeCar(Car):
-    Car.is_reviewed = models.BooleanField(
-        default=True,
-    )
+    pass
 
 
 class AutotradeTruck(Truck):
+    pass
+
+
+class AutotradePart(Part):
     pass

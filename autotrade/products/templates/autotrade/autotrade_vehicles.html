@@ -14,8 +14,8 @@
                 {% if car.description %}
                     <h5><u>Описание:</u> {{ car.description|truncatechars:30 }}</h5>
                 {% endif %}
-                <h5><u>Цена:</u> <strong>{{ object.price|truncatechars:2 }}</strong></h5>
-                <a href="{% url 'details car' object.pk %}">
+                <h5><u>Цена:</u> <strong>{{ car.price|truncatechars:2 }}</strong></h5>
+                <a href="{% url 'details car' car.pk %}">
                     <button>Детайли</button>
                 </a>
             </div>
@@ -36,8 +36,8 @@
                 {% if truck.description %}
                     <h5><u>Описание:</u> {{ truck|truncatechars:30 }}</h5>
                 {% endif %}
-                <h5><u>Цена:</u> <strong>{{ object.price|truncatechars:2 }}</strong></h5>
-                <a href="{% url 'details truck' object.pk %}">
+                <h5><u>Цена:</u> <strong>{{ truck.price|truncatechars:2 }}</strong></h5>
+                <a href="{% url 'details truck' truck.pk %}">
                     <button>Детайли</button>
                 </a>
             </div>
@@ -58,7 +58,7 @@
                     <h5><u>Описание:</u> {{ motorcycle.description }}</h5>
                 {% endif %}
                 <h5><u>Цена:</u> <strong>{{ motorcycle.price|truncatechars:2 }}</strong></h5>
-                <a href="{% url 'details motorcycle' object.pk %}">
+                <a href="{% url 'details motorcycle' motorcycle.pk %}">
                     <button>Детайли</button>
                 </a>
             </div>
@@ -81,7 +81,7 @@
                     <h5><u>Описание:</u> {{ part.description }}</h5>
                 {% endif %}
                 <h5><u>Цена:</u> <strong>{{ part.price|truncatechars:2 }}</strong></h5>
-                <a href="{% url 'details part' object.pk %}">
+                <a href="{% url 'details part' part.pk %}">
                     <button>Детайли</button>
                 </a>
             </div>

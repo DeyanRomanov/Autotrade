@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'autotrade.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd66f12pfncfpq6',
-        'USER': 'bjelbkzeyntnqh',
-        'PASSWORD': '04ea327c5327436637e85522e60c678dc925eeed981117026723cca6fa6a8366',
-        'HOST': 'ec2-34-242-84-130.eu-west-1.compute.amazonaws.com',
+        'NAME': 'deburgftanogpn',
+        'USER': 'xrncpctqhhthum',
+        'PASSWORD': '40221cdc8fa1f5cc95991401b50a342196a89edec9ed3e1169b6588e5eb172c',
+        'HOST': 'ec2-52-48-159-67.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
