@@ -2,14 +2,12 @@
 {% block content %}
     {% if count == 0 %}
         <h1>Все още нямате създадени запитвания.</h1>
-        {% if not request.user.is_staff %}
-            <a href="{% url 'user advertisement' %}">
-                <button>Попълни формуляр за оценка</button>
-            </a>
-        {% else %}
-            <h1>{{ request.user.profile.get_full_name }}, Вие имате {{ count }} {% if count == 1 %}обява{% else %}обяви
-            {% endif %}:</h1>
-        {% endif %}
+        <a href="{% url 'user advertisement' %}">
+            <button>Попълни формуляр за оценка</button>
+        </a>
+    {% else %}
+        <h1>{{ request.user.profile.get_full_name }}, Вие имате {{ count }} {% if count == 1 %}обява{% else %}обяви
+        {% endif %}:</h1>
     {% endif %}
     <br>
     {% for object in object_list %}

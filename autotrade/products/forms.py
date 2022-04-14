@@ -1,6 +1,6 @@
 from django import forms
 
-from autotrade.products.models import Vehicle, TruckBase, CarBase, MotorcycleBase, PartBase, Car, Motorcycle, Truck, \
+from autotrade.products.models import Vehicle, Car, Motorcycle, Truck, \
     Part, AutotradeCar, AutotradeTruck, AutotradeMotorcycle, AutotradePart
 from autotrade.common.mixins import FormControlWidgetMixin
 
@@ -123,7 +123,9 @@ class PartCreateFormBase(FormControlWidgetMixin, forms.ModelForm):
             {'placeholder': 'Ако НЕ разполагате с каталожен номер на продукта оставете празно това поле'})
         self.fields['description'].widget.attrs.update(
             {
-                'placeholder': 'Въведете допълнителна информация за продукта.\nПример:Ляв фар от Жигула 1986г. лява дирекция'})
+                'placeholder': 'Въведете допълнителна информация за продукта.'
+                               '\nПример:Ляв фар от Жигула 1986г. лява дирекция'
+            })
 
     class Meta:
         exclude = (
