@@ -62,10 +62,10 @@ class AutotradeVehicleView(generic.ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        cars = AutotradeCar.objects.get().all()
-        motorcycles = AutotradeMotorcycle.objects.get().all()
-        trucks = AutotradeTruck.objects.get().all()
-        parts = AutotradePart.objects.get().all()
+        cars = AutotradeCar.objects.all()
+        motorcycles = AutotradeMotorcycle.objects.all()
+        trucks = AutotradeTruck.objects.all()
+        parts = AutotradePart.objects.all()
 
         context['trucks'] = trucks
         context['motorcycles'] = motorcycles
