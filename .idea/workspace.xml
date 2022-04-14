@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment="" />
+    <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,8 +176,16 @@
       <workItem from="1649858570212" duration="9807000" />
       <workItem from="1649920365062" duration="17277000" />
       <workItem from="1649945492788" duration="5320000" />
-      <workItem from="1649954818454" duration="12592000" />
+      <workItem from="1649954818454" duration="13133000" />
     </task>
+    <task id="LOCAL-00001" summary=".env added">
+      <created>1649968771170</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1649968771170</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,5 +210,7 @@
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$/autotrade/Autotrade" />
     </ignored-roots>
+    <MESSAGE value=".env added" />
+    <option name="LAST_COMMIT_MESSAGE" value=".env added" />
   </component>
 </project>
