@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
-      <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/public.abK9xQ.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +178,7 @@
       <workItem from="1649858570212" duration="9807000" />
       <workItem from="1649920365062" duration="17277000" />
       <workItem from="1649945492788" duration="5320000" />
-      <workItem from="1649954818454" duration="13344000" />
+      <workItem from="1649954818454" duration="13669000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
