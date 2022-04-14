@@ -273,16 +273,20 @@ class Part(models.Model):
 
 
 class AutotradeMotorcycle(Motorcycle):
-    pass
+    def __init__(self):
+        super().__init__()
 
 
 class AutotradeCar(Car):
-    pass
+    def __init__(self):
+        super().__init__()
 
 
 class AutotradeTruck(Truck):
-    pass
+    def __init__(self):
+        super().__init__()
 
 
 class AutotradePart(Part):
-    pass
+    def __init__(self):
+        super().__init__()
