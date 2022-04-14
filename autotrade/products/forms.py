@@ -43,8 +43,15 @@ class CarEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
-        exclude = (
-            'user',
+        fields = (
+            'image',
+            'mark',
+            'model',
+            'year',
+            'description',
+            'fuel',
+            'motor',
+            'price',
         )
 
 
@@ -65,8 +72,14 @@ class MotorcycleEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
-        exclude = (
-            'user',
+        fields = (
+            'image',
+            'mark',
+            'model',
+            'year',
+            'description',
+            'motor_type',
+            'cooling',
         )
 
 

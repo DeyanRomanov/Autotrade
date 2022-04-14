@@ -85,7 +85,7 @@ class Vehicle(models.Model):
         return f'{self.mark} {self.model} {self.__class__.__name__}'
 
 
-class CarBase:
+class CarBase(Vehicle):
     PETROL = 'Дизел'
     GASOLINE = 'Бензин'
     ELECTRICITY = 'Електрически'
@@ -121,7 +121,7 @@ class CarBase:
         abstract = True
 
 
-class MotorcycleBase:
+class MotorcycleBase(Vehicle):
     AIR_COOLING = 'Въздушно'
     WATER_COOLING = 'Водно'
     CHOICES_COOLING = [
@@ -160,7 +160,7 @@ class MotorcycleBase:
         abstract = True
 
 
-class TruckBase:
+class TruckBase(Vehicle):
     MIN_TOTAL_WEIGHT = 0
 
     MIN_CAPACITY = 0
@@ -287,15 +287,15 @@ class PartBase(models.Model):
         return f'{self.name}'
 
 
-class Car(Vehicle, CarBase):
+class Car(CarBase):
     pass
 
 
-class Motorcycle(Vehicle, MotorcycleBase):
+class Motorcycle(MotorcycleBase):
     pass
 
 
-class Truck(Vehicle, TruckBase):
+class Truck(TruckBase):
     pass
 
 
@@ -303,15 +303,15 @@ class Part(PartBase):
     pass
 
 
-class AutotradeMotorcycle(Vehicle, MotorcycleBase):
+class AutotradeMotorcycle(MotorcycleBase):
     pass
 
 
-class AutotradeCar(Vehicle, CarBase):
+class AutotradeCar(CarBase):
     pass
 
 
-class AutotradeTruck(Vehicle, TruckBase):
+class AutotradeTruck(TruckBase):
     pass
 
 
