@@ -288,32 +288,39 @@ class PartBase(models.Model):
 
 
 class Car(CarBase):
-    pass
+    class Meta:
+        abstract = False
 
 
 class Motorcycle(MotorcycleBase):
-    pass
+    class Meta:
+        abstract = False
 
 
 class Truck(TruckBase):
-    pass
-
+    class Meta:
+        abstract = False
 
 class Part(PartBase):
-    pass
+    class Meta:
+        abstract = False
 
 
 class AutotradeMotorcycle(MotorcycleBase):
-    pass
+    class Meta:
+        abstract = False
 
 
 class AutotradeCar(CarBase):
-    pass
+    class Meta:
+        abstract = False
 
 
 class AutotradeTruck(TruckBase):
-    pass
+    class Meta:
+        abstract = False
 
 
 class AutotradePart(PartBase):
-    pass
+    class Meta:
+        abstract = False
