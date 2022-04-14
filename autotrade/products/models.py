@@ -285,7 +285,7 @@ class PartBase(models.Model):
 
     def __str__(self):
         return f'{self.name}'
-    
+
 
 class Car(CarBase):
     pass
