@@ -117,6 +117,9 @@ class Car(Vehicle):
         verbose_name='Обем на двигател',
     )
 
+    class Meta:
+        abstract = True
+
 
 class Motorcycle(Vehicle):
     AIR_COOLING = 'Въздушно'
@@ -152,6 +155,9 @@ class Motorcycle(Vehicle):
         blank=True,
         verbose_name='Вид охлаждане (незадължително поле)'
     )
+
+    class Meta:
+        abstract = True
 
 
 class Truck(Vehicle):
@@ -190,6 +196,9 @@ class Truck(Vehicle):
         blank=True,
         verbose_name='Категория'
     )
+
+    class Meta:
+        abstract = True
 
 
 class Part(models.Model):
@@ -271,22 +280,18 @@ class Part(models.Model):
         on_delete=models.CASCADE,
     )
 
+    class Meta:
+        abstract = True
+
 
 class AutotradeMotorcycle(Motorcycle):
-    def __init__(self):
-        super().__init__()
-
+    pass
 
 class AutotradeCar(Car):
-    def __init__(self):
-        super().__init__()
-
+    pass
 
 class AutotradeTruck(Truck):
-    def __init__(self):
-        super().__init__()
-
+    pass
 
 class AutotradePart(Part):
-    def __init__(self):
-        super().__init__()
+    pass
