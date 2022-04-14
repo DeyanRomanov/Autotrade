@@ -1,7 +1,7 @@
 from django import forms
 
-from autotrade.products.models import Car, Vehicle, Motorcycle, Truck, Part
-from autotrade.common.mixins import FormControlWidgetMixin, CurrentUserSaveProductMixin
+from autotrade.products.models import Vehicle, TruckBase, CarBase, MotorcycleBase, PartBase
+from autotrade.common.mixins import FormControlWidgetMixin
 
 
 class VehicleWidgets(forms.ModelForm):
@@ -31,7 +31,7 @@ class CarCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
     motor = forms.IntegerField(widget=forms.TextInput(attrs={'placeholder': 'Моля въведете кубатура на автомобила!'}))
 
     class Meta:
-        model = Car
+        model = CarBase
         exclude = (
             'user',
         )
@@ -43,7 +43,7 @@ class CarEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
-        model = Car
+        model = CarBase
         exclude = (
             'user',
         )
@@ -55,7 +55,7 @@ class MotorcycleCreatFormBase(FormControlWidgetMixin, VehicleWidgets):
         self._init_bootstrap_form_controls()
 
     class Meta:
-        model = Motorcycle
+        model = MotorcycleBase
         exclude = (
             'user',
         )
@@ -67,7 +67,7 @@ class MotorcycleEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
-        model = Motorcycle
+        model = MotorcycleBase
         exclude = (
             'user',
         )
@@ -81,7 +81,7 @@ class TruckCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
         self.fields['capacity'].widget.attrs.update({'placeholder': 'Въведете товароносимост в тонаж'})
 
     class Meta:
-        model = Truck
+        model = TruckBase
         exclude = (
             'user',
         )
@@ -93,7 +93,7 @@ class TruckEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
-        model = Truck
+        model = TruckBase
         fields = (
             'image',
             'mark',
@@ -118,7 +118,7 @@ class PartCreateFormBase(FormControlWidgetMixin, forms.ModelForm):
                 'placeholder': 'Въведете допълнителна информация за продукта.\nПример:Ляв фар от Жигула 1986г. лява дирекция'})
 
     class Meta:
-        model = Part
+        model = PartBase
         exclude = (
             'user',
         )
@@ -130,7 +130,7 @@ class PartEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
-        model = Part
+        model = PartBase
         exclude = (
             'user',
         )
