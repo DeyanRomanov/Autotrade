@@ -2,6 +2,8 @@ from django.contrib.auth import get_user_model
 from django.core.validators import MinLengthValidator, MinValueValidator, MaxValueValidator
 from django.db import models
 
+from cloudinary import models as cloudinary_models
+
 from autotrade.products.validators import MaxFileSizeInMbValidator, validate_future_date
 
 UserModel = get_user_model()
@@ -40,12 +42,13 @@ class Vehicle(models.Model):
         verbose_name='Модел',
     )
 
-    image = models.ImageField(
-        validators=(
-            MaxFileSizeInMbValidator(IMAGE_MAXSIZE_IN_MB),
-        ),
-        verbose_name='Изберете снимка до 2мб',
-    )
+    image = cloudinary_models.CloudinaryField('image')
+    # image = models.ImageField(
+    #     validators=(
+    #         MaxFileSizeInMbValidator(IMAGE_MAXSIZE_IN_MB),
+    #     ),
+    #     verbose_name='Изберете снимка до 2мб',
+    # )
 
     user = models.ForeignKey(
         UserModel,
@@ -262,12 +265,13 @@ class PartBase(models.Model):
         verbose_name='Цена'
     )
 
-    image = models.ImageField(
-        validators=(
-            MaxFileSizeInMbValidator(IMAGE_MAXSIZE_IN_MB),
-        ),
-        verbose_name='Изберете снимка до 1мб',
-    )
+    image = cloudinary_models.CloudinaryField('image')
+    # image = models.ImageField(
+    #     validators=(
+    #         MaxFileSizeInMbValidator(IMAGE_MAXSIZE_IN_MB),
+    #     ),
+    #     verbose_name='Изберете снимка до 1мб',
+    # )
 
     description = models.TextField(
         null=True,
