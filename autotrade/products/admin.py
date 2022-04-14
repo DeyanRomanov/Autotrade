@@ -65,22 +65,60 @@ class PartAdmin(admin.ModelAdmin):
 @admin.register(AutotradeCar)
 class AutotradeCarAdmin(admin.ModelAdmin):
     model = AutotradeCar
-    fields = '__all__'
+    list_display = (
+        'mark',
+        'model',
+        'image',
+        'year',
+        'price',
+        'is_reviewed',
+        'description',
+        'fuel',
+        'motor',
+    )
 
 
 @admin.register(AutotradeTruck)
 class AutotradeTruckAdmin(admin.ModelAdmin):
     model = AutotradeTruck
-    fields = '__all__'
+    list_display = (
+        'mark',
+        'model',
+        'image',
+        'year',
+        'price',
+        'is_reviewed',
+        'description',
+        'total_weight',
+        'capacity',
+        'category',
+    )
 
 
 @admin.register(AutotradeMotorcycle)
 class AutotradeMotorcycleAdmin(admin.ModelAdmin):
     model = AutotradeMotorcycle
-    fields = '__all__'
+    list_display = (
+        'mark',
+        'model',
+        'image',
+        'year',
+        'price',
+        'is_reviewed',
+        'description',
+        'motor_type',
+        'cooling',
+    )
 
 
 @admin.register(AutotradePart)
 class AutotradePartAdmin(admin.ModelAdmin):
     model = AutotradePart
-    fields = '__all__'
+    list_display = (
+        'catalog_number',
+        'condition',
+        'image',
+        'price',
+        'parts_category',
+        'user',
+    )
