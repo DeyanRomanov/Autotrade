@@ -86,7 +86,7 @@ if is_production:
         'default': {
             'ENGINE': os.getenv('DB_ENGINE'),
             'NAME': os.getenv('DB_NAME'),
-            'USER': os.getenv('xrncpctqhhthum'),
+            'USER': os.getenv('DB_USER'),
             'PASSWORD': os.getenv('DB_PASSWORD'),
             'HOST': os.getenv('DB_HOST'),
             'PORT': os.getenv('DB_PORT', '5432'),
@@ -145,7 +145,7 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-MEDIA_ROOT = BASE_DIR / 'mediafiles/'
+MEDIA_ROOT = BASE_DIR / 'mediafiles'
 MEDIA_URL = '/media/'
 
 # Default primary key field type
