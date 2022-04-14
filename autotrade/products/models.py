@@ -85,7 +85,7 @@ class Vehicle(models.Model):
         return f'{self.mark} {self.model} {self.__class__.__name__}'
 
 
-class Car(Vehicle):
+class CarBase(Vehicle):
     PETROL = 'Дизел'
     GASOLINE = 'Бензин'
     ELECTRICITY = 'Електрически'
@@ -121,7 +121,7 @@ class Car(Vehicle):
         abstract = True
 
 
-class Motorcycle(Vehicle):
+class MotorcycleBase(Vehicle):
     AIR_COOLING = 'Въздушно'
     WATER_COOLING = 'Водно'
     CHOICES_COOLING = [
@@ -160,7 +160,7 @@ class Motorcycle(Vehicle):
         abstract = True
 
 
-class Truck(Vehicle):
+class TruckBase(Vehicle):
     MIN_TOTAL_WEIGHT = 0
 
     MIN_CAPACITY = 0
@@ -201,7 +201,7 @@ class Truck(Vehicle):
         abstract = True
 
 
-class Part(models.Model):
+class PartBase(models.Model):
     MOTOR = 'Двигател'
     TRANSMISSION = 'Скорости'
     COUPE = 'КУПЕ'
@@ -258,7 +258,7 @@ class Part(models.Model):
     price = models.IntegerField(
         validators=(
             MinValueValidator(MIN_PRICE),
-                    ),
+        ),
         verbose_name='Цена'
     )
 
@@ -284,14 +284,33 @@ class Part(models.Model):
         abstract = True
 
 
-class AutotradeMotorcycle(Motorcycle):
+class Car(CarBase):
     pass
 
-class AutotradeCar(Car):
+
+class Motorcycle(MotorcycleBase):
     pass
 
-class AutotradeTruck(Truck):
+
+class Truck(TruckBase):
     pass
 
-class AutotradePart(Part):
+
+class Part(PartBase):
+    pass
+
+
+class AutotradeMotorcycle(MotorcycleBase):
+    pass
+
+
+class AutotradeCar(CarBase):
+    pass
+
+
+class AutotradeTruck(TruckBase):
+    pass
+
+
+class AutotradePart(PartBase):
     pass
