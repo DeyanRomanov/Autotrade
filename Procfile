@@ -1,2 +1,2 @@
-web: gunicorn --pythonpath autotrade autotrade.wsgi
+web: gunicorn --python autotrade autotrade.wsgi
 release: python manage.py migrate

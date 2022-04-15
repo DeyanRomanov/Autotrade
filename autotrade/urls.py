@@ -7,7 +7,7 @@ from autotrade.views import Home
 
 urlpatterns = [
                   path('admin_admin/', admin.site.urls),
-                  # path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
+                  path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
                   path('', Home.as_view(), name='home'),
                   path('', include('autotrade.userapp.urls')),
                   path('', include('autotrade.products.urls')),
