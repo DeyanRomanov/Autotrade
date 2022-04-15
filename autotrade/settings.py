@@ -5,7 +5,7 @@ from pathlib import Path
 import cloudinary as cloudinary
 from django.conf.global_settings import AUTH_PASSWORD_VALIDATORS
 
-from utils import is_production
+from utils import is_production, is_development
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -126,8 +126,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+if is_development():
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     BASE_DIR / 'templates/static',
