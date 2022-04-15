@@ -18,8 +18,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'sk')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['autotrade-bg.herokuapp.com/',]
-# os.getenv('ALLOWED_HOSTS', 'autotrade-bg.herokuapp.com/').split(' ')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
 APP_ENVIRONMENT = os.getenv('APP_ENVIRONMENT')
 
 # Application definition
