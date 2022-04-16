@@ -37,7 +37,7 @@ class CarCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
         )
 
 
-class CarEditFormBase(FormControlWidgetMixin, forms.ModelForm):
+class CarEditFormBase(FormControlWidgetMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -66,7 +66,7 @@ class MotorcycleCreatFormBase(FormControlWidgetMixin, VehicleWidgets):
         )
 
 
-class MotorcycleEditFormBase(FormControlWidgetMixin, forms.ModelForm):
+class MotorcycleEditFormBase(FormControlWidgetMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -96,7 +96,7 @@ class TruckCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
         )
 
 
-class TruckEditFormBase(FormControlWidgetMixin, forms.ModelForm):
+class TruckEditFormBase(FormControlWidgetMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -189,8 +189,18 @@ class AutotradeCarCreateForm(CarCreateFormBase):
         model = AutotradeCar
 
 
+class AutotradeCarEditForm(CarEditFormBase):
+    class Meta(CarEditFormBase.Meta):
+        model = AutotradeCar
+
+
 class AutotradeTruckCreateForm(TruckCreateFormBase):
     class Meta(TruckCreateFormBase.Meta):
+        model = AutotradeTruck
+
+
+class AutotradeTruckEditForm(TruckEditFormBase):
+    class Meta(TruckEditFormBase.Meta):
         model = AutotradeTruck
 
 
@@ -199,6 +209,16 @@ class AutotradeMotorcycleCreateForm(MotorcycleCreatFormBase):
         model = AutotradeMotorcycle
 
 
+class AutotradeMotorcycleEditForm(MotorcycleEditFormBase):
+    class Meta(MotorcycleEditFormBase.Meta):
+        model = AutotradeMotorcycle
+
+
 class AutotradePartCreateForm(PartCreateFormBase):
     class Meta(PartCreateFormBase.Meta):
+        model = AutotradePart
+
+
+class AutotradePartEditForm(PartEditFormBase):
+    class Meta(PartEditFormBase.Meta):
         model = AutotradePart

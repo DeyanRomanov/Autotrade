@@ -1,9 +1,9 @@
 {% extends 'base/base.html' %}
 {% block content %}
-    <form method="post" action="{% url 'edit car' object.pk %}" enctype="multipart/form-data">
+    <form method="post" action="{% url 'autotrade edit car' object.pk %}" enctype="multipart/form-data">
         {{ form }}
         {% csrf_token %}
         <button>Промени</button>
     </form>
-        <a href="{% url 'user vehicles' %}"><button>Назад към, моите обяви</button></a>
+        <a href="{% url 'user vehicles' %}"><button>Назад към моите обяви</button></a>
 {% endblock %}

@@ -67,15 +67,16 @@ class Vehicle(models.Model):
         default=PRICE_DEFAULT_MESSAGE,
     )
 
-    is_reviewed = models.BooleanField(
-        default=False,
-    )
-
     description = models.TextField(
         null=True,
         blank=True,
         verbose_name='Описание',
     )
+
+    date_of_publication = models.DateField(
+        auto_now_add=True,
+    )
+
 
     class Meta:
         abstract = True
@@ -284,6 +285,10 @@ class PartBase(models.Model):
         on_delete=models.CASCADE,
     )
 
+    date_of_publication = models.DateField(
+        auto_now_add=True,
+    )
+
     class Meta:
         abstract = True
 
@@ -292,19 +297,19 @@ class PartBase(models.Model):
 
 
 class Car(CarBase):
-    pass
+    is_reviewed = models.BooleanField(default=False,)
 
 
 class Motorcycle(MotorcycleBase):
-    pass
+    is_reviewed = models.BooleanField(default=False,)
 
 
 class Truck(TruckBase):
-    pass
+    is_reviewed = models.BooleanField(default=False,)
 
 
 class Part(PartBase):
-    pass
+    is_reviewed = models.BooleanField(default=False,)
 
 
 class AutotradeMotorcycle(MotorcycleBase):

@@ -1,4 +1,6 @@
 from django import forms
+from django.shortcuts import redirect
+from django.urls import reverse_lazy
 
 
 class FormControlWidgetMixin:
@@ -22,3 +24,10 @@ class CurrentUserSaveProductMixin:
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
+
+
+class OnlyStaffAccessMixin:
+    def dispatch(self, request, *args, **kwargs):
+        if not self.request.user.is_staff:
+            return redirect(reverse_lazy('autotrade vehicles'))
+        return super().dispatch(request, *args, **kwargs)

@@ -1,7 +1,8 @@
 from django.urls import path
 
 from autotrade.products.views.views_autotrade import AutotradeCreateCarView, AutotradeVehicleCreateView, \
-    AutotradeVehicleView, AutotradeCreateTruckView, AutotradeCreateMotorcycleView, AutotradeCreatePartView
+    AutotradeVehicleView, AutotradeCreateTruckView, AutotradeCreateMotorcycleView, AutotradeCreatePartView, \
+    AutotradeEditCarView, AutotradeDetailsCarView, AutotradeUsersProductView
 from autotrade.products.views.views_car import CarCreateView, CarDetailsView, CarsEditView, CarsDeleteView
 from autotrade.products.views.views_motorcycle import MotorcycleCreateView, MotorcycleDeleteView, MotorcycleDetailsView, \
     MotorcycleEditView
@@ -32,8 +33,11 @@ urlpatterns = [
 
     path('user_vehicles/', UserVehiclesView.as_view(), name='user vehicles'),
     path('user_advestisement/', UserAdvertisementView.as_view(), name='user advertisement'),
+    path('autotrade_reviewers_page/', AutotradeUsersProductView.as_view(), name='advertisement to review'),
 
     path('autotrade_create_car', AutotradeCreateCarView.as_view(), name='autotrade create car'),
+    path('autotrade_details_car/<int:pk>/', AutotradeDetailsCarView.as_view(), name='autotrade details car'),
+    path('autotrade_edit_car/<int:pk>/', AutotradeEditCarView.as_view(), name='autotrade edit car'),
     path('autotrade_create_truck', AutotradeCreateTruckView.as_view(), name='autotrade create truck'),
     path('autotrade_create_motorcycle', AutotradeCreateMotorcycleView.as_view(), name='autotrade create motorcycle'),
     path('autotrade_create_part', AutotradeCreatePartView.as_view(), name='autotrade create part'),

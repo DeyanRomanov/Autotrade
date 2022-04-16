@@ -2,9 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_details_car.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_edit_car.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade_reviewers_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/common/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/common/mixins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0002_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0003_auto_20220414_2320.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_car_for_sale.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/cars/edit_car.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/cars/edit_car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_car.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_car.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +82,11 @@
       <recent name="C:\Users\Asus\Desktop\pythonProject\Django\Autotrade\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Autotrade\templates\static\assets" />
+      <recent name="C:\Users\Asus\Autotrade\templates\static\vendor\isotope-layout" />
       <recent name="C:\Users\Asus\Autotrade" />
       <recent name="C:\Users\Asus\Autotrade\autotrade" />
       <recent name="C:\Users\Asus\Desktop\pythonProject\Autotrade" />
-      <recent name="C:\Users\Asus\Desktop\pythonProject\Autotrade\autotrade" />
-      <recent name="C:\Users\Asus\Desktop\pythonProject\Django\Autotrade\templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -178,7 +200,8 @@
       <workItem from="1649920365062" duration="17277000" />
       <workItem from="1649945492788" duration="5320000" />
       <workItem from="1649954818454" duration="16608000" />
-      <workItem from="1649995548095" duration="4657000" />
+      <workItem from="1649995548095" duration="13980000" />
+      <workItem from="1650033718385" duration="17311000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
@@ -214,5 +237,16 @@
     </ignored-roots>
     <MESSAGE value=".env added" />
     <option name="LAST_COMMIT_MESSAGE" value=".env added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/autotrade/products/views/views_autotrade.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

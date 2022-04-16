@@ -1,8 +1,8 @@
 import os
+import cloudinary as cloudinary
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-import cloudinary as cloudinary
 from django.conf.global_settings import AUTH_PASSWORD_VALIDATORS
 
 from utils import is_production, is_development
@@ -81,7 +81,7 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT', '5432'),
     }
 }
-
+#
 # CACHES = {
 #     'default': {
 #         'BACKEND':
