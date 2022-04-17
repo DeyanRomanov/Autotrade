@@ -9,7 +9,7 @@ from autotrade.products.models import AutotradeCar, AutotradeMotorcycle, Autotra
 from autotrade.common.mixins import CurrentUserSaveProductMixin, OnlyStaffAccessMixin
 
 
-class AutotradeCreateCarView(mixins.PermissionRequiredMixin, CurrentUserSaveProductMixin, generic.CreateView):
+class AutotradeCreateCarView(CurrentUserSaveProductMixin, generic.CreateView):
     model = AutotradeCar
     form_class = AutotradeCarCreateForm
     template_name = 'autotrade/autotrade_create_car.html'
@@ -28,7 +28,7 @@ class AutotradeDetailsCarView(mixins.LoginRequiredMixin, generic.DetailView):
     template_name = 'autotrade/autotrade_details_car.html'
 
 
-class AutotradeEditCarView(mixins.PermissionRequiredMixin, CurrentUserSaveProductMixin, generic.UpdateView):
+class AutotradeEditCarView(CurrentUserSaveProductMixin, generic.UpdateView):
     model = AutotradeCar
     form_class = AutotradeCarEditForm
     template_name = 'autotrade/autotrade_edit_car.html'
@@ -43,7 +43,7 @@ class AutotradeEditCarView(mixins.PermissionRequiredMixin, CurrentUserSaveProduc
         return super().form_valid(form)
 
 
-class AutotradeCreateTruckView(mixins.PermissionRequiredMixin, CurrentUserSaveProductMixin, generic.CreateView):
+class AutotradeCreateTruckView(CurrentUserSaveProductMixin, generic.CreateView):
     model = AutotradeTruck
     form_class = AutotradeTruckCreateForm
     template_name = 'autotrade/autotrade_create_truck.html'
@@ -58,7 +58,7 @@ class AutotradeCreateTruckView(mixins.PermissionRequiredMixin, CurrentUserSavePr
         return super().form_valid(form)
 
 
-class AutotradeCreateMotorcycleView(mixins.PermissionRequiredMixin, CurrentUserSaveProductMixin, generic.CreateView):
+class AutotradeCreateMotorcycleView(CurrentUserSaveProductMixin, generic.CreateView):
     model = AutotradeMotorcycle
     form_class = AutotradeMotorcycleCreateForm
     template_name = 'autotrade/autotrade_create_motorcycle.html'
@@ -73,7 +73,7 @@ class AutotradeCreateMotorcycleView(mixins.PermissionRequiredMixin, CurrentUserS
         return super().form_valid(form)
 
 
-class AutotradeCreatePartView(mixins.PermissionRequiredMixin, CurrentUserSaveProductMixin, generic.CreateView):
+class AutotradeCreatePartView(CurrentUserSaveProductMixin, generic.CreateView):
     model = AutotradePart
     form_class = AutotradePartCreateForm
     template_name = 'autotrade/autotrade_create_part.html'
@@ -110,7 +110,7 @@ class AutotradeVehicleView(generic.ListView):
         return context
 
 
-class AutotradeUsersProductView(mixins.PermissionRequiredMixin, generic.ListView):
+class AutotradeUsersProductView(generic.ListView):
     template_name = 'autotrade_reviewers_page.html'
     model = Car
     # permission_required = ('products.add_car', 'products.delete_car', 'products.update_car', 'products.change_car',
