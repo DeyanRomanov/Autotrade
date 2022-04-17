@@ -1,4 +1,5 @@
 import os
+import whitenoise
 import cloudinary as cloudinary
 from pathlib import Path
 
