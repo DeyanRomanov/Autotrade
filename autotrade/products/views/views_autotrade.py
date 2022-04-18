@@ -9,16 +9,16 @@ from autotrade.products.models import AutotradeCar, AutotradeMotorcycle, Autotra
 from autotrade.common.mixins import CurrentUserSaveProductMixin, OnlyStaffAccessMixin
 
 
-class AutotradeCreateCarView(CurrentUserSaveProductMixin, generic.CreateView):
+class AutotradeCreateCarView(mixins.PermissionRequiredMixin, CurrentUserSaveProductMixin, generic.CreateView):
     model = AutotradeCar
     form_class = AutotradeCarCreateForm
     template_name = 'autotrade/autotrade_create_car.html'
     success_url = reverse_lazy('autotrade vehicles')
-    # permission_required = ('products.add_autotradecar',
-    #                        'products.change_autotradecar',
-    #                        'products.delete_autotradecar',
-    #                        'products.view_autotradecar',
-    #                        )
+    permission_required = ('products.add_autotradecar',
+                           'products.change_autotradecar',
+                           'products.delete_autotradecar',
+                           'products.view_autotradecar',
+                           )
 
     def form_valid(self, form):
         return super().form_valid(form)
@@ -28,61 +28,61 @@ class AutotradeDetailsCarView(mixins.LoginRequiredMixin, generic.DetailView):
     template_name = 'autotrade/autotrade_details_car.html'
 
 
-class AutotradeEditCarView(CurrentUserSaveProductMixin, generic.UpdateView):
+class AutotradeEditCarView(mixins.PermissionRequiredMixin, CurrentUserSaveProductMixin, generic.UpdateView):
     model = AutotradeCar
     form_class = AutotradeCarEditForm
     template_name = 'autotrade/autotrade_edit_car.html'
     success_url = reverse_lazy('autotrade vehicles')
-    # permission_required = ('products.change_autotradecar',
-    #                        'products.add_autotradecar',
-    #                        'products.delete_autotradecar',
-    #                        'products.change_autotradecar',
-    #                        )
+    permission_required = ('products.change_autotradecar',
+                           'products.add_autotradecar',
+                           'products.delete_autotradecar',
+                           'products.change_autotradecar',
+                           )
 
     def form_valid(self, form):
         return super().form_valid(form)
 
 
-class AutotradeCreateTruckView(CurrentUserSaveProductMixin, generic.CreateView):
+class AutotradeCreateTruckView(mixins.PermissionRequiredMixin, CurrentUserSaveProductMixin, generic.CreateView):
     model = AutotradeTruck
     form_class = AutotradeTruckCreateForm
     template_name = 'autotrade/autotrade_create_truck.html'
     success_url = reverse_lazy('autotrade vehicles')
-    # permission_required = ('products.add_autotradetruck',
-    #                        'products.delete_autotradetruck',
-    #                        'products.view_autotradetruck',
-    #                        'products.change_autotradetruck',
-    #                        )
+    permission_required = ('products.add_autotradetruck',
+                           'products.delete_autotradetruck',
+                           'products.view_autotradetruck',
+                           'products.change_autotradetruck',
+                           )
 
     def form_valid(self, form):
         return super().form_valid(form)
 
 
-class AutotradeCreateMotorcycleView(CurrentUserSaveProductMixin, generic.CreateView):
+class AutotradeCreateMotorcycleView(mixins.PermissionRequiredMixin, CurrentUserSaveProductMixin, generic.CreateView):
     model = AutotradeMotorcycle
     form_class = AutotradeMotorcycleCreateForm
     template_name = 'autotrade/autotrade_create_motorcycle.html'
     success_url = reverse_lazy('autotrade vehicles')
-    # permission_required = ('products.add_autotrademotorcycle',
-    #                        'products.delete_autotrademotorcycle',
-    #                        'products.view_autotrademotorcycle',
-    #                        'products.change_autotrademotorcycle',
-    #                        )
+    permission_required = ('products.add_autotrademotorcycle',
+                           'products.delete_autotrademotorcycle',
+                           'products.view_autotrademotorcycle',
+                           'products.change_autotrademotorcycle',
+                           )
 
     def form_valid(self, form):
         return super().form_valid(form)
 
 
-class AutotradeCreatePartView(CurrentUserSaveProductMixin, generic.CreateView):
+class AutotradeCreatePartView(mixins.PermissionRequiredMixin, CurrentUserSaveProductMixin, generic.CreateView):
     model = AutotradePart
     form_class = AutotradePartCreateForm
     template_name = 'autotrade/autotrade_create_part.html'
     success_url = reverse_lazy('autotrade vehicles')
-    # permission_required = ('products.add_autotradepart',
-    #                        'products.delete_autotradepart',
-    #                        'products.view_autotradepart',
-    #                        'products.change_autotradepart',
-    #                        )
+    permission_required = ('products.add_autotradepart',
+                           'products.delete_autotradepart',
+                           'products.view_autotradepart',
+                           'products.change_autotradepart',
+                           )
 
     def form_valid(self, form):
         return super().form_valid(form)
@@ -110,14 +110,16 @@ class AutotradeVehicleView(generic.ListView):
         return context
 
 
-class AutotradeUsersProductView(generic.ListView):
+class AutotradeUsersProductView(mixins.PermissionRequiredMixin, generic.ListView):
     template_name = 'autotrade_reviewers_page.html'
     model = Car
-    # permission_required = ('products.add_car', 'products.delete_car', 'products.update_car', 'products.change_car',
-    #                        'products.add_truck', 'products.delete_truck', 'products.update_truck', 'products.change_truck',
-    #                        'products.add_motorcycle', 'products.delete_motorcycle', 'products.update_motorcycle', 'products.change_motorcycle',
-    #                        'products.add_part', 'products.delete_part', 'products.update_part', 'products.change_part',
-    #                        )
+    permission_required = ('products.add_car', 'products.delete_car', 'products.update_car', 'products.change_car',
+                           'products.add_truck', 'products.delete_truck', 'products.update_truck',
+                           'products.change_truck',
+                           'products.add_motorcycle', 'products.delete_motorcycle', 'products.update_motorcycle',
+                           'products.change_motorcycle',
+                           'products.add_part', 'products.delete_part', 'products.update_part', 'products.change_part',
+                           )
 
     def get_context_data(self, *, object_list=None, **kwargs):
         vehicles = []
@@ -129,4 +131,4 @@ class AutotradeUsersProductView(generic.ListView):
         context['products'] = vehicles
         return context
 
-    ordering = ('-date_of_publication',)
+    # ordering = ('-date_of_publication',)

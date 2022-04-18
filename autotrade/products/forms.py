@@ -55,7 +55,7 @@ class CarEditFormBase(FormControlWidgetMixin, VehicleWidgets):
         )
 
 
-class MotorcycleCreatFormBase(FormControlWidgetMixin, VehicleWidgets):
+class MotorcycleCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -154,13 +154,13 @@ class CarCreateForm(CarCreateFormBase):
         model = Car
 
 
-class MotorcycleCreatForm(MotorcycleCreatFormBase):
-    class Meta(MotorcycleCreatFormBase.Meta):
+class MotorcycleCreateForm(MotorcycleCreateFormBase):
+    class Meta(MotorcycleCreateFormBase.Meta):
         model = Motorcycle
 
 
 class MotorcycleEditForm(MotorcycleEditFormBase):
-    class Meta(MotorcycleCreatFormBase.Meta):
+    class Meta(MotorcycleCreateFormBase.Meta):
         model = Motorcycle
 
 
@@ -200,25 +200,15 @@ class AutotradeTruckCreateForm(TruckCreateFormBase):
 
 
 class AutotradeTruckEditForm(TruckEditFormBase):
-    class Meta(TruckEditFormBase.Meta):
+    class Meta(TruckCreateFormBase.Meta):
         model = AutotradeTruck
 
 
-class AutotradeMotorcycleCreateForm(MotorcycleCreatFormBase):
-    class Meta(MotorcycleCreatFormBase.Meta):
-        model = AutotradeMotorcycle
-
-
-class AutotradeMotorcycleEditForm(MotorcycleEditFormBase):
-    class Meta(MotorcycleEditFormBase.Meta):
+class AutotradeMotorcycleCreateForm(MotorcycleCreateFormBase):
+    class Meta(MotorcycleCreateFormBase.Meta):
         model = AutotradeMotorcycle
 
 
 class AutotradePartCreateForm(PartCreateFormBase):
     class Meta(PartCreateFormBase.Meta):
-        model = AutotradePart
-
-
-class AutotradePartEditForm(PartEditFormBase):
-    class Meta(PartEditFormBase.Meta):
         model = AutotradePart

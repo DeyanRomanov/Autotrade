@@ -17,7 +17,7 @@
                 {% if request.user.is_authenticated %}
                     <h5><u>Цена:</u> <strong>{{ car.price }}</strong></h5>
                     <a href="{% url 'autotrade details car' car.pk %}">
-                    % else %}
+                {% else %}
                     <h5><u>Цена:</u> <strong>{{ truck.price|truncatechars:2 }}</strong></h5>
                     <a href="{% url 'register' %}">
                 {% endif %}

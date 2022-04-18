@@ -1,4 +1,5 @@
 from django import forms
+from django.db import models
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 
@@ -31,3 +32,7 @@ class OnlyStaffAccessMixin:
         if not self.request.user.is_staff:
             return redirect(reverse_lazy('autotrade vehicles'))
         return super().dispatch(request, *args, **kwargs)
+
+
+class UsersIsReviewedMixin:
+    is_reviewed = models.BooleanField(default=False, )

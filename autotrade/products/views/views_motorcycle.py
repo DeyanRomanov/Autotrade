@@ -2,13 +2,13 @@ from django.contrib.auth import mixins
 from django.urls import reverse_lazy
 from django.views import generic
 
-from autotrade.products.forms import MotorcycleCreatForm, MotorcycleEditForm
+from autotrade.products.forms import MotorcycleCreateForm, MotorcycleEditForm
 from autotrade.products.models import Motorcycle
 
 
 class MotorcycleCreateView(mixins.LoginRequiredMixin, generic.CreateView):
     template_name = 'motorcycle/create_motorcycle.html'
-    form_class = MotorcycleCreatForm
+    form_class = MotorcycleCreateForm
     success_url = reverse_lazy('user vehicles')
 
     def form_valid(self, form):

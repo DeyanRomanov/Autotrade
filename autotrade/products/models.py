@@ -4,6 +4,7 @@ from django.db import models
 
 from cloudinary import models as cloudinary_models
 
+from autotrade.common.mixins import UsersIsReviewedMixin
 from autotrade.products.validators import MaxFileSizeInMbValidator, validate_future_date
 
 UserModel = get_user_model()
@@ -76,7 +77,6 @@ class Vehicle(models.Model):
     date_of_publication = models.DateField(
         auto_now_add=True,
     )
-
 
     class Meta:
         abstract = True
@@ -296,20 +296,20 @@ class PartBase(models.Model):
         return f'{self.name}'
 
 
-class Car(CarBase):
-    is_reviewed = models.BooleanField(default=False,)
+class Car(CarBase, UsersIsReviewedMixin):
+    pass
 
 
-class Motorcycle(MotorcycleBase):
-    is_reviewed = models.BooleanField(default=False,)
+class Motorcycle(MotorcycleBase, UsersIsReviewedMixin):
+    pass
 
 
-class Truck(TruckBase):
-    is_reviewed = models.BooleanField(default=False,)
+class Truck(TruckBase, UsersIsReviewedMixin):
+    pass
 
 
-class Part(PartBase):
-    is_reviewed = models.BooleanField(default=False,)
+class Part(PartBase, UsersIsReviewedMixin):
+    pass
 
 
 class AutotradeMotorcycle(MotorcycleBase):
