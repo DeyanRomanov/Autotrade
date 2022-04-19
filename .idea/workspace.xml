@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
-      <change afterPath="$PROJECT_DIR$/autotrade/products/migrations/0002_auto_20220418_1552.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/migrations/0003_auto_20220418_1600.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/migrations/0004_auto_20220418_2201.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/migrations/0005_auto_20220418_2209.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/migrations/0006_auto_20220418_2212.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/migrations/0007_auto_20220418_2218.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/common/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/common/mixins.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/cars/details_car.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/cars/details_car.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/cars/edit_car.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/cars/edit_car.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_car.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_car.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_motorcycle.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_motorcycle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_vehicles.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_vehicles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +183,7 @@
       <workItem from="1650261301113" duration="7750000" />
       <workItem from="1650287199376" duration="5789000" />
       <workItem from="1650366849846" duration="2492000" />
-      <workItem from="1650383829335" duration="585000" />
+      <workItem from="1650383829335" duration="2777000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>

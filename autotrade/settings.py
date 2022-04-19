@@ -127,18 +127,21 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    BASE_DIR / 'templates/static',
-)
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-MEDIA_ROOT = BASE_DIR / 'mediafiles'
-MEDIA_URL = '/media/'
-
+if is_development():
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
+    STATIC_URL = '/static/'
+    STATICFILES_DIRS = (
+        BASE_DIR / 'templates/static',
+    )
+    MEDIA_ROOT = BASE_DIR / 'mediafiles'
+    MEDIA_URL = '/media/'
+if is_production():
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    cloudinary.config(
+        cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME', None),
+        api_key=os.getenv('CLOUDINARY_API_KEY', None),
+        api_secret=os.getenv('CLOUDINARY_API_SECRET', None),
+    )
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -146,11 +149,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'userapp.UserAppModel'
 
-cloudinary.config(
-    cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME', None),
-    api_key=os.getenv('CLOUDINARY_API_KEY', None),
-    api_secret=os.getenv('CLOUDINARY_API_SECRET', None),
-)
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = 'smtp.gmail.com'
