@@ -1,5 +1,6 @@
 {% extends 'base/base.html' %}
 {% block content %}
+    <h1>Оферта номер {{ object.pk }}</h1>
     <img src="{{ object.image.url }}" alt="{{ object.mark }}" width="300" height="300">
     <h5><u>Марка:</u> {{ object.mark }}</h5>
     <h5><u>Модел:</u> {{ object.model }}</h5>

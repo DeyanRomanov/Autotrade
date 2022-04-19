@@ -4,7 +4,7 @@ from django.db import models
 
 from cloudinary import models as cloudinary_models
 
-from autotrade.common.mixins import UsersIsReviewedMixin
+from autotrade.common.mixins import UserFormPriceReviewedFieldsMixin, UsersIsReviewedMixin
 from autotrade.products.validators import MaxFileSizeInMbValidator, validate_future_date
 
 UserModel = get_user_model()
@@ -297,19 +297,19 @@ class PartBase(models.Model):
 
 
 class Car(CarBase, UsersIsReviewedMixin):
-    pass
+    is_reviewed = UsersIsReviewedMixin.is_reviewed
 
 
 class Motorcycle(MotorcycleBase, UsersIsReviewedMixin):
-    pass
+    is_reviewed = UsersIsReviewedMixin.is_reviewed
 
 
 class Truck(TruckBase, UsersIsReviewedMixin):
-    pass
+    is_reviewed = UsersIsReviewedMixin.is_reviewed
 
 
 class Part(PartBase, UsersIsReviewedMixin):
-    pass
+    is_reviewed = UsersIsReviewedMixin.is_reviewed
 
 
 class AutotradeMotorcycle(MotorcycleBase):

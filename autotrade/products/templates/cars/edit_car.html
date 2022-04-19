@@ -1,6 +1,6 @@
 {% extends 'base/base.html' %}
 {% block content %}
-    <form method="post" action="{% url 'autotrade edit car' object.pk %}" enctype="multipart/form-data">
+    <form method="post" action="{% url 'edit car' object.pk %}" enctype="multipart/form-data">
         {{ form }}
         {% csrf_token %}
         <button>Промени</button>

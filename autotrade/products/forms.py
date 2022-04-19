@@ -2,7 +2,7 @@ from django import forms
 
 from autotrade.products.models import Vehicle, Car, Motorcycle, Truck, \
     Part, AutotradeCar, AutotradeTruck, AutotradeMotorcycle, AutotradePart
-from autotrade.common.mixins import FormControlWidgetMixin
+from autotrade.common.mixins import FormControlWidgetMixin, UserFormPriceReviewedFieldsMixin
 
 
 class VehicleWidgets(forms.ModelForm):
@@ -20,8 +20,8 @@ class VehicleWidgets(forms.ModelForm):
             'type': 'date',
         }, )
 
-    price = forms.CharField(widget=forms.HiddenInput(), initial=Vehicle.PRICE_DEFAULT_MESSAGE)
-    is_reviewed = forms.CharField(widget=forms.HiddenInput(), initial=False)
+    # price = forms.CharField(widget=forms.HiddenInput(), initial=Vehicle.PRICE_DEFAULT_MESSAGE)
+    # is_reviewed = forms.CharField(widget=forms.HiddenInput(), initial=False)
 
 
 class CarCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
@@ -55,7 +55,7 @@ class CarEditFormBase(FormControlWidgetMixin, VehicleWidgets):
         )
 
 
-class MotorcycleCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
+class MotorcycleCreateFormBase(FormControlWidgetMixin, UserFormPriceReviewedFieldsMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
@@ -144,27 +144,42 @@ class PartEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         )
 
 
-class CarEditForm(CarEditFormBase):
+class CarEditForm(CarEditFormBase, UserFormPriceReviewedFieldsMixin):
+    price = UserFormPriceReviewedFieldsMixin.price
+    is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
+
     class Meta(CarEditFormBase.Meta):
         model = Car
 
 
-class CarCreateForm(CarCreateFormBase):
+class CarCreateForm(CarCreateFormBase, UserFormPriceReviewedFieldsMixin):
+    price = UserFormPriceReviewedFieldsMixin.price
+    is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
+
     class Meta(CarCreateFormBase.Meta):
         model = Car
 
 
-class MotorcycleCreateForm(MotorcycleCreateFormBase):
+class MotorcycleCreateForm(MotorcycleCreateFormBase, UserFormPriceReviewedFieldsMixin):
+    price = UserFormPriceReviewedFieldsMixin.price
+    is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
+
     class Meta(MotorcycleCreateFormBase.Meta):
         model = Motorcycle
 
 
-class MotorcycleEditForm(MotorcycleEditFormBase):
+class MotorcycleEditForm(MotorcycleEditFormBase, UserFormPriceReviewedFieldsMixin):
+    price = UserFormPriceReviewedFieldsMixin.price
+    is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
+
     class Meta(MotorcycleCreateFormBase.Meta):
         model = Motorcycle
 
 
-class TruckCreateForm(TruckCreateFormBase):
+class TruckCreateForm(UserFormPriceReviewedFieldsMixin, TruckCreateFormBase):
+    price = UserFormPriceReviewedFieldsMixin.price
+    is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
+
     class Meta(TruckCreateFormBase.Meta):
         model = Truck
 

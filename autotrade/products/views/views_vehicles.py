@@ -12,6 +12,7 @@ class UserVehiclesView(mixins.LoginRequiredMixin, generic.ListView):
     model = Car
     template_name = 'user_vehicles.html'
 
+    # get advertisement only for current user
     def get_queryset(self):
         pk = self.request.user.pk
         cars = list(Car.objects.filter(user_id=pk))
@@ -21,6 +22,7 @@ class UserVehiclesView(mixins.LoginRequiredMixin, generic.ListView):
         vehicles_list = cars + motorcycles + trucks + parts
         return vehicles_list
 
+    # take total advertisement count
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         pk = self.request.user.pk
