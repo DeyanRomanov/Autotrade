@@ -4,8 +4,8 @@ from django.db import models
 
 from cloudinary import models as cloudinary_models
 
-from autotrade.common.mixins import UserFormPriceReviewedFieldsMixin, UsersIsReviewedMixin
-from autotrade.products.validators import MaxFileSizeInMbValidator, validate_future_date
+from autotrade.common.mixins import UsersIsReviewedMixin
+from autotrade.products.validators import validate_future_date
 
 UserModel = get_user_model()
 
@@ -232,7 +232,8 @@ class PartBase(models.Model):
 
     MAX_NAME_LENGTH = 33
 
-    MIN_PRICE = 1
+    PRICE_DEFAULT_MESSAGE = 'В очакване на цена'
+    PRICE_MAX_LENGTH = len(PRICE_DEFAULT_MESSAGE)
 
     IMAGE_MAXSIZE_IN_MB = 1
 
@@ -259,11 +260,9 @@ class PartBase(models.Model):
         verbose_name='Каталожен номер'
     )
 
-    price = models.IntegerField(
-        validators=(
-            MinValueValidator(MIN_PRICE),
-        ),
-        verbose_name='Цена'
+    price = models.CharField(
+        max_length=PRICE_MAX_LENGTH,
+        default=PRICE_DEFAULT_MESSAGE,
     )
 
     image = cloudinary_models.CloudinaryField('image')

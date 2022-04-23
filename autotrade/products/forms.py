@@ -1,6 +1,6 @@
 from django import forms
 
-from autotrade.products.models import Vehicle, Car, Motorcycle, Truck, \
+from autotrade.products.models import Car, Motorcycle, Truck, \
     Part, AutotradeCar, AutotradeTruck, AutotradeMotorcycle, AutotradePart
 from autotrade.common.mixins import FormControlWidgetMixin, UserFormPriceReviewedFieldsMixin
 
@@ -176,7 +176,7 @@ class MotorcycleEditForm(MotorcycleEditFormBase, UserFormPriceReviewedFieldsMixi
         model = Motorcycle
 
 
-class TruckCreateForm(UserFormPriceReviewedFieldsMixin, TruckCreateFormBase):
+class TruckCreateForm(TruckCreateFormBase, UserFormPriceReviewedFieldsMixin):
     price = UserFormPriceReviewedFieldsMixin.price
     is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
 
@@ -189,7 +189,7 @@ class TruckEditForm(TruckEditFormBase):
         model = Truck
 
 
-class PartCreateForm(UserFormPriceReviewedFieldsMixin, PartCreateFormBase):
+class PartCreateForm(PartCreateFormBase, UserFormPriceReviewedFieldsMixin):
     price = UserFormPriceReviewedFieldsMixin.price
     is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
 

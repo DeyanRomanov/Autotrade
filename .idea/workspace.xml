@@ -2,8 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0002_auto_20220418_1552.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0003_auto_20220418_1600.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0004_auto_20220418_2201.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0005_auto_20220418_2209.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0006_auto_20220418_2212.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0007_auto_20220418_2218.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_part.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_part.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/car.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/images/car.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/motorcycle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/images/motorcycle.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/part.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/images/part.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/truck.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/images/truck.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
