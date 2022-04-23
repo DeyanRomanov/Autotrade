@@ -2,19 +2,15 @@ from django.contrib.auth import mixins
 from django.urls import reverse_lazy
 from django.views import generic
 
-from autotrade.common.mixins import OnlyOwnerHaveCRUDPermissionMixin
+from autotrade.common.mixins import OnlyOwnerHaveCRUDPermissionMixin, CurrentUserSaveProductMixin
 from autotrade.products.forms import MotorcycleCreateForm, MotorcycleEditForm
 from autotrade.products.models import Motorcycle
 
 
-class MotorcycleCreateView(OnlyOwnerHaveCRUDPermissionMixin, mixins.LoginRequiredMixin, generic.CreateView):
+class MotorcycleCreateView(CurrentUserSaveProductMixin, mixins.LoginRequiredMixin, generic.CreateView):
     template_name = 'motorcycle/create_motorcycle.html'
     form_class = MotorcycleCreateForm
     success_url = reverse_lazy('user vehicles')
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
 
 
 class MotorcycleDetailsView(OnlyOwnerHaveCRUDPermissionMixin, mixins.LoginRequiredMixin, generic.DetailView):
@@ -28,7 +24,10 @@ class MotorcycleDeleteView(OnlyOwnerHaveCRUDPermissionMixin, mixins.LoginRequire
     model = Motorcycle
 
 
-class MotorcycleEditView(OnlyOwnerHaveCRUDPermissionMixin, mixins.LoginRequiredMixin, generic.UpdateView):
+class MotorcycleEditView(CurrentUserSaveProductMixin, mixins.LoginRequiredMixin, generic.UpdateView):
     template_name = 'motorcycle/edit_motorcycle.html'
     form_class = MotorcycleEditForm
     success_url = reverse_lazy('user vehicles')
+
+    def form_valid(self, form):
+        return super().form_valid(form)
