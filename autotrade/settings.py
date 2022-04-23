@@ -34,7 +34,6 @@ INSTALLED_APPS = [
 
     'admin_honeypot',
 
-    'autotrade.common',
     'autotrade.userapp',
     'autotrade.products',
 ]
@@ -157,3 +156,19 @@ cloudinary.config(
 # EMAIL_PORT = 587
 # EMAIL_HOST_USER = 'autotrade.sender@gmail.com'
 # EMAIL_HOST_PASSWORD = ''
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+             'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+        },
+    },
+}
