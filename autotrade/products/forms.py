@@ -189,7 +189,10 @@ class TruckEditForm(TruckEditFormBase):
         model = Truck
 
 
-class PartCreateForm(PartCreateFormBase):
+class PartCreateForm(UserFormPriceReviewedFieldsMixin, PartCreateFormBase):
+    price = UserFormPriceReviewedFieldsMixin.price
+    is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
+
     class Meta(PartCreateFormBase.Meta):
         model = Part
 
