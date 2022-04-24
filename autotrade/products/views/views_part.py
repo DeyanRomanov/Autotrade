@@ -9,6 +9,7 @@ from autotrade.products.models import Part
 
 class PartCreateView(CurrentUserSaveProductMixin, mixins.LoginRequiredMixin, generic.CreateView):
     template_name = 'part/create_part.html'
+    model = Part
     form_class = PartCreateForm
     success_url = reverse_lazy('user vehicles')
 
@@ -26,6 +27,7 @@ class PartDeleteView(mixins.LoginRequiredMixin, generic.DeleteView):
 
 class PartEditView(CurrentUserSaveProductMixin, mixins.LoginRequiredMixin, generic.UpdateView):
     template_name = 'part/edit_part.html'
+    model = Part
     form_class = PartEditForm
     success_url = reverse_lazy('user vehicles')
 

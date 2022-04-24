@@ -9,6 +9,7 @@ from autotrade.products.models import Car
 
 class CarCreateView(CurrentUserSaveProductMixin, mixins.LoginRequiredMixin, generic.CreateView):
     template_name = 'cars/create_car.html'
+    model = Car
     form_class = CarCreateForm
     success_url = reverse_lazy('user vehicles')
 

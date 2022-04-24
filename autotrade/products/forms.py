@@ -20,9 +20,6 @@ class VehicleWidgets(forms.ModelForm):
             'type': 'date',
         }, )
 
-    # price = forms.CharField(widget=forms.HiddenInput(), initial=Vehicle.PRICE_DEFAULT_MESSAGE)
-    # is_reviewed = forms.CharField(widget=forms.HiddenInput(), initial=False)
-
 
 class CarCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
@@ -128,6 +125,7 @@ class PartCreateFormBase(FormControlWidgetMixin, forms.ModelForm):
             })
 
     class Meta:
+        model = Part
         exclude = (
             'user',
         )
@@ -190,11 +188,11 @@ class TruckEditForm(TruckEditFormBase):
 
 
 class PartCreateForm(PartCreateFormBase, UserFormPriceReviewedFieldsMixin):
-    price = UserFormPriceReviewedFieldsMixin.price
     is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
+    price = UserFormPriceReviewedFieldsMixin.price
 
     class Meta(PartCreateFormBase.Meta):
-        model = Part
+        pass
 
 
 class PartEditForm(PartEditFormBase):
