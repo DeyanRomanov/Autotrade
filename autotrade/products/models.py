@@ -1,18 +1,16 @@
+
 from django.contrib.auth import get_user_model
 from django.core.validators import MinLengthValidator, MinValueValidator, MaxValueValidator
 from django.db import models
 
-from cloudinary import models as cloudinary_models
+from cloudinary import models as cloudinary_models, uploader
+
+from autotrade.common.helpers import _get_max_choices_length
 
 from autotrade.common.mixins import UsersIsReviewedMixin
 from autotrade.products.validators import validate_future_date
 
 UserModel = get_user_model()
-
-
-def _get_max_choices_length(value):
-    max_length = max([len(x[0]) for x in value])
-    return max_length
 
 
 class Vehicle(models.Model):
@@ -81,9 +79,6 @@ class Vehicle(models.Model):
     class Meta:
         abstract = True
 
-    def delete(self, using=None, keep_parents=False):
-        self.image.storage.delete(self.image.name)
-        super().delete()
 
     def __str__(self):
         return f'{self.mark} {self.model} {self.__class__.__name__}'
@@ -263,6 +258,7 @@ class PartBase(models.Model):
     price = models.CharField(
         max_length=PRICE_MAX_LENGTH,
         default=PRICE_DEFAULT_MESSAGE,
+        verbose_name='Цена',
     )
 
     image = cloudinary_models.CloudinaryField('image')

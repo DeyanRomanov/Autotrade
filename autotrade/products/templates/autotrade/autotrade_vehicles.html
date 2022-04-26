@@ -85,10 +85,9 @@
         </div>
         <div class="d-inline p-2 w-50">
             <div class="d-flex flex-column">
-                <h5><u>Наименование на част:</u> {{ motorcycle.name }}</h5>
+                <h5><u>Наименование на част:</u> {{ part.name }}</h5>
                 <h5><u>Състояния:</u> {{ part.condition }}</h5>
                 <h5><u>Kатегория:</u> {{ part.parts_category }}</h5>
-                <h5><u>Охлаждане:</u> {{ motorcycle.cooling }}</h5>
                 {% if part.catalog_number %}
                     <h5><u>Описание:</u> {{ part.catalog_number }}</h5>
                 {% endif %}

@@ -2,6 +2,8 @@
 {% block content %}
     <h1>Сигурен ли си ?</h1>
     <form method="post" action="{% url 'delete car' object.pk %}" enctype="multipart/form-data">
+        <img src="{{ object.image.url }}" alt="{{ object.mark }}" width="300" height="300">
+        <br>
         {{ form }}
         {% csrf_token %}
         <button>Да, изтрий обявата</button>

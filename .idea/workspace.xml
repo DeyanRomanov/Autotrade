@@ -2,11 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
-      <change beforePath="$PROJECT_DIR$/.idea/Autotrade.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Autotrade.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/common/helpers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_details_motorcycle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_details_part.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_details_truck.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_edit_part.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_edit_truck.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_reviewers_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/reviewers/staff_review_car.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/reviewers/staff_review_motorcycle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/reviewers/staff_review_part.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/reviewers/staff_review_truck.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/products/views/views_reviews.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/common/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/common/mixins.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_details_car.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_details_car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade_reviewers_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/cars/delete_car.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/cars/delete_car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/cars/edit_car.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/cars/edit_car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/motorcycle/delete_motorcycle.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/motorcycle/delete_motorcycle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/motorcycle/details_motorcycle.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/motorcycle/details_motorcycle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/part/delete_part.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/part/delete_part.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/part/details_part.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/part/details_part.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/truck/delete_truck.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/truck/delete_truck.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/user_vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/user_vehicles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_car.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_car.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_motorcycle.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_motorcycle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_part.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_part.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_truck.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_truck.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_vehicles.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_vehicles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/templates/profile_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/templates/profile_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +90,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -65,11 +99,11 @@
       <recent name="C:\Users\Asus\Desktop\pythonProject\Django\Autotrade\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Autotrade\autotrade\products\templates\reviewes" />
+      <recent name="C:\Users\Asus\Autotrade\autotrade\products\templates\autotrade" />
+      <recent name="C:\Users\Asus\Autotrade\autotrade\products\templates" />
+      <recent name="C:\Users\Asus\Autotrade\venv\Desktop\Python\Lib" />
       <recent name="C:\Users\Asus\Autotrade" />
-      <recent name="C:\Users\Asus\Autotrade\templates\static\assets" />
-      <recent name="C:\Users\Asus\Autotrade\templates\static\vendor\isotope-layout" />
-      <recent name="C:\Users\Asus\Autotrade\autotrade" />
-      <recent name="C:\Users\Asus\Desktop\pythonProject\Autotrade" />
     </key>
   </component>
   <component name="RunManager">
@@ -192,7 +226,9 @@
       <workItem from="1650450790665" duration="1191000" />
       <workItem from="1650521679465" duration="1538000" />
       <workItem from="1650697498597" duration="7577000" />
-      <workItem from="1650782008830" duration="311000" />
+      <workItem from="1650782008830" duration="87797000" />
+      <workItem from="1650961072396" duration="9643000" />
+      <workItem from="1650982813814" duration="16168000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
@@ -201,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649968771170</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=".env added">
+      <created>1650782333696</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650782333697</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,5 +271,23 @@
     </ignored-roots>
     <MESSAGE value=".env added" />
     <option name="LAST_COMMIT_MESSAGE" value=".env added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/autotrade/products/models.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -2,7 +2,7 @@ from django import forms
 
 from autotrade.products.models import Car, Motorcycle, Truck, \
     Part, AutotradeCar, AutotradeTruck, AutotradeMotorcycle, AutotradePart
-from autotrade.common.mixins import FormControlWidgetMixin, UserFormPriceReviewedFieldsMixin
+from autotrade.common.mixins import FormControlWidgetMixin, UsersIsReviewedMixin, CRUD_USERS_PRODUCTS_PERMISSIONS
 
 
 class VehicleWidgets(forms.ModelForm):
@@ -29,6 +29,7 @@ class CarCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
     motor = forms.IntegerField(widget=forms.TextInput(attrs={'placeholder': 'Моля въведете кубатура на автомобила!'}))
 
     class Meta:
+        model = Car
         exclude = (
             'user',
         )
@@ -40,6 +41,21 @@ class CarEditFormBase(FormControlWidgetMixin, VehicleWidgets):
         self._init_bootstrap_form_controls()
 
     class Meta:
+        model = Car
+        fields = (
+            'image',
+            'mark',
+            'model',
+            'year',
+            'description',
+            'fuel',
+            'motor',
+        )
+
+
+class CarStaffEditForm(CarEditFormBase):
+    class Meta:
+        model = Car
         fields = (
             'image',
             'mark',
@@ -49,15 +65,17 @@ class CarEditFormBase(FormControlWidgetMixin, VehicleWidgets):
             'fuel',
             'motor',
             'price',
+            'is_reviewed',
         )
 
 
-class MotorcycleCreateFormBase(FormControlWidgetMixin, UserFormPriceReviewedFieldsMixin, VehicleWidgets):
+class MotorcycleCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_bootstrap_form_controls()
 
     class Meta:
+        model = Motorcycle
         exclude = (
             'user',
         )
@@ -69,6 +87,7 @@ class MotorcycleEditFormBase(FormControlWidgetMixin, VehicleWidgets):
         self._init_bootstrap_form_controls()
 
     class Meta:
+        model = Motorcycle
         fields = (
             'image',
             'mark',
@@ -80,6 +99,22 @@ class MotorcycleEditFormBase(FormControlWidgetMixin, VehicleWidgets):
         )
 
 
+class MotorcycleStaffEditForm(MotorcycleEditFormBase):
+    class Meta:
+        model = Motorcycle
+        fields = (
+            'image',
+            'mark',
+            'model',
+            'year',
+            'description',
+            'motor_type',
+            'cooling',
+            'price',
+            'is_reviewed',
+        )
+
+
 class TruckCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -88,6 +123,7 @@ class TruckCreateFormBase(FormControlWidgetMixin, VehicleWidgets):
         self.fields['capacity'].widget.attrs.update({'placeholder': 'Въведете товароносимост в тонаж'})
 
     class Meta:
+        model = Truck
         exclude = (
             'user',
         )
@@ -99,6 +135,7 @@ class TruckEditFormBase(FormControlWidgetMixin, VehicleWidgets):
         self._init_bootstrap_form_controls()
 
     class Meta:
+        model = Truck
         fields = (
             'image',
             'mark',
@@ -108,6 +145,23 @@ class TruckEditFormBase(FormControlWidgetMixin, VehicleWidgets):
             'capacity',
             'category',
             'description',
+        )
+
+
+class TruckStaffEditForm(TruckEditFormBase):
+    class Meta:
+        model = Truck
+        fields = (
+            'image',
+            'mark',
+            'model',
+            'year',
+            'total_weight',
+            'capacity',
+            'category',
+            'description',
+            'price',
+            'is_reviewed',
         )
 
 
@@ -137,66 +191,91 @@ class PartEditFormBase(FormControlWidgetMixin, forms.ModelForm):
         self._init_bootstrap_form_controls()
 
     class Meta:
-        exclude = (
-            'user',
+        model = Part
+        fields = (
+            'name',
+            'parts_category',
+            'condition',
+            'catalog_number',
+            'description',
         )
 
 
-class CarEditForm(CarEditFormBase, UserFormPriceReviewedFieldsMixin):
-    price = UserFormPriceReviewedFieldsMixin.price
-    is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
+class PartStaffEditForm(PartEditFormBase):
+    class Meta:
+        model = Part
+        fields = (
+            'name',
+            'parts_category',
+            'condition',
+            'catalog_number',
+            'description',
+            'price',
+            'is_reviewed',
+        )
 
+
+class CarCreateForm(UsersIsReviewedMixin, CarCreateFormBase):
+    is_reviewed = UsersIsReviewedMixin.is_reviewed
+
+    class Meta(CarCreateFormBase.Meta):
+        model = Car
+        widgets = {
+            'price': forms.HiddenInput(),
+            'is_reviewed': forms.HiddenInput(),
+        }
+
+
+class CarEditForm(UsersIsReviewedMixin, CarEditFormBase):
     class Meta(CarEditFormBase.Meta):
         model = Car
 
 
-class CarCreateForm(CarCreateFormBase, UserFormPriceReviewedFieldsMixin):
-    price = UserFormPriceReviewedFieldsMixin.price
-    is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
-
-    class Meta(CarCreateFormBase.Meta):
-        model = Car
-
-
-class MotorcycleCreateForm(MotorcycleCreateFormBase, UserFormPriceReviewedFieldsMixin):
-    price = UserFormPriceReviewedFieldsMixin.price
-    is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
+class MotorcycleCreateForm(UsersIsReviewedMixin, MotorcycleCreateFormBase):
+    is_reviewed = UsersIsReviewedMixin.is_reviewed
 
     class Meta(MotorcycleCreateFormBase.Meta):
         model = Motorcycle
+        widgets = {
+            'price': forms.HiddenInput(),
+            'is_reviewed': forms.HiddenInput(),
+        }
 
 
-class MotorcycleEditForm(MotorcycleEditFormBase, UserFormPriceReviewedFieldsMixin):
-    price = UserFormPriceReviewedFieldsMixin.price
-    is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
-
-    class Meta(MotorcycleCreateFormBase.Meta):
+class MotorcycleEditForm(UsersIsReviewedMixin, MotorcycleEditFormBase):
+    class Meta(MotorcycleEditFormBase.Meta):
         model = Motorcycle
 
 
-class TruckCreateForm(TruckCreateFormBase, UserFormPriceReviewedFieldsMixin):
-    price = UserFormPriceReviewedFieldsMixin.price
-    is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
+class TruckCreateForm(UsersIsReviewedMixin, TruckCreateFormBase):
+    is_reviewed = UsersIsReviewedMixin.is_reviewed
 
     class Meta(TruckCreateFormBase.Meta):
         model = Truck
+        widgets = {
+            'price': forms.HiddenInput(),
+            'is_reviewed': forms.HiddenInput(),
+        }
 
 
 class TruckEditForm(TruckEditFormBase):
-    class Meta(TruckCreateFormBase.Meta):
+    class Meta(TruckEditFormBase.Meta):
         model = Truck
 
 
-class PartCreateForm(PartCreateFormBase, UserFormPriceReviewedFieldsMixin):
-    is_reviewed = UserFormPriceReviewedFieldsMixin.is_reviewed
-    price = UserFormPriceReviewedFieldsMixin.price
+class PartCreateForm(UsersIsReviewedMixin, PartCreateFormBase):
+    is_reviewed = UsersIsReviewedMixin.is_reviewed
 
     class Meta(PartCreateFormBase.Meta):
-        pass
+        model = Part
+        widgets = {
+            'price': forms.HiddenInput(),
+            'is_reviewed': forms.HiddenInput(),
+        }
 
 
 class PartEditForm(PartEditFormBase):
-    class Meta(PartCreateFormBase.Meta):
+    class Meta(PartEditFormBase.Meta):
         model = Part
 
 
@@ -216,7 +295,7 @@ class AutotradeTruckCreateForm(TruckCreateFormBase):
 
 
 class AutotradeTruckEditForm(TruckEditFormBase):
-    class Meta(TruckCreateFormBase.Meta):
+    class Meta(TruckEditFormBase.Meta):
         model = AutotradeTruck
 
 
@@ -225,6 +304,16 @@ class AutotradeMotorcycleCreateForm(MotorcycleCreateFormBase):
         model = AutotradeMotorcycle
 
 
+class AutotradeMotorcycleEditForm(MotorcycleEditFormBase):
+    class Meta(MotorcycleEditFormBase.Meta):
+        model = AutotradeMotorcycle
+
+
 class AutotradePartCreateForm(PartCreateFormBase):
     class Meta(PartCreateFormBase.Meta):
+        model = AutotradePart
+
+
+class AutotradePartEditForm(PartEditFormBase):
+    class Meta(PartEditFormBase.Meta):
         model = AutotradePart

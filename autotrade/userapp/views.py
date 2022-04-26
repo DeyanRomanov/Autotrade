@@ -110,7 +110,7 @@ class ProfileEditView(UserPermissionAccessMixin, mixins.LoginRequiredMixin, gene
         return reverse_lazy('profile details', kwargs={'pk': self.request.user.id})
 
 
-class ProfileUserDeleteView(generic.DeleteView):
+class ProfileUserDeleteView(UserPermissionAccessMixin, generic.DeleteView):
     model = UserAppModel
     form_class = ProfileDeleteForm
     template_name = 'user_profile_delete.html'

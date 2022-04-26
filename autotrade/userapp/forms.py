@@ -47,7 +47,7 @@ class UserRegisterForm(auth_forms.UserCreationForm):
     # profile fields
     first_name = forms.CharField(
         max_length=Profile.FIRST_NAME_MAX_LENGTH,
-        widget=forms.TextInput(attrs={'placeholder': 'Please enter your first name'}),
+        widget=forms.TextInput(attrs={'placeholder': 'Please enter your first name',}),
         validators=(validate_only_letter, MinLengthValidator(Profile.FIRST_NAME_MIN_LENGTH)),
     )
 
@@ -123,8 +123,8 @@ class ProfileEditForm(forms.ModelForm):
 
 def delete_vehicles(instances):
     for inst in instances:
+        inst.__name__.image.storage.delete(inst.image.name)
         inst.delete()
-        # inst.__name__.image.storage.delete(inst.image.name)
     return instances
 
 

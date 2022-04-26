@@ -2,32 +2,37 @@ from django.contrib.auth import mixins
 from django.urls import reverse_lazy
 from django.views import generic
 
-from autotrade.common.mixins import OnlyOwnerHaveCRUDPermissionMixin, CurrentUserSaveProductMixin
+from autotrade.common.mixins import OwnerAndPermStaffHaveCRUDPermissionMixin, CurrentUserSaveProductMixin, \
+    DeleteOnlyOwnersVehiclesAndDestroyImageMixin, OwnerCanNotEditReviewedProductsMixin, GetSuccessUrlAfterDeleteMixin
+
 from autotrade.products.forms import MotorcycleCreateForm, MotorcycleEditForm
 from autotrade.products.models import Motorcycle
 
 
 class MotorcycleCreateView(CurrentUserSaveProductMixin, mixins.LoginRequiredMixin, generic.CreateView):
     template_name = 'motorcycle/create_motorcycle.html'
+    model = Motorcycle
     form_class = MotorcycleCreateForm
     success_url = reverse_lazy('user vehicles')
 
 
-class MotorcycleDetailsView(OnlyOwnerHaveCRUDPermissionMixin, mixins.LoginRequiredMixin, generic.DetailView):
+class MotorcycleDetailsView(OwnerAndPermStaffHaveCRUDPermissionMixin, mixins.LoginRequiredMixin, generic.DetailView):
     model = Motorcycle
     template_name = 'motorcycle/details_motorcycle.html'
 
 
-class MotorcycleDeleteView(OnlyOwnerHaveCRUDPermissionMixin, mixins.LoginRequiredMixin, generic.DeleteView):
+class MotorcycleDeleteView(GetSuccessUrlAfterDeleteMixin, DeleteOnlyOwnersVehiclesAndDestroyImageMixin,
+                           mixins.LoginRequiredMixin, generic.DeleteView):
     template_name = 'motorcycle/delete_motorcycle.html'
-    success_url = reverse_lazy('user vehicles')
     model = Motorcycle
 
 
-class MotorcycleEditView(CurrentUserSaveProductMixin, mixins.LoginRequiredMixin, generic.UpdateView):
+class MotorcycleEditView(OwnerCanNotEditReviewedProductsMixin,
+                         OwnerAndPermStaffHaveCRUDPermissionMixin,
+                         mixins.LoginRequiredMixin, generic.UpdateView):
     template_name = 'motorcycle/edit_motorcycle.html'
+    model = Motorcycle
     form_class = MotorcycleEditForm
-    success_url = reverse_lazy('user vehicles')
 
-    def form_valid(self, form):
-        return super().form_valid(form)
+    def get_success_url(self):
+        return reverse_lazy('details motorcycle', kwargs={'pk': self.object.pk})

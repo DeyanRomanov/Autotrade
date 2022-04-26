@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <img src="{{ object.image.url }}" alt="{{ object.mark }}" width="300" height="300">
+    <h5><u>Наименование:</u> {{ object.mark }}</h5>
+    <h5><u>Категория:</u> {{ object.category }}</h5>
+    <h5><u>Състояние:</u> {{ object.condition }}</h5>
+    {% if object.catalog_number %}
+        <h5><u>Каталожен номер:</u> {{ object.total_weight }}</h5>
+    {% endif %}
+    <h5><u>Товароносимост:</u> {{ object.total_weight }}</h5>
+    {% if object.description %}
+        <h5><u>Описание:</u> <strong>{{ object.description }}</strong></h5>
+    {% endif %}
+    <h5><u>Цена:</u> <strong>{{ object.price }}</strong></h5>
+    {# Номерът на конкретния служител качил обява #}
+    <h5><u>Телефон за контакт:</u> <strong>{{ object.user.phone_number }}</strong></h5>
+    <a href="{% url 'autotrade vehicles' %}">
+        <button>Назад към всички обяви</button>
+    </a>
+    {% if perms.products.change_autotradepart %}
+        <a href="{% url 'autotrade edit part' object.pk %}">
+            <button>Редакция</button>
+        </a>
+    {% endif %}
+{% endblock %}

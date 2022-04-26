@@ -17,8 +17,18 @@
         </div>
         <div class="d-inline p-2 w-50">
             <div class="d-flex flex-column">
-                <h5><u>Марка:</u> {{ object.mark }}</h5>
-                <h5><u>Модел:</u> {{ object.model }}</h5>
+                {% if object.model %}
+                    <h5><u>Марка:</u> {{ object.mark }}</h5>
+                    <h5><u>Модел:</u> {{ object.model }}</h5>
+                {% endif %}
+                {% if object.name %}
+                    <h5><u>Наименование:</u> {{ object.name }}</h5>
+                    <h5><u>Категория:</u> {{ object.parts_category }}</h5>
+                    <h5><u>Състояние:</u> {{ object.condition }}</h5>
+                    {% if object.catalog_number %}
+                        <h5><u>Каталожен номер:</u> {{ object.catalog_number }}</h5>
+                    {% endif %}
+                {% endif %}
                 {% if object.fuel %}
                     <h5><u>Гориво:</u> {{ object.fuel }}</h5>
                 {% endif %}

@@ -20,6 +20,7 @@ class UserVehiclesView(mixins.LoginRequiredMixin, generic.ListView):
         trucks = list(Truck.objects.filter(user_id=pk))
         parts = list(Part.objects.filter(user_id=pk))
         vehicles_list = cars + motorcycles + trucks + parts
+        vehicles_list.sort(key=lambda x: -x.is_reviewed)
         return vehicles_list
 
     # take total advertisement count

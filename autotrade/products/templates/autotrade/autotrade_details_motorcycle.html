@@ -14,7 +14,14 @@
         <h5><u>Описание:</u> <strong>{{ object.description }}</strong></h5>
     {% endif %}
     <h5><u>Цена:</u> <strong>{{ object.price }}</strong></h5>
-    <a href="{% url 'user vehicles' %}">
-        <button>Назад към моите обяви</button>
+    {# Номерът на конкретния служител качил обява #}
+    <h5><u>Телефон за контакт:</u> <strong>{{ object.user.phone_number }}</strong></h5>
+    <a href="{% url 'autotrade vehicles' %}">
+        <button>Назад към всички обяви</button>
     </a>
+    {% if perms.products.change_autotrademotorcycle %}
+        <a href="{% url 'autotrade edit motorcycle' object.pk %}">
+            <button>Редакция</button>
+        </a>
+    {% endif %}
 {% endblock %}

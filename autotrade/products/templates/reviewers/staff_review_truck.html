@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <form method="post" action="{% url 'autotrade user edit truck' object.pk %}" enctype="multipart/form-data">
+        {{ form }}
+        {% csrf_token %}
+        <h4>Собственост на: {{ object.user.profile.get_full_name }}</h4>
+        <h4>Телефон: {{ object.user.phone_number }}</h4>
+        <button>Промени</button>
+    </form>
+    <a href="{% url 'advertisement to review' %}">
+        <button>Назад към обяви за преглед</button>
+    </a>
+    <a href="{% url 'delete car' object.pk %}">
+        <button>Изтрий обявата</button>
+    </a>
+
+{% endblock %}

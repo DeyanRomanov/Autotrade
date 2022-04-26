@@ -1,6 +1,8 @@
 {% extends 'base/base.html' %}
 {% block content %}
     <form method="post" action="{% url 'delete motorcycle' object.pk %}" enctype="multipart/form-data">
+        <img src="{{ object.image.url }}" alt="{{ object.mark }}" width="300" height="300">
+        <br>
         {{ form }}
         {% csrf_token %}
         <button>Изтрий</button>
