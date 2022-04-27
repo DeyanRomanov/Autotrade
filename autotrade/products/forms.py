@@ -287,6 +287,11 @@ class AutotradeCarCreateForm(CarCreateFormBase):
 class AutotradeCarEditForm(CarEditFormBase):
     class Meta(CarEditFormBase.Meta):
         model = AutotradeCar
+        # change fields to Autotrade cars
+        new_fields = list('price')
+        base_fields = list(CarEditFormBase.Meta.fields)
+        update_fields = base_fields + new_fields
+        fields = tuple(update_fields)
 
 
 class AutotradeTruckCreateForm(TruckCreateFormBase):

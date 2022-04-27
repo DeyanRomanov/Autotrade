@@ -2,45 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
-      <change afterPath="$PROJECT_DIR$/autotrade/common/helpers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_details_motorcycle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_details_part.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_details_truck.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_edit_part.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_edit_truck.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_reviewers_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/reviewers/staff_review_car.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/reviewers/staff_review_motorcycle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/reviewers/staff_review_part.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/templates/reviewers/staff_review_truck.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/products/views/views_reviews.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/common/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/common/mixins.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_details_car.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_details_car.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade_reviewers_page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/cars/delete_car.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/cars/delete_car.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/cars/edit_car.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/cars/edit_car.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/motorcycle/delete_motorcycle.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/motorcycle/delete_motorcycle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/motorcycle/details_motorcycle.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/motorcycle/details_motorcycle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/part/delete_part.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/part/delete_part.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/part/details_part.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/part/details_part.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/truck/delete_truck.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/truck/delete_truck.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/user_vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/user_vehicles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_car.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_car.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_motorcycle.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_motorcycle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_part.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_part.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_truck.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_truck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_vehicles.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_vehicles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/userapp/templates/profile_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/templates/profile_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +194,8 @@
       <workItem from="1650697498597" duration="7577000" />
       <workItem from="1650782008830" duration="87797000" />
       <workItem from="1650961072396" duration="9643000" />
-      <workItem from="1650982813814" duration="16168000" />
+      <workItem from="1650982813814" duration="16482000" />
+      <workItem from="1651037334357" duration="3138000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
