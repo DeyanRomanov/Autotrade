@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/templates/profile_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/templates/profile_details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +191,7 @@
       <workItem from="1650782008830" duration="87797000" />
       <workItem from="1650961072396" duration="9643000" />
       <workItem from="1650982813814" duration="16482000" />
-      <workItem from="1651037334357" duration="3138000" />
+      <workItem from="1651037334357" duration="3472000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
