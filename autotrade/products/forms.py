@@ -287,17 +287,7 @@ class AutotradeCarCreateForm(CarCreateFormBase):
 class AutotradeCarEditForm(CarEditFormBase):
     class Meta(CarEditFormBase.Meta):
         model = AutotradeCar
-        fields = (
-            'image',
-            'mark',
-            'model',
-            'year',
-            'total_weight',
-            'capacity',
-            'category',
-            'description',
-            'price',
-        )
+        fields = '__all__'
 
 
 class AutotradeTruckCreateForm(TruckCreateFormBase):
