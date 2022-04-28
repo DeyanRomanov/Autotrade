@@ -1,13 +1,11 @@
 from django.http import HttpResponse
-from django.views import generic
-from django import views
-from django.views.generic import RedirectView
+from django.views import generic, View
 
 
 class Home(generic.TemplateView):
     template_name = 'index.html'
 
 
-class InternalErrorView(views.View):
+class InternalErrorView(View):
     def get(self, request):
-        return RedirectView()
+        return HttpResponse('Възникна неочаквана грешка, моля опитайте отново')

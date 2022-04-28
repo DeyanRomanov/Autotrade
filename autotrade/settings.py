@@ -172,20 +172,20 @@ except:
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'formatter': {
-        'verbose': {
-            'format': '{asctime} [{levelname}] {module} {process:d} {thread:d} {message}',
-            'style': '{',
-        },
-    },
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
-            'level': LOGGING_LEVEL,
+            'level': 'INFO',
         },
         'file': {
             'class': 'logging.FileHandler',
             'filename': LOGS_DIR / 'log.txt',
+        },
+    },
+    'formatter': {
+        'verbose': {
+            'format': '{asctime} [{levelname}] {module} {process:d} {thread:d} {message}',
+            'style': '{',
         },
     },
     'mail_admins': {
@@ -195,12 +195,12 @@ LOGGING = {
     },
     'loggers': {
         'django.db.backends': {
-            'level': LOGGING_LEVEL,
+            'level': 'INFO',
             'handlers': ['console'],
         },
         'root': {
             'handlers': ['console', 'file'],
-            'level': 'INFO',
+            'level': 'CRITICAL',
         }
     },
 }
