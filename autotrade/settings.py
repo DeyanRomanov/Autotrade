@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', 'sk')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+DEBUG = os.getenv('DEBUG', 'False') == 'False'
 
 ALLOWED_HOSTS = ['*']
 APP_ENVIRONMENT = os.getenv('APP_ENVIRONMENT')
@@ -180,28 +180,14 @@ LOGGING = {
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
-            'level': 'INFO',
-            # 'formatter': 'verbose',
         },
         'file': {
             'class': 'logging.FileHandler',
             'filename': LOGS_DIR / 'log.txt',
         },
     },
-    'loggers': {
-        'django.db.backends': {
-            'level': 'INFO',
-            'handlers': ['console'],
-            'filters': [],
-        },
-        'root': {
-            'handlers': ['console', 'file'],
-            'level': 'CRITICAL',
-        }
-    },
-    'mail_admins': {
-        'level': 'ERROR',
-        'class': 'django.utils.log.AdminEmailHandler',
-        'filters': ['require_debug_false']
+    'root': {
+        'handlers': ['console'],
+        'level': 'WARNING',
     },
 }

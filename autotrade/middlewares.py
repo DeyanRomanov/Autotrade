@@ -1,17 +1,20 @@
 import logging
 
-from autotrade.views import InternalErrorView
+from django.shortcuts import redirect
+from django.urls import reverse_lazy
+
+
+errors = [400, 403, 404]
 
 
 def handle_exception(get_response):
     def middleware(request):
         response = get_response(request)
-        if response.status_code >= 405:
-            logging.critical('Critical')
-            logging.error('Info')
-            logging.warning('Warning')
-            logging.debug('Debug')
-            return InternalErrorView.as_view()(request)
+        if response.status_code in errors:
+            return response
+        elif response.status_code >= 400:
+            logging.info('INFO')
+            return redirect(reverse_lazy('home'))
 
         return response
 
