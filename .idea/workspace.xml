@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
+      <change afterPath="$PROJECT_DIR$/autotrade/middlewares.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/userapp/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/userapp/tests/tests_models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/userapp/tests/tests_models/test_profile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/userapp/tests/tests_views/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/userapp/tests/tests_views/test_register_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base/base1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/static/images/car_begin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/common/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/common/mixins.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/validators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,11 +29,15 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Asus\Desktop" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -48,7 +69,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -56,19 +77,120 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Autotrade\templates\static\images" />
       <recent name="C:\Users\Asus\Desktop\pythonProject\Django\Autotrade\templates\static" />
       <recent name="C:\Users\Asus\Desktop\pythonProject\Django\Autotrade\templates\base" />
       <recent name="C:\Users\Asus\Desktop\pythonProject\Django\Autotrade\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Autotrade\autotrade\userapp\tests\tests_models" />
       <recent name="C:\Users\Asus\Autotrade\autotrade\products\templates\reviewes" />
       <recent name="C:\Users\Asus\Autotrade\autotrade\products\templates\autotrade" />
       <recent name="C:\Users\Asus\Autotrade\autotrade\products\templates" />
       <recent name="C:\Users\Asus\Autotrade\venv\Desktop\Python\Lib" />
-      <recent name="C:\Users\Asus\Autotrade" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django Server.Autotrade">
+    <configuration name="Test: autotrade.userapp.tests" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Autotrade" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="autotrade.userapp.tests" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: autotrade.userapp.tests.tests_forms.test_userregisterform.UserRegisterFormTest" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Autotrade" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="autotrade.userapp.tests.tests_forms.test_userregisterform.UserRegisterFormTest" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: autotrade.userapp.tests.tests_forms.test_userregisterform.UserRegisterFormTest.test_phone_number_not_contains_only_numbers__not_succes" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Autotrade" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="autotrade.userapp.tests.tests_forms.test_userregisterform.UserRegisterFormTest.test_phone_number_not_contains_only_numbers__not_succes" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: autotrade.userapp.tests.tests_views.test_register_user.RegisterUserViewTest.test_if_all_correct_create_user" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Autotrade" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="autotrade.userapp.tests.tests_views.test_register_user.RegisterUserViewTest.test_if_all_correct_create_user" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: autotrade.userapp.tests.tests_views.test_register_user.RegisterUserViewTest.test_redirect_after_success_register_to_home" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Autotrade" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="autotrade.userapp.tests.tests_views.test_register_user.RegisterUserViewTest.test_redirect_after_success_register_to_home" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Autotrade" type="Python.DjangoServer" factoryName="Django server">
       <module name="Autotrade" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,6 +249,15 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: autotrade.userapp.tests" />
+        <item itemvalue="Django tests.Test: autotrade.userapp.tests.tests_views.test_register_user.RegisterUserViewTest.test_redirect_after_success_register_to_home" />
+        <item itemvalue="Django tests.Test: autotrade.userapp.tests.tests_views.test_register_user.RegisterUserViewTest.test_if_all_correct_create_user" />
+        <item itemvalue="Django tests.Test: autotrade.userapp.tests.tests_forms.test_userregisterform.UserRegisterFormTest.test_phone_number_not_contains_only_numbers__not_succes" />
+        <item itemvalue="Django tests.Test: autotrade.userapp.tests.tests_forms.test_userregisterform.UserRegisterFormTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -191,7 +322,10 @@
       <workItem from="1650782008830" duration="87797000" />
       <workItem from="1650961072396" duration="9643000" />
       <workItem from="1650982813814" duration="16482000" />
-      <workItem from="1651037334357" duration="3690000" />
+      <workItem from="1651037334357" duration="16605000" />
+      <workItem from="1651072907053" duration="107000" />
+      <workItem from="1651073179419" duration="18226000" />
+      <workItem from="1651124536718" duration="11838000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
@@ -246,9 +380,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/autotrade/products/models.py</url>
-          <line>65</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/manage.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -259,5 +393,24 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_forms_test_userappmodel_UserAppModelTest_test_userappmodel_phone_number_valid__expect_succes.coverage" NAME="Test: autotrade.userapp.tests.tests_forms.test_userappmodel.UserAppModelTest.test_userappmodel_phone_number_valid__expect_succes Coverage Results" MODIFIED="1651078364039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_views_test_register_user_RegisterUserViewTest_test_if_all_correct_create_user.coverage" NAME="Test: autotrade.userapp.tests.tests_views.test_register_user.RegisterUserViewTest.test_if_all_correct_create_user Coverage Results" MODIFIED="1651091757475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_forms_test_userappmodel_ProfileTest_test_profile_first_name_contains_only_letters__success.coverage" NAME="Test: autotrade.userapp.tests.tests_forms.test_userappmodel.ProfileTest.test_profile_first_name_contains_only_letters__success Coverage Results" MODIFIED="1651080231935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_views_test_register_user_RegisterUserViewTest_test_redirect_after_success_register_to_home.coverage" NAME="Test: autotrade.userapp.tests.tests_views.test_register_user.RegisterUserViewTest.test_redirect_after_success_register_to_home Coverage Results" MODIFIED="1651091946976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_forms_test_userappmodel_UserAppModelTest_test_userappmodel_phone_number_not_contains_only_number___not_succes.coverage" NAME="Test: autotrade.userapp.tests.tests_forms.test_userappmodel.UserAppModelTest.test_userappmodel_phone_number_not_contains_only_number___not_succes Coverage Results" MODIFIED="1651078097394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_models_test_profile_ProfileTest_test_profile_first_name_contains_space__not_success.coverage" NAME="Test: autotrade.userapp.tests.tests_models.test_profile.ProfileTest.test_profile_first_name_contains_space__not_success Coverage Results" MODIFIED="1651081834277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests.coverage" NAME="Test: autotrade.userapp.tests Coverage Results" MODIFIED="1651143139261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_models_test_profile_ProfileTest_test_profile_years_less_than_eighteen__not_success.coverage" NAME="Test: autotrade.userapp.tests.tests_models.test_profile.ProfileTest.test_profile_years_less_than_eighteen__not_success Coverage Results" MODIFIED="1651083742617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_models_test_profile_ProfileTest.coverage" NAME="Test: autotrade.userapp.tests.tests_models.test_profile.ProfileTest Coverage Results" MODIFIED="1651083864909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_forms_test_userregisterform_UserRegisterFormTest_test_phone_number_not_contains_only_numbers__not_succes.coverage" NAME="Test: autotrade.userapp.tests.tests_forms.test_userregisterform.UserRegisterFormTest.test_phone_number_not_contains_only_numbers__not_succes Coverage Results" MODIFIED="1651089749847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_models_test_profile_ProfileTest_test_profile_last_name_contains_number_letter__not_success.coverage" NAME="Test: autotrade.userapp.tests.tests_models.test_profile.ProfileTest.test_profile_last_name_contains_number_letter__not_success Coverage Results" MODIFIED="1651082002514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_models_test_profile_ProfileTest_test_profile_first_name_contains_only_letters__success.coverage" NAME="Test: autotrade.userapp.tests.tests_models.test_profile.ProfileTest.test_profile_first_name_contains_only_letters__success Coverage Results" MODIFIED="1651082162854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_models_test_profile_ProfileTest_test_profile_last_name_contains_only_letters__success.coverage" NAME="Test: autotrade.userapp.tests.tests_models.test_profile.ProfileTest.test_profile_last_name_contains_only_letters__success Coverage Results" MODIFIED="1651082196284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_forms_test_userregisterform_UserRegisterFormTest.coverage" NAME="Test: autotrade.userapp.tests.tests_forms.test_userregisterform.UserRegisterFormTest Coverage Results" MODIFIED="1651086607608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_models_test_profile_ProfileTest_test_profile_get_gull_name.coverage" NAME="Test: autotrade.userapp.tests.tests_models.test_profile.ProfileTest.test_profile_get_gull_name Coverage Results" MODIFIED="1651083076259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_forms_test_userappmodel_UserAppModelTest_test_userappmodel_phone_number_length_less_than_ten__not_success.coverage" NAME="Test: autotrade.userapp.tests.tests_forms.test_userappmodel.UserAppModelTest.test_userappmodel_phone_number_length_less_than_ten__not_success Coverage Results" MODIFIED="1651078381511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/manage_py$Test__autotrade_userapp_tests_tests_models_test_profile_ProfileTest_test_profile_age_if_less_than_eighteen.coverage" NAME="Test: autotrade.userapp.tests.tests_models.test_profile.ProfileTest.test_profile_age_if_less_than_eighteen Coverage Results" MODIFIED="1651082668478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

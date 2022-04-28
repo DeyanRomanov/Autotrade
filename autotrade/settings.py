@@ -4,7 +4,7 @@ import cloudinary as cloudinary
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-from django.conf.global_settings import AUTH_PASSWORD_VALIDATORS
+from django.conf.global_settings import AUTH_PASSWORD_VALIDATORS, LOGGING
 
 from utils import is_production, is_development
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'autotrade.middlewares.handle_exception',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -135,7 +136,7 @@ STATICFILES_DIRS = (
 )
 MEDIA_ROOT = BASE_DIR / 'mediafiles'
 MEDIA_URL = '/media/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -156,3 +157,50 @@ cloudinary.config(
 # EMAIL_PORT = 587
 # EMAIL_HOST_USER = 'autotrade.sender@gmail.com'
 # EMAIL_HOST_PASSWORD = ''
+
+if is_production():
+    LOGGING_LEVEL = 'INFO'
+elif is_development():
+    LOGGING_LEVEL = 'CRITICAL'
+
+LOGS_DIR = BASE_DIR / 'logs'
+try:
+    os.mkdir(LOGS_DIR)
+except:
+    pass
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatter': {
+        'verbose': {
+            'format': '{asctime} [{levelname}] {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'level': LOGGING_LEVEL,
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': LOGS_DIR / 'log.txt',
+        },
+    },
+    'mail_admins': {
+        'level': 'ERROR',
+        'class': 'django.utils.log.AdminEmailHandler',
+        'filters': ['require_debug_false']
+    },
+    'loggers': {
+        'django.db.backends': {
+            'level': LOGGING_LEVEL,
+            'handlers': ['console'],
+        },
+        'root': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+        }
+    },
+}

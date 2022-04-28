@@ -2,7 +2,8 @@ from django import forms
 
 from autotrade.products.models import Car, Motorcycle, Truck, \
     Part, AutotradeCar, AutotradeTruck, AutotradeMotorcycle, AutotradePart
-from autotrade.common.mixins import FormControlWidgetMixin, UsersIsReviewedMixin, CRUD_USERS_PRODUCTS_PERMISSIONS
+from autotrade.common.mixins import FormControlWidgetMixin, UsersIsReviewedMixin, \
+    DisableUserFieldMixin, IsReviewedHiddenWidgetsMixin
 
 
 class VehicleWidgets(forms.ModelForm):
@@ -218,12 +219,12 @@ class PartStaffEditForm(PartEditFormBase):
 class CarCreateForm(UsersIsReviewedMixin, CarCreateFormBase):
     is_reviewed = UsersIsReviewedMixin.is_reviewed
 
-    class Meta(CarCreateFormBase.Meta):
+    class Meta(CarCreateFormBase.Meta, IsReviewedHiddenWidgetsMixin):
         model = Car
-        widgets = {
-            'price': forms.HiddenInput(),
-            'is_reviewed': forms.HiddenInput(),
-        }
+        # widgets = {
+        #     'price': forms.HiddenInput(),
+        #     'is_reviewed': forms.HiddenInput(),
+        # }
 
 
 class CarEditForm(UsersIsReviewedMixin, CarEditFormBase):
@@ -234,12 +235,8 @@ class CarEditForm(UsersIsReviewedMixin, CarEditFormBase):
 class MotorcycleCreateForm(UsersIsReviewedMixin, MotorcycleCreateFormBase):
     is_reviewed = UsersIsReviewedMixin.is_reviewed
 
-    class Meta(MotorcycleCreateFormBase.Meta):
+    class Meta(MotorcycleCreateFormBase.Meta, IsReviewedHiddenWidgetsMixin):
         model = Motorcycle
-        widgets = {
-            'price': forms.HiddenInput(),
-            'is_reviewed': forms.HiddenInput(),
-        }
 
 
 class MotorcycleEditForm(UsersIsReviewedMixin, MotorcycleEditFormBase):
@@ -250,12 +247,8 @@ class MotorcycleEditForm(UsersIsReviewedMixin, MotorcycleEditFormBase):
 class TruckCreateForm(UsersIsReviewedMixin, TruckCreateFormBase):
     is_reviewed = UsersIsReviewedMixin.is_reviewed
 
-    class Meta(TruckCreateFormBase.Meta):
+    class Meta(TruckCreateFormBase.Meta, IsReviewedHiddenWidgetsMixin):
         model = Truck
-        widgets = {
-            'price': forms.HiddenInput(),
-            'is_reviewed': forms.HiddenInput(),
-        }
 
 
 class TruckEditForm(TruckEditFormBase):
@@ -266,12 +259,8 @@ class TruckEditForm(TruckEditFormBase):
 class PartCreateForm(UsersIsReviewedMixin, PartCreateFormBase):
     is_reviewed = UsersIsReviewedMixin.is_reviewed
 
-    class Meta(PartCreateFormBase.Meta):
+    class Meta(PartCreateFormBase.Meta, IsReviewedHiddenWidgetsMixin):
         model = Part
-        widgets = {
-            'price': forms.HiddenInput(),
-            'is_reviewed': forms.HiddenInput(),
-        }
 
 
 class PartEditForm(PartEditFormBase):
@@ -285,9 +274,8 @@ class AutotradeCarCreateForm(CarCreateFormBase):
 
 
 class AutotradeCarEditForm(CarEditFormBase):
-    class Meta(CarEditFormBase.Meta):
+    class Meta(DisableUserFieldMixin, CarEditFormBase.Meta):
         model = AutotradeCar
-        fields = '__all__'
 
 
 class AutotradeTruckCreateForm(TruckCreateFormBase):
@@ -296,7 +284,7 @@ class AutotradeTruckCreateForm(TruckCreateFormBase):
 
 
 class AutotradeTruckEditForm(TruckEditFormBase):
-    class Meta(TruckEditFormBase.Meta):
+    class Meta(DisableUserFieldMixin, TruckEditFormBase.Meta):
         model = AutotradeTruck
 
 
@@ -306,7 +294,7 @@ class AutotradeMotorcycleCreateForm(MotorcycleCreateFormBase):
 
 
 class AutotradeMotorcycleEditForm(MotorcycleEditFormBase):
-    class Meta(MotorcycleEditFormBase.Meta):
+    class Meta(DisableUserFieldMixin, MotorcycleEditFormBase.Meta):
         model = AutotradeMotorcycle
 
 
@@ -316,5 +304,5 @@ class AutotradePartCreateForm(PartCreateFormBase):
 
 
 class AutotradePartEditForm(PartEditFormBase):
-    class Meta(PartEditFormBase.Meta):
+    class Meta(DisableUserFieldMixin, PartEditFormBase.Meta):
         model = AutotradePart

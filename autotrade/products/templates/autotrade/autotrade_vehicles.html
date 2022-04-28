@@ -1,109 +1,97 @@
 {% extends 'base/base.html' %}
 {% block content %}
     {% for car in cars %}
-        <div class="d-inline p-2 w-50">
+        <div class="container">
             <img src="{{ car.image.url }}" alt="{{ car.description }}" width="300" height="300">
-        </div>
-        <div class="d-inline p-2 w-50">
-            <div class="d-flex flex-column">
-                <h5><u>Марка:</u> {{ car.mark }}</h5>
-                <h5><u>Модел:</u> {{ car.model }}</h5>
-                <h5><u>Гориво:</u> {{ car.fuel }}</h5>
-                <h5><u>Година на производство:</u> {{ car.year }}</h5>
-                <h5><u>Двигател:</u> {{ car.motor }}</h5>
-                {% if car.description %}
-                    <h5><u>Описание:</u> {{ car.description|truncatechars:30 }}</h5>
-                {% endif %}
-                {% if request.user.is_authenticated %}
-                    <h5><u>Цена:</u> <strong>{{ car.price }}</strong></h5>
-                    <a href="{% url 'autotrade details car' car.pk %}">
-                {% else %}
-                    <h5><u>Цена:</u> <strong>{{ truck.price|truncatechars:2 }}</strong></h5>
-                    <a href="{% url 'register' %}">
-                {% endif %}
-                <button>Детайли</button>
-                </a>
-            </div>
+            <h5><u>Марка:</u> {{ car.mark }}</h5>
+            <h5><u>Модел:</u> {{ car.model }}</h5>
+            <h5><u>Гориво:</u> {{ car.fuel }}</h5>
+            <h5><u>Година на производство:</u> {{ car.year }}</h5>
+            <h5><u>Двигател:</u> {{ car.motor }}</h5>
+            {% if car.description %}
+                <h5><u>Описание:</u> {{ car.description|truncatechars:30 }}</h5>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                <h5><u>Цена:</u> <strong>{{ car.price }}</strong></h5>
+                <a href="{% url 'autotrade details car' car.pk %}">
+            {% else %}
+                <h5><u>Цена:</u> <strong>{{ car.price|truncatechars:2 }}</strong></h5>
+                <a href="{% url 'register' %}">
+            {% endif %}
+            <button>Детайли</button>
+            </a>
         </div>
     {% endfor %}
     {% for truck in trucks %}
-        <div class="d-inline p-2 w-50">
+        <div class="container">
             <img src="{{ truck.image.url }}" alt="{{ truck.description }}" width="300" height="300">
-        </div>
-        <div class="d-inline p-2 w-50">
-            <div class="d-flex flex-column">
-                <h5><u>Марка:</u> {{ truck.mark }}</h5>
-                <h5><u>Модел:</u> {{ truck.model }}</h5>
-                <h5><u>Година:</u> {{ truck.year }}</h5>
-                <h5><u>Категория:</u> {{ truck.category }}</h5>
-                <h5><u>Общо тегло:</u> {{ truck.total_weight }}</h5>
-                <h5><u>Товароносимост:</u> {{ truck.capacity }}</h5>
-                {% if truck.description %}
-                    <h5><u>Описание:</u> {{ truck|truncatechars:30 }}</h5>
-                {% endif %}
-                {% if request.user.is_authenticated %}
-                    <h5><u>Цена:</u> <strong>{{ truck.price }}</strong></h5>
-                    <a href="{% url 'autotrade details truck' truck.pk %}">
-                {% else %}
-                    <h5><u>Цена:</u> <strong>{{ truck.price|truncatechars:2 }}</strong></h5>
-                    <a href="{% url 'register' %}">
-                {% endif %}
-                <button>Детайли</button>
-                </a>
-            </div>
+
+            <h5><u>Марка:</u> {{ truck.mark }}</h5>
+            <h5><u>Модел:</u> {{ truck.model }}</h5>
+            <h5><u>Година:</u> {{ truck.year }}</h5>
+            <h5><u>Категория:</u> {{ truck.category }}</h5>
+            <h5><u>Общо тегло:</u> {{ truck.total_weight }}</h5>
+            <h5><u>Товароносимост:</u> {{ truck.capacity }}</h5>
+            {% if truck.description %}
+                <h5><u>Описание:</u> {{ truck|truncatechars:30 }}</h5>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                <h5><u>Цена:</u> <strong>{{ truck.price }}</strong></h5>
+                <a href="{% url 'autotrade details truck' truck.pk %}">
+            {% else %}
+                <h5><u>Цена:</u> <strong>{{ truck.price|truncatechars:2 }}</strong></h5>
+                <a href="{% url 'register' %}">
+            {% endif %}
+            <button>Детайли</button>
+            </a>
+
         </div>
     {% endfor %}
     {% for motorcycle in motorcycles %}
-        <div class="d-inline p-2 w-50">
+        <div class="container">
             <img src="{{ motorcycle.image.url }}" alt="{{ motorcycle.description }}" width="300" height="300">
-        </div>
-        <div class="d-inline p-2 w-50">
-            <div class="d-flex flex-column">
-                <h5><u>Марка:</u> {{ motorcycle.mark }}</h5>
-                <h5><u>Модел:</u> {{ motorcycle.model }}</h5>
-                <h5><u>Година:</u> {{ motorcycle.year }}</h5>
-                <h5><u>Тип:</u> {{ motorcycle.motor_type }}</h5>
-                <h5><u>Охлаждане:</u> {{ motorcycle.cooling }}</h5>
-                {% if motorcycle.description %}
-                    <h5><u>Описание:</u> {{ motorcycle.description }}</h5>
-                {% endif %}
-                {% if request.user.is_authenticated %}
-                    <h5><u>Цена:</u> <strong>{{ motorcycle.price }}</strong></h5>
-                    <a href="{% url 'autotrade details motorcycle' motorcycle.pk %}">
-                {% else %}
-                    <h5><u>Цена:</u> <strong>{{ motorcycle.price|truncatechars:2 }}</strong></h5>
-                    <a href="{% url 'register' %}">
-                {% endif %}
-                <button>Детайли</button>
-                </a>
-            </div>
+
+            <h5><u>Марка:</u> {{ motorcycle.mark }}</h5>
+            <h5><u>Модел:</u> {{ motorcycle.model }}</h5>
+            <h5><u>Година:</u> {{ motorcycle.year }}</h5>
+            <h5><u>Тип:</u> {{ motorcycle.motor_type }}</h5>
+            <h5><u>Охлаждане:</u> {{ motorcycle.cooling }}</h5>
+            {% if motorcycle.description %}
+                <h5><u>Описание:</u> {{ motorcycle.description }}</h5>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                <h5><u>Цена:</u> <strong>{{ motorcycle.price }}</strong></h5>
+                <a href="{% url 'autotrade details motorcycle' motorcycle.pk %}">
+            {% else %}
+                <h5><u>Цена:</u> <strong>{{ motorcycle.price|truncatechars:2 }}</strong></h5>
+                <a href="{% url 'register' %}">
+            {% endif %}
+            <button>Детайли</button>
+            </a>
         </div>
     {% endfor %}
     {% for part in parts %}
-        <div class="d-inline p-2 w-50">
+        <div class="container">
             <img src="{{ part.image.url }}" alt="{{ part.description }}" width="300" height="300">
-        </div>
-        <div class="d-inline p-2 w-50">
-            <div class="d-flex flex-column">
-                <h5><u>Наименование на част:</u> {{ part.name }}</h5>
-                <h5><u>Състояния:</u> {{ part.condition }}</h5>
-                <h5><u>Kатегория:</u> {{ part.parts_category }}</h5>
-                {% if part.catalog_number %}
-                    <h5><u>Описание:</u> {{ part.catalog_number }}</h5>
-                {% endif %}
-                {% if part.description %}
-                    <h5><u>Описание:</u> {{ part.description }}</h5>
-                {% endif %}
-                {% if request.user.is_authenticated %}
-                    <h5><u>Цена:</u> <strong>{{ part.price }}</strong></h5>
-                    <a href="{% url 'autotrade details part' part.pk %}">
-                {% else %}
-                    <h5><u>Цена:</u> <strong>{{ part.price|truncatechars:2 }}</strong></h5>
-                    <a href="{% url 'register' %}">
-                {% endif %}
-                <button>Детайли</button>
-                </a>
-            </div>
+
+            <h5><u>Наименование на част:</u> {{ part.name }}</h5>
+            <h5><u>Състояния:</u> {{ part.condition }}</h5>
+            <h5><u>Kатегория:</u> {{ part.parts_category }}</h5>
+            {% if part.catalog_number %}
+                <h5><u>Описание:</u> {{ part.catalog_number }}</h5>
+            {% endif %}
+            {% if part.description %}
+                <h5><u>Описание:</u> {{ part.description }}</h5>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                <h5><u>Цена:</u> <strong>{{ part.price }}</strong></h5>
+                <a href="{% url 'autotrade details part' part.pk %}">
+            {% else %}
+                <h5><u>Цена:</u> <strong>{{ part.price|truncatechars:2 }}</strong></h5>
+                <a href="{% url 'register' %}">
+            {% endif %}
+            <button>Детайли</button>
+            </a>
         </div>
     {% endfor %}
 {% endblock %}

@@ -1,3 +1,4 @@
+from django import forms
 from django.db import models
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
@@ -89,6 +90,13 @@ class UsersIsReviewedMixin:
     )
 
 
+class IsReviewedHiddenWidgetsMixin:
+    widgets = {
+        'price': forms.HiddenInput(),
+        'is_reviewed': forms.HiddenInput(),
+    }
+
+
 class OwnerCanNotEditReviewedProductsMixin:
     def dispatch(self, request, *args, **kwargs):
         obj = self.get_object()
@@ -104,3 +112,14 @@ class OwnerAndPermStaffHaveCRUDPermissionMixin:
         if obj.user == self.request.user or self.request.user.has_perms(CRUD_USERS_PRODUCTS_PERMISSIONS):
             return super().dispatch(request, *args, **kwargs)
         return redirect(reverse_lazy('user vehicles'))
+
+
+class DisableUserFieldMixin:
+    fields = '__all__'
+    widgets = {
+        'user': forms.TextInput(
+            attrs={
+                'readonly': 'readonly',
+                'disable': 'disable',
+            }, )
+    }

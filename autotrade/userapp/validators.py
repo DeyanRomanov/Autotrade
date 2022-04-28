@@ -18,6 +18,6 @@ class ValidateEighteenYears:
         self.min_years = min_years
 
     def __call__(self, value):
-        current_years = (self.__DATE_TODAY - value).days / 365
+        current_years = (self.__DATE_TODAY - value).days / 365.25
         if current_years < self.min_years:
             raise ValidationError(f'{self.__ERROR_MESSAGE_MIN_YEARS}')
