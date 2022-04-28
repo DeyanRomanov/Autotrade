@@ -136,7 +136,7 @@ STATICFILES_DIRS = (
 )
 MEDIA_ROOT = BASE_DIR / 'mediafiles'
 MEDIA_URL = '/media/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -176,11 +176,23 @@ LOGGING = {
         'console': {
             'class': 'logging.StreamHandler',
             'level': 'INFO',
+            'formatter' : 'verbose',
         },
         'file': {
             'class': 'logging.FileHandler',
             'filename': LOGS_DIR / 'log.txt',
         },
+    },
+    'loggers': {
+        'django.db.backends': {
+            'level': 'INFO',
+            'handlers': ['console'],
+            'filters': [],
+        },
+        'root': {
+            'handlers': ['console', 'file'],
+            'level': 'CRITICAL',
+        }
     },
     'formatter': {
         'verbose': {
@@ -192,15 +204,5 @@ LOGGING = {
         'level': 'ERROR',
         'class': 'django.utils.log.AdminEmailHandler',
         'filters': ['require_debug_false']
-    },
-    'loggers': {
-        'django.db.backends': {
-            'level': 'INFO',
-            'handlers': ['console'],
-        },
-        'root': {
-            'handlers': ['console', 'file'],
-            'level': 'CRITICAL',
-        }
     },
 }

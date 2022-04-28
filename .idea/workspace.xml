@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/middlewares.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,7 +310,7 @@
       <workItem from="1651037334357" duration="16605000" />
       <workItem from="1651072907053" duration="107000" />
       <workItem from="1651073179419" duration="18226000" />
-      <workItem from="1651124536718" duration="13363000" />
+      <workItem from="1651124536718" duration="14005000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
