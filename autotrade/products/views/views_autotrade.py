@@ -1,5 +1,5 @@
 from django.contrib.auth import mixins
-from django.core.paginator import Paginator
+# from django.core.paginator import Paginator
 
 from django.urls import reverse_lazy
 from django.views import generic
