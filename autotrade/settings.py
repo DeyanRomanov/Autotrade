@@ -176,7 +176,7 @@ LOGGING = {
         'console': {
             'class': 'logging.StreamHandler',
             'level': 'INFO',
-            'formatter' : 'verbose',
+            # 'formatter': 'verbose',
         },
         'file': {
             'class': 'logging.FileHandler',
@@ -193,12 +193,6 @@ LOGGING = {
             'handlers': ['console', 'file'],
             'level': 'CRITICAL',
         }
-    },
-    'formatter': {
-        'verbose': {
-            'format': '{asctime} [{levelname}] {module} {process:d} {thread:d} {message}',
-            'style': '{',
-        },
     },
     'mail_admins': {
         'level': 'ERROR',
