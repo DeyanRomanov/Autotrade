@@ -1,7 +1,9 @@
 from django.contrib.auth import mixins
+from django.core.paginator import Paginator
 
 from django.urls import reverse_lazy
 from django.views import generic
+from django.views.decorators.cache import cache_page
 
 from autotrade.products.forms import AutotradeCarCreateForm, AutotradeTruckCreateForm, AutotradeMotorcycleCreateForm, \
     AutotradePartCreateForm, AutotradeCarEditForm, AutotradeMotorcycleEditForm, AutotradeTruckEditForm, \
@@ -130,6 +132,7 @@ class AutotradeEditPartView(mixins.PermissionRequiredMixin, generic.UpdateView):
     permission_required = _AUTOTRADE_PART_PERMISSION
 
 
+@cache_page(60*60*24*365)
 class AutotradeVehicleCreateView(OnlyStaffAccessMixin, generic.TemplateView):
     template_name = 'autotrade/autotrade_create_vehicles.html'
 
@@ -137,6 +140,9 @@ class AutotradeVehicleCreateView(OnlyStaffAccessMixin, generic.TemplateView):
 class AutotradeVehicleView(generic.ListView):
     model = AutotradeCar
     template_name = 'autotrade/autotrade_vehicles.html'
+
+    # paginator = Paginator(context)
+    # current_page = request.GET.get('page', 1)
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)

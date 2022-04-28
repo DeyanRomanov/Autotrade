@@ -4,6 +4,7 @@ import cloudinary as cloudinary
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from cloudinary import urlparse
 from django.conf.global_settings import AUTH_PASSWORD_VALIDATORS, LOGGING
 
 from utils import is_production, is_development
@@ -85,7 +86,17 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT', '5432'),
     }
 }
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": os.getenv('REDIS_URL', 'redis://127.0.0.1:6379'),
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
 
+#
 # CACHES = {
 #     'default': {
 #         'BACKEND':
