@@ -138,7 +138,7 @@ STATICFILES_DIRS = (
 )
 MEDIA_ROOT = BASE_DIR / 'mediafiles'
 MEDIA_URL = '/media/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 WHITENOISE_USE_FINDERS = True
 WHITENOISE_MANIFEST_STRICT = True

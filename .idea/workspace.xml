@@ -52,7 +52,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/staticfiles" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -60,17 +60,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Autotrade\staticfiles" />
       <recent name="C:\Users\Asus\Autotrade\templates\static\images" />
       <recent name="C:\Users\Asus\Desktop\pythonProject\Django\Autotrade\templates\static" />
       <recent name="C:\Users\Asus\Desktop\pythonProject\Django\Autotrade\templates\base" />
       <recent name="C:\Users\Asus\Desktop\pythonProject\Django\Autotrade\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Autotrade\templates\static\images" />
       <recent name="C:\Users\Asus\Autotrade\templates\static" />
       <recent name="C:\Users\Asus\Autotrade" />
       <recent name="C:\Users\Asus\Autotrade\autotrade\userapp\tests\tests_models" />
       <recent name="C:\Users\Asus\Autotrade\autotrade\products\templates\reviewes" />
-      <recent name="C:\Users\Asus\Autotrade\autotrade\products\templates\autotrade" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.Autotrade">
@@ -309,7 +310,7 @@
       <workItem from="1651072907053" duration="107000" />
       <workItem from="1651073179419" duration="18226000" />
       <workItem from="1651124536718" duration="14126000" />
-      <workItem from="1651158979040" duration="6820000" />
+      <workItem from="1651158979040" duration="7147000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
