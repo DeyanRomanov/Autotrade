@@ -10,7 +10,7 @@ from autotrade.products.models import AutotradeCar, AutotradeMotorcycle, Autotra
     Motorcycle, Part
 from autotrade.common.mixins import CurrentUserSaveProductMixin, OnlyStaffAccessMixin
 
-PERMISSION_DENIED_MESSAGE = 'Нямате права за достъп, моля потърсете за съдействие по -висшестоящ'
+PERMISSION_DENIED_MESSAGE = 'Нямате права за достъп'
 
 _AUTOTRADE_PART_PERMISSION = ('products.add_autotradepart',
                               'products.delete_autotradepart',

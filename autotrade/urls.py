@@ -3,7 +3,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
-from autotrade.views import Home, InternalErrorView
+from autotrade.views import Home
 
 urlpatterns = [
                   path('admin_admin/', admin.site.urls),
