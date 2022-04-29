@@ -3,7 +3,6 @@ import logging
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 
-
 errors = [400, 403, 404]
 
 

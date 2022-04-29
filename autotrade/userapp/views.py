@@ -8,15 +8,11 @@ from autotrade.userapp.forms import UserRegisterForm, ProfileEditForm, ProfileDe
 from autotrade.userapp.models import Profile, UserAppModel
 from autotrade.common.mixins import UserPermissionAccessMixin
 
+from django.conf import settings
+from django.core.mail import send_mail
+
 UserModel = get_user_model()
 
-__WELLCOME_MESSAGE = f', благодарим Ви, че се регистрирахте в нашия сайт. \
-         Очакваме вашите запитвания, и предложения. При възникнали въпроси от Ваша страна , не се колебайте да се свържете \
-                     с нашия управител Николай Романов на тел.: 089 998 5421!'
-
-__SUBJECT_FOR_EMAIL = 'Добре дошли в AUTOTRADE'
-
-#
 # @receiver(signals.pre_save, sender=Profile)
 # def send_email_after_register(instance, **kwargs):
 #     subject = __SUBJECT_FOR_EMAIL
@@ -27,6 +23,12 @@ __SUBJECT_FOR_EMAIL = 'Добре дошли в AUTOTRADE'
 
 
 class RegisterUser(generic.CreateView):
+    __WELLCOME_MESSAGE = f', благодарим Ви, че се регистрирахте в нашия сайт. \
+             Очакваме вашите запитвания, и предложения. При възникнали въпроси от Ваша страна , не се колебайте да се свържете \
+                         с нашия управител Николай Романов на тел.: 089 998 5421!'
+
+    __SUBJECT_FOR_EMAIL = 'Добре дошли в AUTOTRADE'
+
     template_name = 'register.html'
     form_class = UserRegisterForm
     success_url = reverse_lazy('home')
@@ -40,12 +42,12 @@ class RegisterUser(generic.CreateView):
         login(self.request, self.object)
         # after success registration send email for wellcome
         # https: // www.geeksforgeeks.org / setup - sending - email - in -django - project /
-        # user_names = Profile.objects.get(pk=self.request.user.pk)
-        # subject = self.__SUBJECT_FOR_EMAIL
-        # message = f'Добре дошли {user_names.get_full_name}{self.__WELLCOME_MESSAGE}'
-        # email_from = settings.EMAIL_HOST_USER
-        # recipient_list = [self.request.user.email, ]
-        # send_mail(subject, message, email_from, recipient_list)
+        user_names = Profile.objects.get(pk=self.request.user.pk)
+        subject = self.__SUBJECT_FOR_EMAIL
+        message = f'Добре дошли {user_names.get_full_name}{self.__WELLCOME_MESSAGE}'
+        email_from = settings.EMAIL_HOST_USER
+        recipient_list = [self.request.user.email, ]
+        send_mail(subject, message, email_from, recipient_list)
         return result
 
     def dispatch(self, request, *args, **kwargs):

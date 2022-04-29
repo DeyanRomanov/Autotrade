@@ -158,12 +158,12 @@ cloudinary.config(
     api_secret=os.getenv('CLOUDINARY_API_SECRET', None),
 )
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_USE_TLS = True
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'autotrade.sender@gmail.com'
-# EMAIL_HOST_PASSWORD = ''
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'autotrade.sender@gmail.com'
+EMAIL_HOST_PASSWORD = 'zxcacd11'
 
 if is_production():
     LOGGING_LEVEL = 'INFO'
