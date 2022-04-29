@@ -2,7 +2,6 @@ from django.contrib.auth import mixins
 
 from django.urls import reverse_lazy
 from django.views import generic
-from django.views.decorators.cache import cache_page
 
 from autotrade.products.forms import AutotradeCarCreateForm, AutotradeTruckCreateForm, AutotradeMotorcycleCreateForm, \
     AutotradePartCreateForm, AutotradeCarEditForm, AutotradeMotorcycleEditForm, AutotradeTruckEditForm, \
@@ -131,7 +130,6 @@ class AutotradeEditPartView(mixins.PermissionRequiredMixin, generic.UpdateView):
     permission_required = _AUTOTRADE_PART_PERMISSION
 
 
-@cache_page(60 * 60 * 24 * 365)
 class AutotradeVehicleCreateView(OnlyStaffAccessMixin, generic.TemplateView):
     template_name = 'autotrade/autotrade_create_vehicles.html'
 

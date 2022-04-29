@@ -1,11 +1,9 @@
 from django.contrib.auth import mixins
 from django.views import generic
-from django.views.decorators.cache import cache_page
 
 from autotrade.products.models import Car, Motorcycle, Truck, Part
 
 
-@cache_page(60 * 60 * 24 * 365)
 class UserAdvertisementView(mixins.LoginRequiredMixin, generic.TemplateView):
     template_name = 'user_advertisement.html'
 
