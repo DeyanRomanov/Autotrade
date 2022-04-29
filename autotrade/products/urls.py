@@ -1,6 +1,5 @@
 from django.urls import path
 
-from django.views.decorators.cache import cache_page
 
 from autotrade.products.views.views_autotrade import AutotradeCreateCarView, AutotradeVehicleCreateView, \
     AutotradeVehicleView, AutotradeCreateTruckView, AutotradeCreateMotorcycleView, AutotradeCreatePartView, \
@@ -38,8 +37,7 @@ urlpatterns = [
     path('edit_part/<int:pk>/', PartEditView.as_view(), name='edit part'),
 
     path('user_vehicles/', UserVehiclesView.as_view(), name='user vehicles'),
-    path('user_advestisement/', cache_page(60 * 60 * 24 * 365)(UserAdvertisementView.as_view()),
-         name='user advertisement'),
+    path('user_advestisement/', UserAdvertisementView.as_view(), name='user advertisement'),
     path('autotrade_reviewers_page/', AutotradeUsersProductView.as_view(), name='advertisement to review'),
 
     path('autotrade_create_car/', AutotradeCreateCarView.as_view(), name='autotrade create car'),
@@ -57,8 +55,7 @@ urlpatterns = [
     path('autotrade_details_part/<int:pk>/', AutotradeDetailsPartView.as_view(), name='autotrade details part'),
     path('autotrade_edit_part/<int:pk>/', AutotradeEditPartView.as_view(), name='autotrade edit part'),
 
-    path('autotrade_create_vehicle/', cache_page(60 * 60 * 24 * 365)(AutotradeVehicleCreateView.as_view()),
-         name='autotrade create vehicles'),
+    path('autotrade_create_vehicle/', AutotradeVehicleCreateView.as_view(), name='autotrade create vehicles'),
     path('autotrade_edit_user_car/<int:pk>/', CarStaffEditView.as_view(), name='autotrade user edit car'),
     path('autotrade_edit_user_motorcycle/<int:pk>/', MotorcycleStaffEditView.as_view(),
          name='autotrade user edit motorcycle'),
