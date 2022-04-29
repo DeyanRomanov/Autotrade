@@ -120,8 +120,8 @@ class ProfileUserDeleteView(UserPermissionAccessMixin, generic.DeleteView):
 class AutotradeUsersView(mixins.LoginRequiredMixin, generic.ListView):
     template_name = 'autotrade_users.html'
     model = UserModel
+    paginate_by = 6
+    context_object_name = 'autotrade_users'
 
-    def get_context_data(self, *, object_list=None, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['autotrade_users'] = UserModel.objects.filter(is_staff=False)
-        return context
+    def get_queryset(self):
+        return super(AutotradeUsersView, self).get_queryset().filter(is_staff=False).order_by('id')

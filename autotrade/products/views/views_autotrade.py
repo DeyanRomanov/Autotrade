@@ -1,5 +1,4 @@
 from django.contrib.auth import mixins
-# from django.core.paginator import Paginator
 
 from django.urls import reverse_lazy
 from django.views import generic
@@ -132,17 +131,14 @@ class AutotradeEditPartView(mixins.PermissionRequiredMixin, generic.UpdateView):
     permission_required = _AUTOTRADE_PART_PERMISSION
 
 
-@cache_page(60*60*24*365)
+@cache_page(60 * 60 * 24 * 365)
 class AutotradeVehicleCreateView(OnlyStaffAccessMixin, generic.TemplateView):
     template_name = 'autotrade/autotrade_create_vehicles.html'
 
 
 class AutotradeVehicleView(generic.ListView):
-    model = AutotradeCar
+    model = (AutotradeCar, AutotradeMotorcycle, AutotradeTruck, AutotradePart)
     template_name = 'autotrade/autotrade_vehicles.html'
-
-    # paginator = Paginator(context)
-    # current_page = request.GET.get('page', 1)
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -150,10 +146,12 @@ class AutotradeVehicleView(generic.ListView):
         motorcycles = AutotradeMotorcycle.objects.all()
         trucks = AutotradeTruck.objects.all()
         parts = AutotradePart.objects.all()
-        context['trucks'] = trucks
-        context['motorcycles'] = motorcycles
-        context['parts'] = parts
-        context['cars'] = cars
+        context = {
+            'trucks': trucks,
+            'motorcycles': motorcycles,
+            'parts': parts,
+            'cars': cars,
+        }
         return context
 
 
@@ -162,6 +160,7 @@ class AutotradeUsersProductView(mixins.PermissionRequiredMixin, generic.ListView
     model = Car
     permission_required = _AUTOTRADE_USER_PRODUCT_FULL_PERMISSION
     permission_denied_message = PERMISSION_DENIED_MESSAGE
+    paginate_by = 3
 
     def get_context_data(self, *, object_list=None, **kwargs):
         vehicles = []
