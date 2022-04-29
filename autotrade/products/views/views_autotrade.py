@@ -137,6 +137,13 @@ class AutotradeVehicleCreateView(OnlyStaffAccessMixin, generic.TemplateView):
 class AutotradeVehicleView(generic.ListView):
     model = (AutotradeCar, AutotradeMotorcycle, AutotradeTruck, AutotradePart)
     template_name = 'autotrade/autotrade_vehicles.html'
+    #
+    # def dispatch(self, request, *args, **kwargs):
+    #     response = super().dispatch(request, *args, **kwargs)
+    #     last_viewed_vehicle = request.session.get('last_viewed_vehicle_pks', [])
+    #     last_viewed_vehicle.insert(0, self.kwargs['pk'])
+    #     request.session['last_viewed_vehicle_pks'] = last_viewed_vehicle[:5]
+    #     return response
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)

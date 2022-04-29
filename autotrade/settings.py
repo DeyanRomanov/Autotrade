@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'autotrade.products.middlewares.last_viewed_vehicles',
 ]
 
 ROOT_URLCONF = 'autotrade.urls'
