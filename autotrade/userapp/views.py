@@ -6,7 +6,7 @@ from django.views import generic
 
 from autotrade.userapp.forms import UserRegisterForm, ProfileEditForm, ProfileDeleteForm, CreateProfileForm
 from autotrade.userapp.models import Profile, UserAppModel
-from autotrade.common.mixins import UserPermissionAccessMixin
+from autotrade.common.mixins import UserPermissionAccessMixin, CurrentUserSaveProductMixin
 
 from django.conf import settings
 from django.core.mail import send_mail
@@ -112,7 +112,7 @@ class ProfileEditView(UserPermissionAccessMixin, mixins.LoginRequiredMixin, gene
         return reverse_lazy('profile details', kwargs={'pk': self.request.user.id})
 
 
-class ProfileUserDeleteView(UserPermissionAccessMixin, generic.DeleteView):
+class ProfileUserDeleteView(CurrentUserSaveProductMixin, mixins.LoginRequiredMixin, generic.DeleteView):
     model = UserAppModel
     form_class = ProfileDeleteForm
     template_name = 'user_profile_delete.html'
