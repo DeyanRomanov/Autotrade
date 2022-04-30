@@ -42,12 +42,12 @@ class RegisterUser(generic.CreateView):
         login(self.request, self.object)
         # after success registration send email for wellcome
         # https: // www.geeksforgeeks.org / setup - sending - email - in -django - project /
-        user_names = Profile.objects.get(pk=self.request.user.pk)
-        subject = self.__SUBJECT_FOR_EMAIL
-        message = f'Добре дошли {user_names.get_full_name}{self.__WELLCOME_MESSAGE}'
-        email_from = settings.EMAIL_HOST_USER
-        recipient_list = [self.request.user.email, ]
-        send_mail(subject, message, email_from, recipient_list)
+        # user_names = Profile.objects.get(pk=self.request.user.pk)
+        # subject = self.__SUBJECT_FOR_EMAIL
+        # message = f'Добре дошли {user_names.get_full_name}{self.__WELLCOME_MESSAGE}'
+        # email_from = settings.EMAIL_HOST_USER
+        # recipient_list = [self.request.user.email, ]
+        # send_mail(subject, message, email_from, recipient_list)
         return result
 
     def dispatch(self, request, *args, **kwargs):
