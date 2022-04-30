@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
-      <change afterPath="$PROJECT_DIR$/autotrade/userapp/test/tests_models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/userapp/test/tests_views/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autotrade/userapp/test/tests_views/test_register_user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/test/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/tests/tests_models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/test/views_autotrade/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/tests/tests_models/test_profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/test/tests_models/test_profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/tests/tests_views/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/test/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/tests/tests_views/test_register_user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,7 +312,7 @@
       <workItem from="1651124536718" duration="14126000" />
       <workItem from="1651158979040" duration="21077000" />
       <workItem from="1651181250113" duration="18537000" />
-      <workItem from="1651266218783" duration="11035000" />
+      <workItem from="1651266218783" duration="12487000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
