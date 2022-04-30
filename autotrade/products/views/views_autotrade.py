@@ -135,7 +135,7 @@ class AutotradeVehicleCreateView(OnlyStaffAccessMixin, generic.TemplateView):
 
 
 class AutotradeVehicleView(generic.ListView):
-    model = (AutotradeCar, AutotradeMotorcycle, AutotradeTruck, AutotradePart)
+    model = AutotradeCar
     template_name = 'autotrade/autotrade_vehicles.html'
     #
     # def dispatch(self, request, *args, **kwargs):
