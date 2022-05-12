@@ -3,22 +3,22 @@
     {% for product in products %}
         {% if product.motor %}
             <li>
-                <a href="{% url 'autotrade user edit car' product.pk %}"> <img src="https://res.cloudinary.com/hmyfvghu4/image/upload/{{ product.image.id }}.png" alt="pic"> {{ product.date_of_publication }} {{ product.mark }}</a>
+                <a href="{% url 'autotrade user edit car' product.pk %}"> <img src="{{ product.image.url }}" alt="pic" width="150" height="150"> {{ product.date_of_publication }} {{ product.mark }}</a>
             </li>
         {% endif %}
         {% if product.cooling %}
             <li>
-                <a href="{% url 'autotrade user edit motorcycle' product.pk %}">{{ product.date_of_publication }} {{ product.mark }}</a>
+                <a href="{% url 'autotrade user edit motorcycle' product.pk %}"> <img src="{{ product.image.url }}" alt="pic" width="150" height="150"> {{ product.date_of_publication }} {{ product.mark }}</a>
             </li>
         {% endif %}
         {% if product.capacity %}
             <li>
-                <a href="{% url 'autotrade user edit truck' product.pk %}">{{ product.date_of_publication }} {{ product.mark }}</a>
+                <a href="{% url 'autotrade user edit truck' product.pk %}"> <img src="{{ product.image.url }}" alt="pic" width="150" height="150"> {{ product.date_of_publication }} {{ product.mark }}</a>
             </li>
         {% endif %}
         {% if product.catalog_number %}
             <li>
-                <a href="{% url 'autotrade user edit part' product.pk %}">{{ product.date_of_publication }} {{ product.name }}</a>
+                <a href="{% url 'autotrade user edit part' product.pk %}"> <img src="{{ product.image.url }}" alt="pic" width="150" height="150"> {{ product.date_of_publication }} {{ product.name }}</a>
             </li>
         {% endif %}
     {% endfor %}
