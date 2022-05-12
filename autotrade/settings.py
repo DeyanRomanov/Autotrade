@@ -1,5 +1,6 @@
 import os
 import whitenoise
+import django_redis
 import cloudinary as cloudinary
 from pathlib import Path
 

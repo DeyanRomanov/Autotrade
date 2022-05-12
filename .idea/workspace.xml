@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -320,7 +319,7 @@
       <workItem from="1651669623940" duration="316000" />
       <workItem from="1651740280302" duration="3235000" />
       <workItem from="1652282568053" duration="301000" />
-      <workItem from="1652344078678" duration="7299000" />
+      <workItem from="1652344078678" duration="7606000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
