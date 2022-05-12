@@ -8,8 +8,8 @@ from autotrade.userapp.forms import UserRegisterForm, ProfileEditForm, ProfileDe
 from autotrade.userapp.models import Profile, UserAppModel
 from autotrade.common.mixins import UserPermissionAccessMixin, CurrentUserSaveProductMixin
 
-from django.conf import settings
-from django.core.mail import send_mail
+# from django.conf import settings
+# from django.core.mail import send_mail
 
 UserModel = get_user_model()
 
@@ -23,11 +23,11 @@ UserModel = get_user_model()
 
 
 class RegisterUser(generic.CreateView):
-    __WELLCOME_MESSAGE = f', благодарим Ви, че се регистрирахте в нашия сайт. \
-             Очакваме вашите запитвания, и предложения. При възникнали въпроси от Ваша страна , не се колебайте да се свържете \
-                         с нашия управител Иван Иванов на тел.: 0888 888 888 !'
-
-    __SUBJECT_FOR_EMAIL = 'Добре дошли в AUTOTRADE'
+    # __WELLCOME_MESSAGE = f', благодарим Ви, че се регистрирахте в нашия сайт. \
+    #          Очакваме вашите запитвания, и предложения. При възникнали въпроси от Ваша страна , не се колебайте да се свържете \
+    #                      с нашия управител Иван Иванов на тел.: 0888 888 888 !'
+    #
+    # __SUBJECT_FOR_EMAIL = 'Добре дошли в AUTOTRADE'
 
     template_name = 'register.html'
     form_class = UserRegisterForm

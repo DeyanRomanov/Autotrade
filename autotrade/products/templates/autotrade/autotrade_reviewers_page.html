@@ -3,7 +3,7 @@
     {% for product in products %}
         {% if product.motor %}
             <li>
-                <a href="{% url 'autotrade user edit car' product.pk %}">{{ product.date_of_publication }} {{ product.mark }}</a>
+                <a href="{% url 'autotrade user edit car' product.pk %}"> <img src="https://res.cloudinary.com/hmyfvghu4/image/upload/{{ product.image.id }}.png" alt="pic"> {{ product.date_of_publication }} {{ product.mark }}</a>
             </li>
         {% endif %}
         {% if product.cooling %}

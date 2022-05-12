@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_reviewers_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_reviewers_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/core/cache/backends" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop/pythonProject/Hacker_Rang" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -313,7 +315,14 @@
       <workItem from="1651124536718" duration="14126000" />
       <workItem from="1651158979040" duration="21077000" />
       <workItem from="1651181250113" duration="18537000" />
-      <workItem from="1651266218783" duration="14106000" />
+      <workItem from="1651266218783" duration="16312000" />
+      <workItem from="1651306192371" duration="1018000" />
+      <workItem from="1651559537110" duration="5043000" />
+      <workItem from="1651642144023" duration="2870000" />
+      <workItem from="1651669623940" duration="316000" />
+      <workItem from="1651740280302" duration="3235000" />
+      <workItem from="1652282568053" duration="301000" />
+      <workItem from="1652344078678" duration="2913000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
