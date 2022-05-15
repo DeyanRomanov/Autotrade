@@ -96,7 +96,7 @@ CACHES = {
             'django.core.cache.backends.dummy.DummyCache'
             if DEBUG
             else 'django_redis.cache.RedisCache',
-        'LOCATION': os.getenv('REDIS_URL', 'redis://127.0.0.1:6379'),
+        'LOCATION': os.getenv('REDIS_URL', ''),
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "CONNECTION_POOL_KWARGS": {
