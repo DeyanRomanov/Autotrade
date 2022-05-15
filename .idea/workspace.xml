@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
-      <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -319,7 +319,10 @@
       <workItem from="1651669623940" duration="316000" />
       <workItem from="1651740280302" duration="3235000" />
       <workItem from="1652282568053" duration="301000" />
-      <workItem from="1652344078678" duration="7606000" />
+      <workItem from="1652344078678" duration="8339000" />
+      <workItem from="1652360936501" duration="1190000" />
+      <workItem from="1652431647381" duration="595000" />
+      <workItem from="1652436779311" duration="971000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
