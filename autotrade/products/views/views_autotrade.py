@@ -137,6 +137,7 @@ class AutotradeVehicleCreateView(OnlyStaffAccessMixin, generic.TemplateView):
 class AutotradeVehicleView(generic.ListView):
     model = AutotradeCar
     template_name = 'autotrade/autotrade_vehicles.html'
+    paginate_by = 6
     #
     # def dispatch(self, request, *args, **kwargs):
     #     response = super().dispatch(request, *args, **kwargs)

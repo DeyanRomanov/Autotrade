@@ -3,24 +3,53 @@
     {% for product in products %}
         {% if product.motor %}
             <li>
-                <a href="{% url 'autotrade user edit car' product.pk %}"> <img src="{{ product.image.url }}" alt="pic" width="150" height="150"> {{ product.date_of_publication }} {{ product.mark }}</a>
+                <a href="{% url 'autotrade user edit car' product.pk %}"> <img src="{{ product.image.url }}" alt="pic"
+                                                                               width="150"
+                                                                               height="150"> {{ product.date_of_publication }} {{ product.mark }}
+                </a>
             </li>
         {% endif %}
         {% if product.cooling %}
             <li>
-                <a href="{% url 'autotrade user edit motorcycle' product.pk %}"> <img src="{{ product.image.url }}" alt="pic" width="150" height="150"> {{ product.date_of_publication }} {{ product.mark }}</a>
+                <a href="{% url 'autotrade user edit motorcycle' product.pk %}"> <img src="{{ product.image.url }}"
+                                                                                      alt="pic" width="150"
+                                                                                      height="150"> {{ product.date_of_publication }} {{ product.mark }}
+                </a>
             </li>
         {% endif %}
         {% if product.capacity %}
             <li>
-                <a href="{% url 'autotrade user edit truck' product.pk %}"> <img src="{{ product.image.url }}" alt="pic" width="150" height="150"> {{ product.date_of_publication }} {{ product.mark }}</a>
+                <a href="{% url 'autotrade user edit truck' product.pk %}"> <img src="{{ product.image.url }}" alt="pic"
+                                                                                 width="150"
+                                                                                 height="150"> {{ product.date_of_publication }} {{ product.mark }}
+                </a>
             </li>
         {% endif %}
         {% if product.catalog_number %}
             <li>
-                <a href="{% url 'autotrade user edit part' product.pk %}"> <img src="{{ product.image.url }}" alt="pic" width="150" height="150"> {{ product.date_of_publication }} {{ product.name }}</a>
+                <a href="{% url 'autotrade user edit part' product.pk %}"> <img src="{{ product.image.url }}" alt="pic"
+                                                                                width="150"
+                                                                                height="150"> {{ product.date_of_publication }} {{ product.name }}
+                </a>
             </li>
         {% endif %}
     {% endfor %}
 
-{% endblock %}
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock %}          
