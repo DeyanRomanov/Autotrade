@@ -1,9 +1,8 @@
-
 from django.contrib.auth import get_user_model
 from django.core.validators import MinLengthValidator, MinValueValidator, MaxValueValidator
 from django.db import models
 
-from cloudinary import models as cloudinary_models, uploader
+from cloudinary import models as cloudinary_models
 
 from autotrade.common.helpers import _get_max_choices_length
 

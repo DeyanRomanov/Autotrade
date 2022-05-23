@@ -137,7 +137,8 @@ class AutotradeVehicleCreateView(OnlyStaffAccessMixin, generic.TemplateView):
 class AutotradeVehicleView(generic.ListView):
     model = AutotradeCar
     template_name = 'autotrade/autotrade_vehicles.html'
-    paginate_by = 6
+    paginate_by = 3
+
     #
     # def dispatch(self, request, *args, **kwargs):
     #     response = super().dispatch(request, *args, **kwargs)
@@ -145,19 +146,17 @@ class AutotradeVehicleView(generic.ListView):
     #     last_viewed_vehicle.insert(0, self.kwargs['pk'])
     #     request.session['last_viewed_vehicle_pks'] = last_viewed_vehicle[:5]
     #     return response
-
     def get_context_data(self, *, object_list=None, **kwargs):
+        vehicles = []
         context = super().get_context_data(**kwargs)
-        cars = AutotradeCar.objects.all()
-        motorcycles = AutotradeMotorcycle.objects.all()
-        trucks = AutotradeTruck.objects.all()
-        parts = AutotradePart.objects.all()
-        context = {
-            'trucks': trucks,
-            'motorcycles': motorcycles,
-            'parts': parts,
-            'cars': cars,
-        }
+        vehicles.extend(list(AutotradeCar.objects.all()))
+        vehicles.extend(list(AutotradeTruck.objects.all()))
+        vehicles.extend(list(AutotradeMotorcycle.objects.all()))
+        vehicles.extend(list(AutotradePart.objects.all()))
+        # sort by date of publication
+        vehicles.sort(key=lambda x: x.date_of_publication)
+
+        context['vehicles'] = vehicles
         return context
 
 
@@ -177,5 +176,6 @@ class AutotradeUsersProductView(mixins.PermissionRequiredMixin, generic.ListView
         vehicles.extend(list(Part.objects.filter(is_reviewed=False)))
         # sort by date of publication
         vehicles.sort(key=lambda x: x.date_of_publication)
+
         context['products'] = vehicles
         return context

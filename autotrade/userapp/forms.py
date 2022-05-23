@@ -1,11 +1,10 @@
-import os
 from datetime import date
 
 from django import forms
 from django.contrib.auth import forms as auth_forms, get_user_model
 from django.core.validators import MinLengthValidator, RegexValidator
 
-from autotrade.products.models import Car, Motorcycle, Truck, Vehicle
+from autotrade.products.models import Car, Motorcycle, Truck
 from autotrade.userapp.models import Profile, UserAppModel
 from autotrade.userapp.validators import validate_only_letter, ValidateEighteenYears
 
@@ -47,7 +46,7 @@ class UserRegisterForm(auth_forms.UserCreationForm):
     # profile fields
     first_name = forms.CharField(
         max_length=Profile.FIRST_NAME_MAX_LENGTH,
-        widget=forms.TextInput(attrs={'placeholder': 'Please enter your first name',}),
+        widget=forms.TextInput(attrs={'placeholder': 'Please enter your first name', }),
         validators=(validate_only_letter, MinLengthValidator(Profile.FIRST_NAME_MIN_LENGTH)),
     )
 
@@ -129,7 +128,7 @@ def delete_vehicles(instances):
 
 
 class ProfileDeleteForm(forms.ModelForm):
-    def delete(self, using=None, keep_parents=False):
+    def delete(self):
         cars = list(Car.objects.get(user_id=self.request.user.pk).all())
         delete_vehicles(cars)
         trucks = list(Truck.objects.get(user_id=self.request.user.pk).all())
