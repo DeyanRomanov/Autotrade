@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/userapp/templates/forgotten_password.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/views/views_autotrade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,7 +337,7 @@
       <workItem from="1652894342808" duration="1308000" />
       <workItem from="1652940586998" duration="13307000" />
       <workItem from="1653030420130" duration="736000" />
-      <workItem from="1653324443461" duration="1382000" />
+      <workItem from="1653324443461" duration="3565000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>

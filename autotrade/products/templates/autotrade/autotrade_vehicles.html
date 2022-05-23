@@ -34,7 +34,15 @@
             {% endif %}
             {% if request.user.is_authenticated %}
                 <h5><u>Цена:</u> <strong>{{ vehicle.price }}</strong></h5>
-                <a href="{% url 'autotrade details car' vehicle.pk %}">
+                {% if vehicle.motor %}
+                    <a href="{% url 'autotrade details car' vehicle.pk %}">
+                {% elif vehicle.total_weight %}
+                    <a href="{% url 'autotrade details truck' vehicle.pk %}">
+                {% elif vehicle.cooling %}
+                    <a href="{% url 'autotrade details motorcycle' vehicle.pk %}">
+                {% else %}
+                    <a href="{% url 'autotrade details part' vehicle.pk %}">
+                {% endif %}
             {% else %}
                 <h5><u>Цена:</u> <strong>{{ vehicle.price|truncatechars:2 }}</strong></h5>
                 <a href="{% url 'login' %}">
