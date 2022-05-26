@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
-      <change afterPath="$PROJECT_DIR$/autotrade/userapp/templates/forgotten_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/templates/autotrade/autotrade_vehicles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autotrade/userapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/userapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -337,7 +335,10 @@
       <workItem from="1652894342808" duration="1308000" />
       <workItem from="1652940586998" duration="13307000" />
       <workItem from="1653030420130" duration="736000" />
-      <workItem from="1653324443461" duration="3565000" />
+      <workItem from="1653324443461" duration="5056000" />
+      <workItem from="1653372127978" duration="7853000" />
+      <workItem from="1653467080771" duration="2317000" />
+      <workItem from="1653548490135" duration="8849000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
@@ -397,13 +398,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/manage.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
