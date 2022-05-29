@@ -1,0 +1,8 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <h1>Резултатът от вашето търсене е:</h1>
+    {% for object in object_list %}
+        <a href="{% url 'autotrade details car' object.pk %}"><img src="{{ object.image.url }}" alt="pic" width="150" height="150">{{ object }}</a>
+    {% endfor %}
+
+{% endblock %}

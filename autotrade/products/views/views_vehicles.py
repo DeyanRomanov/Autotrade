@@ -38,3 +38,4 @@ class UserVehiclesView(mixins.LoginRequiredMixin, generic.ListView):
             part_count,
         ])
         return context
+
