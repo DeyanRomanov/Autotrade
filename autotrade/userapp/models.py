@@ -34,6 +34,8 @@ class UserAppModel(auth_model.AbstractBaseUser, auth_model.PermissionsMixin):
                            ),
         ),
     )
+    # django wants this for reset password
+    is_active = models.BooleanField(default=True, )
 
     objects = UserManager()
 

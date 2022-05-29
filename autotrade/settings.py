@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'autotrade.middlewares.handle_exception',
+    # 'autotrade.middlewares.handle_exception',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'autotrade.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'autotrade_db'),
+        'NAME': os.getenv('DB_NAME', 'db_autotrade'),
         'USER': os.getenv('DB_USER', 'postgres'),
         'PASSWORD': os.getenv('DB_PASSWORD', 'Snejieli90@'),
         'HOST': os.getenv('DB_HOST', '127.0.0.1'),

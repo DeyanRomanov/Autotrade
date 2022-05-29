@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
+      <change afterPath="$PROJECT_DIR$/autotrade/userapp/migrations/0002_userappmodel_is_active.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/userapp/templates/password_reset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/userapp/templates/password_reset_complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/userapp/templates/password_reset_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autotrade/userapp/templates/password_reset_sent.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/information_schema.FNRwLQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d7b4a4a2-7630-4b07-ba13-06ee910c79db/storage_v2/_src_/database/autotrade_db.6BOOPQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/products/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/templates/forgotten_password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/userapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -338,7 +356,8 @@
       <workItem from="1653324443461" duration="5056000" />
       <workItem from="1653372127978" duration="7853000" />
       <workItem from="1653467080771" duration="2317000" />
-      <workItem from="1653548490135" duration="8849000" />
+      <workItem from="1653548490135" duration="10997000" />
+      <workItem from="1653709441798" duration="19975000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>

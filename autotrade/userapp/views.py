@@ -63,10 +63,6 @@ class ChangeUserPasswordView(auth_views.PasswordChangeView, mixins.LoginRequired
     success_url = reverse_lazy('change password done')
 
 
-class ForgottenUserPasswordView(auth_views.PasswordResetView):
-    template_name = 'forgotten_password.html'
-
-
 class UserLogin(auth_views.LoginView):
     template_name = 'login.html'
     success_url = reverse_lazy('autotrade vehicles')
