@@ -1,20 +1,22 @@
 {% extends 'base/base.html' %}
 {% block content %}
-    <div>
-        <p><strong>Име:</strong> {{ object.first_name }}</p>
-        <p><strong>Фамилия:</strong> {{ object.last_name }}</p>
-        <p><strong>Дата на раждане:</strong> {{ object.date_of_birth }}</p>
-        <p><strong>Имейл:</strong> {{ object.user.email }}</p>
-        <p><strong>Телефон:</strong> {{ object.user.phone_number }}</p>
-    </div>
-    {% if request.user.pk == object.user.pk %}
-        <a href="{% url 'profile edit' request.user.pk %}">
-            <button>Промяна</button>
-        </a><a href="{% url 'change password' %}">
-        <button>Смяна на парола</button>
-    </a>
-        <a href="{% url 'profile user delete' request.user.pk %}">
-            <button>Изтрий</button>
+    <center>
+        <div>
+            <p><strong>Име:</strong> {{ object.first_name }}</p>
+            <p><strong>Фамилия:</strong> {{ object.last_name }}</p>
+            <p><strong>Дата на раждане:</strong> {{ object.date_of_birth }}</p>
+            <p><strong>Имейл:</strong> {{ object.user.email }}</p>
+            <p><strong>Телефон:</strong> {{ object.user.phone_number }}</p>
+        </div>
+        {% if request.user.pk == object.user.pk %}
+            <a href="{% url 'profile edit' request.user.pk %}">
+                <button>Промяна</button>
+            </a><a href="{% url 'change password' %}">
+            <button>Смяна на парола</button>
         </a>
-    {% endif %}
+            <a href="{% url 'profile user delete' request.user.pk %}">
+                <button>Изтрий</button>
+            </a>
+        {% endif %}
+    </center>
 {% endblock %}

@@ -1,13 +1,14 @@
 {% extends 'base/base.html' %}
 {% block content %}
-    {% for autotrade_user in autotrade_users %}
-        <div class="d-inline p-2 w-50">
-            <div class="d-flex flex-column">
-                <a href="{% url 'profile details' autotrade_user.pk %}">{{ autotrade_user }}</a>
+    <center>
+        {% for autotrade_user in autotrade_users %}
+            <div class="d-inline p-2 w-50">
+                <div class="d-flex flex-column">
+                    <a href="{% url 'profile details' autotrade_user.pk %}">{{ autotrade_user }}</a>
+                </div>
             </div>
-        </div>
-    {% endfor %}
-    <div class="pagination">
+        {% endfor %}
+        <div class="pagination">
     <span class="step-links">
         {% if page_obj.has_previous %}
             <a href="?page=1">&laquo; първа</a>
@@ -23,5 +24,6 @@
             <a href="?page={{ page_obj.paginator.num_pages }}">последна &raquo;</a>
         {% endif %}
     </span>
-    </div>
+        </div>
+    </center>
 {% endblock %}

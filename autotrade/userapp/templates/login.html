@@ -1,12 +1,18 @@
 {% extends 'base/base.html' %}
 {% block content %}
-<form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
-    {{ form }}
-    <button>
-        Вход
-    </button>
-</form>
-<a href="{% url 'register' %}"><button>Регистрация</button></a>
-<a href="{% url 'password_reset' %}"><button>Забравена парола</button></a>
+    <center>
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            {{ form }}
+            <button>
+                Вход
+            </button>
+        </form>
+        <a href="{% url 'register' %}">
+            <button>Регистрация</button>
+        </a>
+        <a href="{% url 'password_reset' %}">
+            <button>Забравена парола</button>
+        </a>
+    </center>
 {% endblock %}

@@ -1,16 +1,19 @@
 {% extends 'base/base.html' %}
 {% block content %}
-    <h1>
-        Изтриване на профила!
-    </h1>
-    <h2>Всички създадени обяви от този профил ще бъдат изтрити заедно с него!
-        Сигурни ли сте?
-    </h2>
-    <form method="post" action="{% url 'profile user delete' request.user.pk %}" enctype="multipart/form-data">
-        {{ form }}
-        {% csrf_token %}
-        <button>Изтрий</button>
-    </form><a href="{% url 'profile details' request.user.pk %}">
-    <button>Върни се</button>
-</a>
+    <center>
+        <h1>
+            Изтриване на профила!
+        </h1>
+        <h2>Всички създадени обяви от този профил ще бъдат изтрити заедно с него!
+            Сигурни ли сте?
+        </h2>
+        <form method="post" action="{% url 'profile user delete' request.user.pk %}" enctype="multipart/form-data">
+            {{ form }}
+            {% csrf_token %}
+            <button>Изтрий</button>
+        </form>
+        <a href="{% url 'profile details' request.user.pk %}">
+            <button>Върни се</button>
+        </a>
+    </center>
 {% endblock %}
