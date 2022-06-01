@@ -37,7 +37,7 @@ urlpatterns = [
     path('edit_part/<int:pk>/', PartEditView.as_view(), name='edit part'),
 
     path('user_vehicles/', UserVehiclesView.as_view(), name='user vehicles'),
-    path('user_advestisement/', cache_page(60*60*24*365)(UserAdvertisementView.as_view()), name='user advertisement'),
+    path('user_advestisement/', cache_page(1)(UserAdvertisementView.as_view()), name='user advertisement'),
     path('autotrade_reviewers_page/', AutotradeUsersProductView.as_view(), name='advertisement to review'),
 
     path('autotrade_create_car/', AutotradeCreateCarView.as_view(), name='autotrade create car'),
