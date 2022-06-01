@@ -1,5 +1,6 @@
 from django.contrib.auth import mixins
 from django.views import generic
+from django.views.decorators.cache import cache_page
 
 from autotrade.products.models import Car, Motorcycle, Truck, Part
 

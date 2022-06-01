@@ -1,5 +1,8 @@
 {% extends 'base/base.html' %}
 {% block content %}
+    <form method="get" action="{% url 'autotrade vehicles' %}">
+        <button>Сортиране</button>
+    </form>
     {% for vehicle in vehicles %}
         <div class="container">
             <img src="{{ vehicle.image.url }}" alt="{{ vehicle.description }}" width="300" height="300">

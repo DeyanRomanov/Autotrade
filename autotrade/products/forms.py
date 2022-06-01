@@ -306,3 +306,20 @@ class AutotradePartCreateForm(PartCreateFormBase):
 class AutotradePartEditForm(PartEditFormBase):
     class Meta(DisableUserFieldMixin, PartEditFormBase.Meta):
         model = AutotradePart
+
+
+class AutotradeOrderVehicleForm(forms.Form):
+    cars = AutotradeCar.objects.all()
+    trucks = AutotradeTruck.objects.all()
+    motorcycles = AutotradeMotorcycle.objects.all()
+    parts = AutotradePart.objects.all()
+    ORDER_CHOICES = [
+        (cars, 'Автомобили'),
+        (trucks, 'Товарни'),
+        (motorcycles, 'Мотоциклети'),
+        (parts, 'Части'),
+    ]
+
+    order_by = forms.ChoiceField(
+        choices=ORDER_CHOICES,
+    )
