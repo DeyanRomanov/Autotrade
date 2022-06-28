@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d925fe89-a0c0-4898-a064-bf7c9fa87423" name="Changes" comment=".env added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autotrade/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/products/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autotrade/userapp/templates/password_reset.html" beforeDir="false" afterPath="$PROJECT_DIR$/autotrade/userapp/templates/password_reset.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop/pythonProject/Hacker_Rang" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -341,7 +342,13 @@
       <workItem from="1653893177782" duration="7955000" />
       <workItem from="1653976868208" duration="3733000" />
       <workItem from="1654067562127" duration="7819000" />
-      <workItem from="1654318494187" duration="791000" />
+      <workItem from="1654318494187" duration="1373000" />
+      <workItem from="1654669138616" duration="3095000" />
+      <workItem from="1654778165592" duration="420000" />
+      <workItem from="1654839369623" duration="1625000" />
+      <workItem from="1655121391817" duration="2028000" />
+      <workItem from="1655478112043" duration="710000" />
+      <workItem from="1656394296529" duration="70000" />
     </task>
     <task id="LOCAL-00001" summary=".env added">
       <created>1649968771170</created>
